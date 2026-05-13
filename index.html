@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Guided Implant Surgery – Clinicare Training | Fortaleza, Brasil</title>
+  <meta name="description" content="Programa de inmersión en Cirugía Guiada Digital de Implantes. 7 días en Fortaleza, Brasil. Practica en pacientes reales con supervisión de especialistas internacionales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a2e;
+      background: #fff;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── TOKENS ────────────────────────────────────────────────── */
+    :root {
+      --navy:   #0d1b3e;
+      --blue:   #1a3a6e;
+      --gold:   #c8a84b;
+      --gold-lt:#e6c97a;
+      --sky:    #2d6fbd;
+      --white:  #ffffff;
+      --gray50: #f8f9fc;
+      --gray100:#eef0f5;
+      --gray400:#9098ae;
+      --gray700:#4a5168;
+      --radius: 14px;
+      --shadow: 0 4px 30px rgba(13,27,62,.10);
+      --shadow-lg: 0 12px 48px rgba(13,27,62,.18);
+    }
+
+    /* ─── UTILITIES ─────────────────────────────────────────────── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section   { padding: 96px 0; }
+    .section--alt { background: var(--gray50); }
+    .tag {
+      display: inline-block;
+      background: rgba(200,168,75,.15);
+      color: var(--gold);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray700);
+      max-width: 640px;
+    }
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-header .section-sub { margin: 0 auto; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all .25s;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,168,75,.45); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+    .btn-outline:hover { background: var(--white); color: var(--navy); transform: translateY(-2px); }
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all .25s;
+    }
+    .btn-whatsapp:hover { background: #1ebe5a; transform: translateY(-2px); box-shadow: 0 6px 22px rgba(37,211,102,.4); }
+
+    /* ─── NAVBAR ────────────────────────────────────────────────── */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 0;
+      transition: background .3s, box-shadow .3s;
+    }
+    .navbar.scrolled {
+      background: var(--navy);
+      box-shadow: 0 2px 20px rgba(0,0,0,.25);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      padding: 0 32px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .nav-brand span { color: var(--gold); }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,.85);
+      font-size: .9rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta .btn { padding: 10px 22px; font-size: .88rem; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+    .mobile-menu {
+      display: none;
+      background: var(--navy);
+      padding: 16px 32px 24px;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      color: rgba(255,255,255,.85);
+      padding: 10px 0;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: color .2s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    @media (max-width: 860px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ─── HERO ──────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #061228 0%, #0d2145 50%, #0a2d6b 100%);
+    }
+    .hero-photo-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('imgs/hero_fortaleza.jpg');
+      background-size: cover;
+      background-position: center top;
+      opacity: 0.32;
+      pointer-events: none;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 70% 40%, rgba(45,111,189,.20) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 70%, rgba(200,168,75,.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 140px 24px 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 120px 24px 80px; }
+      .hero-visual { display: none; }
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,168,75,.18);
+      border: 1px solid rgba(200,168,75,.35);
+      color: var(--gold-lt);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before { content: '📍'; }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 36px;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 32px;
+    }
+    .hero-stat-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .hero-stat-label {
+      font-size: .8rem;
+      color: rgba(255,255,255,.6);
+      font-weight: 500;
+    }
+    /* Hero visual cards */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .hv-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--white);
+      transition: transform .3s;
+    }
+    .hv-card:hover { transform: translateX(6px); }
+    .hv-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .hv-icon.gold { background: rgba(200,168,75,.2); }
+    .hv-icon.blue { background: rgba(45,111,189,.3); }
+    .hv-icon.green { background: rgba(37,211,102,.2); }
+    .hv-text strong { display: block; font-weight: 700; margin-bottom: 2px; }
+    .hv-text span { font-size: .85rem; color: rgba(255,255,255,.65); }
+    .hv-partners {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px;
+      padding: 18px 24px;
+      text-align: center;
+    }
+    .hv-partners p { font-size: .75rem; color: rgba(255,255,255,.5); margin-bottom: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    .hv-partner-logos {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hv-partner-logos span {
+      color: rgba(255,255,255,.7);
+      font-weight: 700;
+      font-size: .85rem;
+      letter-spacing: .05em;
+    }
+
+    /* ─── STATS BAR ─────────────────────────────────────────────── */
+    .stats-bar {
+      background: var(--navy);
+      padding: 28px 0;
+    }
+    .stats-bar-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .stat-item { text-align: center; }
+    .stat-item .val {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-item .lbl {
+      font-size: .82rem;
+      color: rgba(255,255,255,.65);
+      font-weight: 500;
+    }
+    .stat-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,.12);
+    }
+    @media (max-width: 600px) { .stat-divider { display: none; } }
+
+    /* ─── PHOTO STRIP ───────────────────────────────────────────── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 260px;
+      overflow: hidden;
+    }
+    .photo-strip-item {
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-strip-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+      display: block;
+    }
+    .photo-strip-item:hover img { transform: scale(1.07); }
+    @media (max-width: 700px) {
+      .photo-strip { grid-template-columns: repeat(2,1fr); height: 200px; }
+    }
+
+    /* ─── GALLERY SECTION ───────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 240px 240px;
+      gap: 14px;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 10px 14px;
+      background: linear-gradient(to top, rgba(13,27,62,.8), transparent);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+    @media (max-width: 740px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item.tall { grid-row: auto; }
+    }
+
+    /* ─── ABOUT ──────────────────────────────────────────────────── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--sky));
+    }
+    .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .feature-icon {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .feature-card p { color: var(--gray700); font-size: .95rem; }
+    .feature-list {
+      list-style: none;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .9rem;
+      color: var(--gray700);
+    }
+    .feature-list li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── MODULES / TIMELINE ────────────────────────────────────── */
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 36px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--sky));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: var(--navy);
+      border: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      z-index: 1;
+      box-shadow: 0 0 0 6px rgba(200,168,75,.12);
+    }
+    .timeline-body {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      flex: 1;
+      box-shadow: var(--shadow);
+    }
+    .timeline-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .timeline-body .day-tag {
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .timeline-body p { color: var(--gray700); font-size: .9rem; }
+    .timeline-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .pill {
+      background: var(--gray100);
+      color: var(--navy);
+      font-size: .78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+    .pill.gold { background: rgba(200,168,75,.15); color: var(--gold); }
+
+    /* ─── INSTRUCTORS ────────────────────────────────────────────── */
+    .instructors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .instructor-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .instructor-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .instructor-photo {
+      height: 280px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .instructor-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform .4s ease;
+    }
+    .instructor-card:hover .instructor-photo img { transform: scale(1.05); }
+    .instructor-photo::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to top, rgba(13,27,62,.7), transparent);
+    }
+    .instructor-initials {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: rgba(200,168,75,.2);
+      border: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: -1px;
+      margin: auto;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .instructor-body { padding: 28px; }
+    .instructor-role {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+    .instructor-name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .instructor-title {
+      font-size: .88rem;
+      color: var(--gray700);
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    .instructor-creds {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .instructor-creds li {
+      font-size: .82rem;
+      color: var(--gray700);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .instructor-creds li::before {
+      content: '▪';
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ─── LOCATION ───────────────────────────────────────────────── */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (max-width: 740px) { .location-grid { grid-template-columns: 1fr; } }
+    .location-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 360px;
+    }
+    .location-map iframe { width: 100%; height: 100%; border: 0; }
+    .location-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .location-info p {
+      color: var(--gray700);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .location-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .location-perks li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: .93rem;
+      color: var(--gray700);
+    }
+    .perk-icon {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: rgba(200,168,75,.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .location-date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 22px;
+      border-radius: 12px;
+      margin-top: 24px;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+    .location-date-badge strong { color: var(--gold); }
+
+    /* ─── TESTIMONIALS ───────────────────────────────────────────── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: transform .3s;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); }
+    .testimonial-card::before {
+      content: '\201C';
+      font-size: 5rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      opacity: .25;
+      position: absolute;
+      top: 10px; left: 22px;
+      line-height: 1;
+    }
+    .stars { color: #f5a623; font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .testimonial-text {
+      color: var(--gray700);
+      font-size: .95rem;
+      line-height: 1.75;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid var(--gray100);
+      padding-top: 18px;
+    }
+    .author-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--sky));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+    .author-name { font-weight: 700; color: var(--navy); font-size: .9rem; }
+    .author-role { font-size: .8rem; color: var(--gray400); }
+
+    /* ─── PRICING ────────────────────────────────────────────────── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 780px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .price-card {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 44px 40px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(200,168,75,.08);
+    }
+    .price-card::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(45,111,189,.12);
+    }
+    .price-card-content { position: relative; z-index: 1; }
+    .price-label {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .price-amount {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .price-amount sup {
+      font-size: 1.4rem;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .price-note {
+      font-size: .85rem;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 32px;
+    }
+    .price-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .price-includes li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: .93rem;
+      color: rgba(255,255,255,.85);
+    }
+    .price-includes li::before {
+      content: '✓';
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(200,168,75,.2);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: .75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .price-card .btn-primary { width: 100%; justify-content: center; font-size: 1.05rem; padding: 18px; }
+    .price-urgency {
+      margin-top: 16px;
+      text-align: center;
+      font-size: .82rem;
+      color: rgba(255,255,255,.5);
+    }
+    .price-urgency strong { color: var(--gold-lt); }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray100);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-card > p {
+      color: var(--gray400);
+      font-size: .88rem;
+      margin-bottom: 26px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: .83rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gray100);
+      border-radius: 10px;
+      font-size: .93rem;
+      font-family: inherit;
+      color: var(--navy);
+      background: var(--gray50);
+      transition: border-color .2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--sky); background: var(--white); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all .25s;
+      font-family: inherit;
+    }
+    .form-submit:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,168,75,.4); }
+
+    /* ─── PARTNERS ───────────────────────────────────────────────── */
+    .partners-section { padding: 48px 0; border-top: 1px solid var(--gray100); }
+    .partners-label {
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gray400);
+      margin-bottom: 28px;
+    }
+    .partners-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .partner-logo {
+      color: var(--gray400);
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: .04em;
+      transition: color .2s;
+    }
+    .partner-logo:hover { color: var(--navy); }
+    .partner-logo span { color: var(--sky); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.7);
+      padding: 72px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 860px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 500px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    .footer-brand { margin-bottom: 16px; }
+    .footer-brand-name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .footer-brand-name span { color: var(--gold); }
+    .footer-tagline { font-size: .85rem; margin-bottom: 20px; }
+    .footer h4 {
+      color: var(--white);
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links li a {
+      font-size: .88rem;
+      color: rgba(255,255,255,.6);
+      transition: color .2s;
+    }
+    .footer-links li a:hover { color: var(--gold); }
+    .footer-contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .88rem;
+    }
+    .footer-contact-item span:first-child { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .social-btn {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      transition: all .2s;
+      color: rgba(255,255,255,.7);
+    }
+    .social-btn:hover { background: var(--gold); color: var(--navy); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: .82rem; }
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-bottom-links a {
+      font-size: .82rem;
+      color: rgba(255,255,255,.5);
+      transition: color .2s;
+    }
+    .footer-bottom-links a:hover { color: var(--gold); }
+
+    /* ─── FLOATING WHATSAPP ──────────────────────────────────────── */
+    .fab-whatsapp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      font-size: 1.6rem;
+      box-shadow: 0 6px 24px rgba(37,211,102,.5);
+      transition: all .3s;
+      text-decoration: none;
+    }
+    .fab-whatsapp:hover { transform: scale(1.12) translateY(-3px); box-shadow: 0 10px 30px rgba(37,211,102,.6); }
+
+    /* ─── SCROLL ANIMATIONS ──────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+
+    /* ─── SUCCESS MESSAGE ────────────────────────────────────────── */
+    .success-msg {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    /* ─── RESPONSIVE TWEAKS ──────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .section { padding: 64px 0; }
+      .timeline::before { left: 24px; }
+      .timeline-dot { width: 50px; height: 50px; font-size: 1.1rem; }
+      .timeline-item { gap: 18px; }
+      .price-card { padding: 32px 24px; }
+      .form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo-icon">🦷</div>
+      <span>Clinicare <span>Training</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre el Curso</a></li>
+      <li><a href="#modulos">Módulos</a></li>
+      <li><a href="#instrutores">Instructores</a></li>
+      <li><a href="#localizacao">Ubicación</a></li>
+      <li><a href="#depoimentos">Testimonios</a></li>
+      <li><a href="#inscricao">Inscripción</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#inscricao" class="btn btn-primary">Quiero inscribirme</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre">Sobre el Curso</a>
+    <a href="#modulos">Módulos</a>
+    <a href="#instrutores">Instructores</a>
+    <a href="#localizacao">Ubicación</a>
+    <a href="#depoimentos">Testimonios</a>
+    <a href="#inscricao">Inscripción</a>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+  <div class="hero-photo-bg"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Fortaleza, CE — Brasil · 6–13 Nov 2026</div>
+      <h1 class="hero-title">
+        Conviértete en Especialista en<br>
+        <em>Cirugía Guiada</em><br>
+        de Implantes
+      </h1>
+      <p class="hero-sub">
+        Una semana de inmersión clínica total en Fortaleza. Tú operas, tú aprendes.
+        El 100% de las cirugías son realizadas por los propios alumnos con supervisión de especialistas internacionales y tecnología digital de vanguardia.
+      </p>
+      <div class="hero-buttons">
+        <a href="#inscricao" class="btn btn-primary">🎓 Quiero inscribirme</a>
+        <a href="#sobre" class="btn btn-outline">Saber más</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val">7</div>
+          <div class="hero-stat-label">Días de inmersión</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">100%</div>
+          <div class="hero-stat-label">Cirugías por alumnos</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">4</div>
+          <div class="hero-stat-label">Tandas quirúrgicas/día</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">+2.000</div>
+          <div class="hero-stat-label">Alumnos formados en 2024</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-card">
+        <div class="hv-icon gold">🦷</div>
+        <div class="hv-text">
+          <strong>Implantes Straumann Neodent®</strong>
+          <span>Tecnología de referencia mundial</span>
+        </div>
+      </div>
+      <div class="hv-card">
+        <div class="hv-icon blue">🖥️</div>
+        <div class="hv-text">
+          <strong>Flujo Digital Completo</strong>
+          <span>Planificación 3D + cirugía guiada</span>
+        </div>
+      </div>
+      <div class="hv-card">
+        <div class="hv-icon gold">🏆</div>
+        <div class="hv-text">
+          <strong>Diploma Acreditado</strong>
+          <span>Certificación internacional reconocida</span>
+        </div>
+      </div>
+      <div class="hv-card">
+        <div class="hv-icon green">📡</div>
+        <div class="hv-text">
+          <strong>Transmisión 4K en Vivo</strong>
+          <span>Casos complejos en tiempo real</span>
+        </div>
+      </div>
+      <div class="hv-partners">
+        <p>Socios Oficiales</p>
+        <div class="hv-partner-logos">
+          <span>NEODENT®</span>
+          <span>|</span>
+          <span>Straumann Group</span>
+          <span>|</span>
+          <span>NACAR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS BAR ══════════════ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <span class="val">+115</span>
+        <span class="lbl">Cursos por año</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="val">2.000</span>
+        <span class="lbl">Alumnos en 2024</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="val">2.500</span>
+        <span class="lbl">Pacientes beneficiados</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="val">2017</span>
+        <span class="lbl">Fundada en</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="val">Nordeste</span>
+        <span class="lbl">Líder regional de Brasil</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PHOTO STRIP ══════════════ -->
+<div class="photo-strip">
+  <div class="photo-strip-item">
+    <img src="imgs/clinicare_building.jpg" alt="Clinicare Training — Edificio" loading="lazy" />
+  </div>
+  <div class="photo-strip-item">
+    <img src="imgs/surgeon_tech.jpg" alt="Cirujano con tecnología de vanguardia" loading="lazy" />
+  </div>
+  <div class="photo-strip-item">
+    <img src="imgs/clinicare_classroom.jpg" alt="Aula Clinicare Training" loading="lazy" />
+  </div>
+  <div class="photo-strip-item">
+    <img src="imgs/guided_surgery.jpg" alt="Cirugía guiada con implantes Straumann" loading="lazy" />
+  </div>
+</div>
+
+<!-- ══════════════ SOBRE O CURSO ══════════════ -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Sobre el Programa</div>
+      <h2 class="section-title">Excelencia en Formación Clínica</h2>
+      <p class="section-sub">
+        Nuestro programa ofrece una experiencia clínica completa diseñada para profesionales que buscan el siguiente nivel en precisión y técnica quirúrgica guiada por tecnología digital.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🏥</span>
+        <h3>Práctica Intensiva en Pacientes Reales</h3>
+        <p>En Fortaleza, todas las cirugías son realizadas por los propios alumnos. Práctica clínica directa con supervisión de especialistas internacionales.</p>
+        <ul class="feature-list">
+          <li>4 tandas quirúrgicas por día</li>
+          <li>Casos reales seleccionados</li>
+          <li>Supervisión 1:1 por los instructores</li>
+          <li>Verificación postoperatoria (planificado vs. ejecutado)</li>
+        </ul>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <span class="feature-icon">🖥️</span>
+        <h3>Tecnología de Diagnóstico 3D</h3>
+        <p>Infraestructura premium con flujo digital completo: auditorios con transmisión 4K, planificación virtual y ejecución guiada de alta precisión.</p>
+        <ul class="feature-list">
+          <li>Planificación digital diaria</li>
+          <li>Revisión por parejas y validación de casos</li>
+          <li>Cirugía guiada con carga inmediata</li>
+          <li>Tecnología Straumann/Neodent® integrada</li>
+        </ul>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <span class="feature-icon">🎓</span>
+        <h3>Mentoría Personalizada &amp; Grupos Reducidos</h3>
+        <p>Formato Clínica-Escuela con un concepto disruptivo de enseñanza en posgrado. Grupos pequeños garantizan atención individualizada a cada participante.</p>
+        <ul class="feature-list">
+          <li>Mentoría personalizada del equipo</li>
+          <li>Grupos reducidos para máxima atención</li>
+          <li>Diploma acreditado internacionalmente</li>
+          <li>Red de profesionales de Brasil y del mundo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALERÍA DE FOTOS ══════════════ -->
+<section class="section section--alt" style="padding-top:0; padding-bottom:64px;">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:36px;">
+      <div class="tag">Galería</div>
+      <h2 class="section-title">Nuestras Instalaciones y Cirugías</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal">
+        <img src="imgs/surgery_real.jpg" alt="Cirugía real realizada por alumno" loading="lazy" />
+        <div class="gallery-caption">Cirugía real sobre paciente</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="imgs/clinicare_building.jpg" alt="Edificio Clinicare Training" loading="lazy" />
+        <div class="gallery-caption">Clinicare Training — Fortaleza</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="imgs/surgeon_tech.jpg" alt="Tecnología de vanguardia" loading="lazy" />
+        <div class="gallery-caption">Transmisión 4K en vivo</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="imgs/classroom1.jpg" alt="Aula de formación" loading="lazy" />
+        <div class="gallery-caption">Formación teórico-práctica</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="imgs/guided_surgery.jpg" alt="Cirugía guiada digital" loading="lazy" />
+        <div class="gallery-caption">Guía quirúrgica Straumann</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MÓDULOS / TIMELINE ══════════════ -->
+<section class="section section--alt" id="modulos">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Programa Semanal</div>
+      <h2 class="section-title">7 Días de Inmersión Quirúrgica Total</h2>
+      <p class="section-sub">
+        Una semana estructurada para maximizar tu aprendizaje práctico, desde la planificación digital hasta la ejecución quirúrgica con resultados verificables.
+      </p>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">✈️</div>
+        <div class="timeline-body">
+          <span class="day-tag">Sábado · 6 Nov</span>
+          <h3>Llegada a Fortaleza</h3>
+          <p>Llegada de los participantes y traslado al hotel. Bienvenida y entrega de materiales del curso.</p>
+          <div class="timeline-pills">
+            <span class="pill">Llegada</span>
+            <span class="pill">Traslado al hotel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🌴</div>
+        <div class="timeline-body">
+          <span class="day-tag">Domingo · 7 Nov</span>
+          <h3>Día Libre + Reunión Inaugural</h3>
+          <p>Excursión opcional por la ciudad. A las 19h, reunión general de presentación: equipo, funcionamiento de la clínica y flujo del curso.</p>
+          <div class="timeline-pills">
+            <span class="pill">Excursión opcional</span>
+            <span class="pill gold">Reunión 19:00h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🔬</div>
+        <div class="timeline-body">
+          <span class="day-tag">Lunes · 8 Nov</span>
+          <h3>Primera Jornada Quirúrgica Completa</h3>
+          <p>Presentación del curso, equipo y clínica. Inicio de las cirugías guiadas digitalmente con 4 tandas a lo largo del día.</p>
+          <div class="timeline-pills">
+            <span class="pill">Planificación Digital</span>
+            <span class="pill gold">4 Tandas Quirúrgicas</span>
+            <span class="pill">Verificación Post-op</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🦷</div>
+        <div class="timeline-body">
+          <span class="day-tag">Martes · 9 Nov</span>
+          <h3>Segunda Jornada Quirúrgica Completa</h3>
+          <p>Continuación de las cirugías guiadas. Presentación de casos por los alumnos, revisión por parejas y 4 nuevas tandas quirúrgicas.</p>
+          <div class="timeline-pills">
+            <span class="pill">Cirugía Guiada</span>
+            <span class="pill gold">Revisión por Parejas</span>
+            <span class="pill">Casos Clínicos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">⚡</div>
+        <div class="timeline-body">
+          <span class="day-tag">Miércoles · 10 Nov</span>
+          <h3>OneDay OnePiece + Tarde Libre</h3>
+          <p>Cirugía guiada con carga inmediata (protocolo OneDay OnePiece). Tarde libre para explorar Fortaleza.</p>
+          <div class="timeline-pills">
+            <span class="pill gold">Carga Inmediata</span>
+            <span class="pill">OneDay OnePiece</span>
+            <span class="pill">Tarde Libre</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🦿</div>
+        <div class="timeline-body">
+          <span class="day-tag">Jueves · 11 Nov</span>
+          <h3>Jornada All-on-Four</h3>
+          <p>Jornada dedicada al protocolo All-on-Four. 4 tandas quirúrgicas con casos de rehabilitación total guiada digitalmente.</p>
+          <div class="timeline-pills">
+            <span class="pill gold">All-on-Four</span>
+            <span class="pill">Rehabilitación Total</span>
+            <span class="pill">Protocolo Digital</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🏆</div>
+        <div class="timeline-body">
+          <span class="day-tag">Viernes · 12 Nov</span>
+          <h3>All-on-Four + Cierre y Entrega de Diplomas</h3>
+          <p>Finalización de las cirugías All-on-Four por los alumnos. A las 14h, cena de clausura con entrega oficial de los diplomas acreditados.</p>
+          <div class="timeline-pills">
+            <span class="pill gold">Diplomas Acreditados</span>
+            <span class="pill">Cena de Clausura</span>
+            <span class="pill">Tarde Libre</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🛫</div>
+        <div class="timeline-body">
+          <span class="day-tag">Sábado · 13 Nov</span>
+          <h3>Regreso de los Participantes</h3>
+          <p>Salida y regreso de los participantes. Traslado libre al aeropuerto de Fortaleza.</p>
+          <div class="timeline-pills">
+            <span class="pill">Traslado al Aeropuerto</span>
+            <span class="pill">Clausura</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ INSTRUTORES ══════════════ -->
+<section class="section" id="instrutores">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Nuestro Equipo</div>
+      <h2 class="section-title">Instructores de Excelencia Internacional</h2>
+      <p class="section-sub">
+        Profesionales con décadas de experiencia clínica y formación internacional que guían cada cirugía a tu lado.
+      </p>
+    </div>
+    <div class="instructors-grid">
+
+      <div class="instructor-card reveal">
+        <div class="instructor-photo">
+          <img src="imgs/dr_juan_mendez.jpg" alt="Dr. Juan Méndez" />
+        </div>
+        <div class="instructor-body">
+          <div class="instructor-role">Dirección del Curso</div>
+          <div class="instructor-name">Dr. Juan Méndez</div>
+          <div class="instructor-title">Especialista en Implantología y Cirugía Plástica Periodontal</div>
+          <ul class="instructor-creds">
+            <li>Máster en Implantología y Rehabilitación Oral – European School of Oral Rehabilitation, Madrid</li>
+            <li>Diploma en Periodoncia e Implantes – Clínica Gingiva, Madrid</li>
+            <li>Diploma Universitario en Implantología Oral y Maxilofacial – Universidad Paris XII</li>
+            <li>Experto en Regeneración Ósea y Mucogingival – Prof. Carlo Tinti, Italia</li>
+            <li>Ex-director de programas internacionales de implantología en Barcelona (2000–2020)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="instructor-card reveal reveal-delay-1">
+        <div class="instructor-photo">
+          <img src="imgs/prof_assis_filipe.jpg" alt="Prof. Assis Filipe" />
+        </div>
+        <div class="instructor-body">
+          <div class="instructor-role">Coordinación Clínica</div>
+          <div class="instructor-name">Prof. Assis Filipe</div>
+          <div class="instructor-title">Cirujano Buco-Maxilo-Facial · CTBMF-PhD · UFC</div>
+          <ul class="instructor-creds">
+            <li>Residencia en CTBMF e Implantología – HUOL/UFRN</li>
+            <li>Especialista por el CFO y el Colegio Brasileño de CTBMF</li>
+            <li>Doctor y Máster en Clínica Odontológica – Universidad Federal de Ceará (UFC)</li>
+            <li>Fellowship en Cirugía de Fisura Labiopalatina – Hospital Infantil Albert Sabin</li>
+            <li>Cirujano de SMILE TRAIN (Cleft Lip and Palate) – EE.UU.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="instructor-card reveal reveal-delay-2">
+        <div class="instructor-photo">
+          <img src="imgs/surgery_hands.jpg" alt="Especialistas invitados" style="object-position: center center;" />
+        </div>
+        <div class="instructor-body">
+          <div class="instructor-role">Profesores Invitados</div>
+          <div class="instructor-name">Especialistas Internacionales</div>
+          <div class="instructor-title">Profesionales invitados en cada edición del programa</div>
+          <ul class="instructor-creds">
+            <li>Especialistas de referencia en cirugía guiada digital</li>
+            <li>Representantes técnicos de Straumann Group y Neodent®</li>
+            <li>Expertos en prótesis sobre implantes y rehabilitación oral</li>
+            <li>Profesionales con trayectoria clínica y académica internacional</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ LOCALIZAÇÃO ══════════════ -->
+<section class="section section--alt" id="localizacao">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Dónde se realiza</div>
+      <h2 class="section-title">Fortaleza, Ceará — Brasil</h2>
+      <p class="section-sub">
+        Capital de Ceará, Fortaleza combina infraestructura de clase mundial con el encanto tropical del Nordeste brasileño.
+      </p>
+    </div>
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <h3>Clinicare Training — Referente del Nordeste</h3>
+        <p>
+          Inaugurada en 2017 como clínica de alto estándar y líder en educación odontológica desde 2018, Clinicare Training es hoy la mayor referencia en posgrado odontológico del Nordeste de Brasil, atrayendo profesionales de todo el país.
+        </p>
+        <ul class="location-perks">
+          <li>
+            <div class="perk-icon">🏛️</div>
+            <span>Auditorios equipados con tecnología de transmisión 4K en vivo</span>
+          </li>
+          <li>
+            <div class="perk-icon">💻</div>
+            <span>Clínicas con flujo digital completo (CBCT, escáner intraoral, planificación 3D)</span>
+          </li>
+          <li>
+            <div class="perk-icon">🔬</div>
+            <span>Ambiente sofisticado que refleja la calidad de los implantes Straumann</span>
+          </li>
+          <li>
+            <div class="perk-icon">🌊</div>
+            <span>A pocos minutos de la Playa de Iracema y del centro histórico de Fortaleza</span>
+          </li>
+          <li>
+            <div class="perk-icon">✈️</div>
+            <span>Aeropuerto Internacional Pinto Martins con vuelos directos desde Brasil y Europa</span>
+          </li>
+        </ul>
+        <div class="location-date-badge">
+          📅 <span>Próxima edición: <strong>6 al 13 de noviembre de 2026</strong></span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1" style="display:flex; flex-direction:column; gap:16px;">
+        <div class="location-map" style="height:260px; flex-shrink:0;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127526.88!2d-38.5434!3d-3.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74a25e2af0d11%3A0x7d60e97c61e4f46f!2sFortaleza%2C%20CE%2C%20Brasil!5e0!3m2!1ses!2ses!4v1680000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Fortaleza, Ceará, Brasil">
+          </iframe>
+        </div>
+        <div style="border-radius:var(--radius); overflow:hidden; height:180px; box-shadow:var(--shadow-lg);">
+          <img src="imgs/clinicare_classroom.jpg" alt="Interior Clinicare Training"
+               style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DEPOIMENTOS ══════════════ -->
+<section class="section" id="depoimentos">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Testimonios</div>
+      <h2 class="section-title">Lo que dicen nuestros alumnos</h2>
+      <p class="section-sub">
+        Profesionales de todo Brasil y del mundo que transformaron su práctica clínica con nuestra inmersión.
+      </p>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          "La inmersión en Fortaleza fue un antes y un después en mi carrera. Operar con cirugía guiada digital desde el primer día, con supervisión de especialistas internacionales, me dio una seguridad que ningún curso teórico podría haberme dado. La inversión valió cada euro."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JR</div>
+          <div>
+            <div class="author-name">Dr. Javier Romero</div>
+            <div class="author-role">Implantólogo · Madrid, España</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Nunca imaginé que en solo 7 días dominaría el protocolo All-on-Four guiado digitalmente. La infraestructura de Clinicare Training es impresionante y los instructores están disponibles en todo momento. Volví a mi clínica con una visión completamente nueva."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LC</div>
+          <div>
+            <div class="author-name">Dra. Laura Castro</div>
+            <div class="author-role">Cirujana Dental · Barcelona, España</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Como cirujano con experiencia en implantes convencionales, el programa de cirugía guiada digital me abrió la mente a un nivel completamente diferente de precisión. El flujo digital, la planificación 3D y la verificación postoperatoria son transformadores. Lo recomiendo sin dudar."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div>
+            <div class="author-name">Dr. Andrés Morales</div>
+            <div class="author-role">CTBMF · Buenos Aires, Argentina</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+      <p style="color:var(--gray400); font-size:.85rem; font-style:italic;">"Educación que transforma la práctica clínica y la vida de los pacientes." — Clinicare Training</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PHOTO BAND (surgery) ══════════════ -->
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; height:220px; overflow:hidden; gap:6px; margin:0 0 0 0;">
+  <div style="overflow:hidden;">
+    <img src="imgs/surgery_real.jpg" alt="Cirugía real"
+         style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s;" />
+  </div>
+  <div style="overflow:hidden;">
+    <img src="imgs/classroom2.jpg" alt="Formación clínica"
+         style="width:100%;height:100%;object-fit:cover;display:block;" />
+  </div>
+  <div style="overflow:hidden;">
+    <img src="imgs/surgery_hands.jpg" alt="Precisión quirúrgica"
+         style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" />
+  </div>
+</div>
+
+<!-- ══════════════ PARCEIROS ══════════════ -->
+<div class="container">
+  <div class="partners-section reveal">
+    <p class="partners-label">Socios Oficiales del Programa</p>
+    <div class="partners-logos">
+      <span class="partner-logo">NEODENT<span>®</span></span>
+      <span class="partner-logo">Straumann<span>Group</span></span>
+      <span class="partner-logo">CLINICARE<span> Training</span></span>
+      <span class="partner-logo">NACAR<span> Clínicas</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ INSCRIÇÃO / PRICING ══════════════ -->
+<section class="section section--alt" id="inscricao">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Inversión e Inscripción</div>
+      <h2 class="section-title">Asegura tu Plaza Ahora</h2>
+      <p class="section-sub">
+        Plazas extremadamente limitadas para garantizar la calidad de la supervisión y la atención individualizada a cada participante.
+      </p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card reveal">
+        <div class="price-card-content">
+          <div class="price-label">Programa Completo · 7 Días</div>
+          <div class="price-amount">
+            <sup>€</sup>Consultar
+          </div>
+          <p class="price-note">Condiciones especiales para inscripciones anticipadas · Financiación disponible</p>
+          <ul class="price-includes">
+            <li>7 días de inmersión clínica en Fortaleza</li>
+            <li>100% de las cirugías realizadas por el alumno</li>
+            <li>4 tandas quirúrgicas por día</li>
+            <li>Tecnología Straumann/Neodent® integrada</li>
+            <li>Planificación digital 3D y cirugía guiada</li>
+            <li>Protocolo All-on-Four y carga inmediata</li>
+            <li>Transmisión 4K en vivo de casos complejos</li>
+            <li>Diploma acreditado internacionalmente</li>
+            <li>Materiales y kits quirúrgicos incluidos</li>
+            <li>Cena de clausura con entrega de diplomas</li>
+          </ul>
+          <a href="https://wa.me/34651039967?text=¡Hola!%20Me%20gustaría%20recibir%20información%20sobre%20el%20Digital%20Guided%20Implant%20Surgery%20Immersion%20Program%20en%20Fortaleza." target="_blank" class="btn btn-primary">
+            🎓 Quiero inscribirme
+          </a>
+          <p class="price-urgency">⚡ Plazas limitadas · <strong>Edición Noviembre 2026</strong></p>
+        </div>
+      </div>
+
+      <div class="form-card reveal reveal-delay-1">
+        <h3>Solicita más información</h3>
+        <p>Rellena el formulario y te contactaremos en menos de 24h.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nome">Nombre completo *</label>
+            <input type="text" id="nome" placeholder="Dr. / Dra. Tu Nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email profesional *</label>
+            <input type="email" id="email" placeholder="tuemail@clinica.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefone">WhatsApp / Teléfono *</label>
+            <input type="tel" id="telefone" placeholder="+34 600 000 000" required />
+          </div>
+          <div class="form-group">
+            <label for="especialidade">Especialidad</label>
+            <select id="especialidade">
+              <option value="">Selecciona tu especialidad</option>
+              <option>Implantología</option>
+              <option>Cirugía Buco-Maxilo-Facial</option>
+              <option>Periodoncia</option>
+              <option>Prótesis Dental</option>
+              <option>Odontología General</option>
+              <option>Otra especialidad</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensaje (opcional)</label>
+            <textarea id="mensagem" placeholder="Dudas, disponibilidad, forma de pago..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Quiero saber más →</button>
+          <div class="success-msg" id="successMsg">
+            ✅ ¡Mensaje enviado! Te contactaremos pronto por WhatsApp o email.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-brand-name">Clinicare <span>Training</span></div>
+          <p class="footer-tagline">Educación que transforma la práctica clínica y la vida de los pacientes.</p>
+        </div>
+        <p style="font-size:.85rem; margin-bottom:20px;">
+          Referente en posgrado odontológico en el Nordeste de Brasil desde 2018. Más de 2.000 profesionales capacitados por año.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Instagram">📸</a>
+          <a href="#" class="social-btn" title="Facebook">👤</a>
+          <a href="#" class="social-btn" title="YouTube">▶️</a>
+          <a href="#" class="social-btn" title="LinkedIn">💼</a>
+          <a href="https://wa.me/34651039967" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="#sobre">Sobre el Curso</a></li>
+          <li><a href="#modulos">Módulos</a></li>
+          <li><a href="#instrutores">Instructores</a></li>
+          <li><a href="#localizacao">Ubicación</a></li>
+          <li><a href="#depoimentos">Testimonios</a></li>
+          <li><a href="#inscricao">Inscripción</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programa</h4>
+        <ul class="footer-links">
+          <li><a href="#">Cirugía Guiada Digital</a></li>
+          <li><a href="#">Protocolo All-on-Four</a></li>
+          <li><a href="#">Carga Inmediata</a></li>
+          <li><a href="#">Planificación 3D</a></li>
+          <li><a href="#">Diploma Acreditado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Fortaleza, Ceará, Brasil</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+34 651 039 967</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span>formacion@clinicasnacar.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>👤</span>
+            <span>Contacto: Eduardo Burger</span>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <a href="https://wa.me/34651039967?text=¡Hola!%20Me%20interesa%20el%20programa%20de%20cirugía%20guiada%20en%20Fortaleza." target="_blank" class="btn-whatsapp">
+            💬 WhatsApp directo
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Clinicare Training · Todos los derechos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos de Uso</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════ FLOATING WHATSAPP ══════════════ -->
+<a href="https://wa.me/34651039967?text=¡Hola!%20Quiero%20información%20sobre%20el%20Digital%20Guided%20Implant%20Surgery%20en%20Fortaleza." target="_blank" class="fab-whatsapp" title="Contáctanos por WhatsApp" aria-label="WhatsApp">
+  💬
+</a>
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
+<script>
+  // ─── Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // ─── Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ─── Form submit (demo)
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    if (!nome || !email || !telefone) {
+      alert('Por favor, completa nombre, email y teléfono.');
+      return;
+    }
+    const msg = document.getElementById('successMsg');
+    msg.style.display = 'block';
+    this.reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 6000);
+  });
+
+  // ─── Smooth active nav link highlight
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${current}`
+        ? 'var(--gold)'
+        : '';
+    });
+  });
+
+  // ─── Animate stat numbers on scroll
+  function animateCounter(el, target, duration = 1500) {
+    let start = 0;
+    const isFloat = target % 1 !== 0;
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      const val = Math.floor(progress * target);
+      el.textContent = isFloat ? val.toFixed(0) : val.toLocaleString('es-ES');
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('es-ES');
+    };
+    requestAnimationFrame(step);
+  }
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const vals = e.target.querySelectorAll('.val');
+        vals.forEach(v => {
+          const raw = v.textContent.replace(/\D/g,'');
+          if (raw) animateCounter(v, parseInt(raw));
+        });
+        statObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  const statsBar = document.querySelector('.stats-bar-inner');
+  if (statsBar) statObserver.observe(statsBar);
+</script>
+</body>
+</html>
