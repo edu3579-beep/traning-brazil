@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Técnicas Quirúrgicas – DGIS Fortaleza 2026" lang="es">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Protocolos quirúrgicos</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">3 Técnicas de Cirugía Guiada Digital</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:600px;">Del nivel básico al avanzado en una sola semana. Tres protocolos completos con pacientes reales.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <!-- Técnica 1 -->
+    <div class="grid-2" style="gap:48px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--sky100);">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span class="badge-basic" style="font-size:.75rem;padding:4px 12px;">Nivel básico–intermedio</span>
+          <span style="font-size:.72rem;font-weight:700;color:var(--sl400);">Días 1–2 · Lun–Mar</span>
+        </div>
+        <h2 class="sec-h2">Implantología Guiada Digital</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">El protocolo estándar de cirugía guiada por computadora. Planificación 3D preoperatoria con software de diseño de férulas quirúrgicas, ejecución guiada con máxima precisión.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+          {[
+            'Planificación digital del caso en software 3D',
+            'Diseño y fabricación de férula quirúrgica',
+            'Colocación de implantes con guía digital',
+            'Verificación postoperatoria planned vs. executed',
+          ].map(i => (
+            <li style="display:flex;gap:10px;font-size:.86rem;color:var(--sl700);word-wrap:break-word;">
+              <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--green)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+            </li>
+          ))}
+        </ul>
+        <a href="/inscripcion" class="btn btn-sky">Inscribirme →</a>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image6.jpeg" alt="Implantología guiada" style="height:320px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Guías quirúrgicas en boca — implantología guiada digital</div>
+      </div>
+    </div>
+
+    <!-- Técnica 2 -->
+    <div class="grid-2" style="gap:48px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--sky100);">
+      <div class="img-frame" style="order:-1 on mobile;">
+        <img src="/pptx_images/image9.jpeg" alt="OneDay OnePiece" style="height:320px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Implante OneDay OnePiece — carga inmediata</div>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span class="badge-mid" style="font-size:.75rem;padding:4px 12px;">Nivel intermedio</span>
+          <span style="font-size:.72rem;font-weight:700;color:var(--sl400);">Día 3 · Miércoles</span>
+        </div>
+        <h2 class="sec-h2">OneDay OnePiece</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">Protocolo de carga inmediata con implantes de una sola pieza. El paciente entra y sale el mismo día con corona provisional colocada. Máxima eficiencia clínica con resultado estético inmediato.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+          {[
+            'Selección de casos aptos para carga inmediata',
+            'Planificación digital específica para OneDay',
+            'Cirugía guiada con implante de una pieza',
+            'Carga provisional el mismo día de la cirugía',
+          ].map(i => (
+            <li style="display:flex;gap:10px;font-size:.86rem;color:var(--sl700);word-wrap:break-word;">
+              <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+            </li>
+          ))}
+        </ul>
+        <a href="/inscripcion" class="btn btn-sky">Inscribirme →</a>
+      </div>
+    </div>
+
+    <!-- Técnica 3 -->
+    <div class="grid-2" style="gap:48px;align-items:center;margin-bottom:56px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <span class="badge-advanced" style="font-size:.75rem;padding:4px 12px;">Nivel avanzado</span>
+          <span style="font-size:.72rem;font-weight:700;color:var(--sl400);">Días 4–5 · Jue–Vie</span>
+        </div>
+        <h2 class="sec-h2">All-on-Four</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">Rehabilitación completa del arco con cuatro implantes estratégicamente colocados mediante guía digital. El protocolo más complejo del programa, con planificación avanzada y resultado de arco completo.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+          {[
+            'Planificación avanzada del arco completo',
+            'Angulación distal de implantes posteriores',
+            'Cirugía All-on-Four con guía digital',
+            'Carga inmediata con prótesis provisional completa',
+          ].map(i => (
+            <li style="display:flex;gap:10px;font-size:.86rem;color:var(--sl700);word-wrap:break-word;">
+              <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="#6d28d9" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+            </li>
+          ))}
+        </ul>
+        <a href="/inscripcion" class="btn btn-sky">Inscribirme →</a>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image8.jpeg" alt="All-on-Four cirugía" style="height:320px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Cirugía All-on-Four en equipo — CliniCare Training</div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3 style="font-weight:800;font-size:1.1rem;color:var(--sky900);margin-bottom:6px;">Tres técnicas. Una semana. Pacientes reales.</h3>
+        <p style="font-size:.85rem;color:var(--sl500);">Tú operas en todos los casos bajo supervisión experta directa.</p>
+      </div>
+      <a href="/inscripcion" class="btn btn-sky btn-lg">Inscribirme →</a>
+    </div>
+  </div>
+</div>
+</Layout>

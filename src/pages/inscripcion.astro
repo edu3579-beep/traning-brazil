@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+const WA = 'https://wa.me/34651039967';
+---
+<Layout title="Inscripción – DGIS Fortaleza 2026" lang="es">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Plazas limitadas</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Inscripción al programa</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:600px;">Cupo reducido para garantizar supervisión individualizada. Asegura tu plaza ahora.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="gap:48px;align-items:start;">
+
+      <!-- FORM -->
+      <div>
+        <span class="eyebrow">Formulario de inscripción</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Solicita tu plaza</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:28px;">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas para confirmar disponibilidad y condiciones.</p>
+
+        <form id="inscripcion-form" style="display:flex;flex-direction:column;gap:18px;">
+          <div class="grid-2" style="gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Nombre *</label>
+              <input type="text" id="f-nombre" class="form-input" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Apellidos *</label>
+              <input type="text" id="f-apellidos" class="form-input" placeholder="Tus apellidos" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input type="email" id="f-email" class="form-input" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Teléfono / WhatsApp *</label>
+            <input type="tel" id="f-tel" class="form-input" placeholder="+34 600 000 000" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">País / Ciudad</label>
+            <input type="text" id="f-pais" class="form-input" placeholder="España – Madrid" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Especialidad / Área clínica</label>
+            <input type="text" id="f-especialidad" class="form-input" placeholder="Implantología, Cirugía oral..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Experiencia en implantología</label>
+            <select id="f-exp" class="form-input" style="appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;">
+              <option value="">Selecciona...</option>
+              <option>Sin experiencia en implantología</option>
+              <option>Nivel básico (menos de 2 años)</option>
+              <option>Nivel intermedio (2–5 años)</option>
+              <option>Nivel avanzado (más de 5 años)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">¿Alguna pregunta o comentario?</label>
+            <textarea id="f-mensaje" class="form-input" rows="3" placeholder="Escribe aquí tus preguntas..." style="resize:vertical;"></textarea>
+          </div>
+
+          <button type="button" onclick="enviarWA()" class="btn btn-wa btn-lg" style="justify-content:center;font-size:1rem;padding:14px;">
+            💬 Enviar inscripción por WhatsApp
+          </button>
+          <p style="font-size:.75rem;color:var(--sl400);text-align:center;">Al hacer clic se abrirá WhatsApp con tu solicitud pre-rellenada.</p>
+        </form>
+      </div>
+
+      <!-- INFO LATERAL -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+
+        <div class="card">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <h3 style="font-weight:800;font-size:1rem;color:var(--sky900);margin-bottom:14px;">📋 Información del programa</h3>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+              {[
+                ['📅 Fechas', '6–13 Noviembre 2026'],
+                ['📍 Lugar', 'CliniCare Training · Fortaleza, Brasil'],
+                ['👥 Cupo', 'Limitado — plazas reducidas'],
+                ['🏆 Diploma', 'Acreditado al finalizar el programa'],
+                ['🌐 Idioma', 'Español'],
+              ].map(([k,v]) => (
+                <li style="display:flex;gap:10px;font-size:.84rem;word-wrap:break-word;">
+                  <span style="font-weight:700;color:var(--sky900);min-width:80px;flex-shrink:0;">{k}</span>
+                  <span style="color:var(--sl500);">{v}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-accent-green"></div>
+          <div class="card-body">
+            <h3 style="font-weight:800;font-size:1rem;color:var(--sky900);margin-bottom:10px;">💬 Contacto directo</h3>
+            <p style="font-size:.84rem;color:var(--sl500);margin-bottom:16px;">¿Prefieres hablar directamente? Contacta con Eduardo Burger:</p>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href={WA} target="_blank" class="btn btn-wa" style="justify-content:center;">💬 WhatsApp</a>
+              <a href="tel:+34651039967" class="btn btn-outline" style="justify-content:center;">📞 +34 651 039 967</a>
+              <a href="mailto:formacion@clinicasnacar.com" class="btn btn-outline" style="justify-content:center;font-size:.8rem;">✉ formacion@clinicasnacar.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-accent-gold"></div>
+          <div class="card-body">
+            <h3 style="font-weight:800;font-size:1rem;color:var(--sky900);margin-bottom:10px;">⬇ Descarga el programa</h3>
+            <p style="font-size:.84rem;color:var(--sl500);margin-bottom:16px;">Descarga el programa completo en PDF para revisarlo con calma.</p>
+            <a href="/descargar" class="btn btn-dark" style="width:100%;justify-content:center;">⬇ Descargar PDF</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+function enviarWA() {
+  const n  = document.getElementById('f-nombre').value;
+  const ap = document.getElementById('f-apellidos').value;
+  const em = document.getElementById('f-email').value;
+  const tel= document.getElementById('f-tel').value;
+  const pa = document.getElementById('f-pais').value;
+  const es = document.getElementById('f-especialidad').value;
+  const ex = document.getElementById('f-exp').value;
+  const ms = document.getElementById('f-mensaje').value;
+  if (!n || !ap || !em || !tel) { alert('Por favor rellena los campos obligatorios (*)'); return; }
+  const txt = encodeURIComponent(
+    `Hola, me gustaría inscribirme al DGIS Fortaleza 2026.\n\n` +
+    `👤 Nombre: ${n} ${ap}\n📧 Email: ${em}\n📞 Teléfono: ${tel}\n` +
+    (pa  ? `🌍 País/Ciudad: ${pa}\n` : '') +
+    (es  ? `🦷 Especialidad: ${es}\n` : '') +
+    (ex  ? `📊 Experiencia: ${ex}\n` : '') +
+    (ms  ? `\n💬 Mensaje: ${ms}` : '')
+  );
+  window.open(`https://wa.me/34651039967?text=${txt}`, '_blank');
+}
+</script>
+</Layout>

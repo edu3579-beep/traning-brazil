@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="El Programa – DGIS Fortaleza 2026" lang="es">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">El Programa</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Inmersión quirúrgica real sobre pacientes</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:600px;">En Fortaleza todas las cirugías son realizadas por los propios alumnos. Práctica clínica directa con supervisión experta y planificación digital guiada.</p>
+  </div>
+</div>
+
+<!-- Tú eres el cirujano + fotos -->
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="gap:48px;align-items:start;margin-bottom:64px;">
+      <div style="display:flex;flex-direction:column;gap:36px;">
+        <div>
+          <span class="eyebrow">Enfoque clínico</span>
+          <h2 class="sec-h2" style="margin-top:10px;">Tú eres el cirujano principal</h2>
+          <div class="sky-bar"></div>
+          <p class="lead" style="margin-bottom:14px;">A diferencia de otros programas formativos, en el DGIS Fortaleza los alumnos no asisten como observadores: <strong>operan</strong>. Cada alumno actúa como cirujano principal en cada tanda quirúrgica, con supervisión directa del equipo docente.</p>
+          <p class="lead">El programa cubre tres protocolos de cirugía guiada digital, de mayor a menor complejidad, con sesiones de verificación postoperatoria (planned vs. executed) al finalizar cada jornada.</p>
+        </div>
+        <div>
+          <span class="eyebrow">Metodología</span>
+          <h2 class="sec-h2" style="margin-top:10px;">Flujo de trabajo digital completo</h2>
+          <div class="sky-bar"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+            {[
+              'Planificación digital de cada caso antes de la cirugía',
+              'Revisión por parejas y validación con el equipo docente',
+              'Ejecución de la cirugía como cirujano principal',
+              'Verificación postoperatoria planned vs. executed',
+              'Análisis de precisión y retroalimentación clínica',
+            ].map(i => (
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--sl700);word-wrap:break-word;">
+                <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                {i}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="img-frame">
+          <img src="/pptx_images/image8.jpeg" alt="Cirugía en equipo" style="height:220px;width:100%;object-fit:cover;" />
+          <div class="img-cap">Cirugía hands-on con paciente real</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/image4.jpeg" alt="Cirujano con lupa" style="height:180px;width:100%;object-fit:cover;" />
+          <div class="img-cap">Magnificación óptica en cirugía guiada</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/image5.jpeg" alt="Transmisión en directo" style="height:160px;width:100%;object-fit:cover;" />
+          <div class="img-cap">Transmisión quirúrgica en directo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flujo diario 4 pasos -->
+    <div class="center mx-auto" style="margin-bottom:36px;">
+      <span class="eyebrow">Cada día</span>
+      <h2 class="sec-h2" style="margin-top:10px;">Flujo diario de Cirugía Guiada Digital</h2>
+      <div class="sky-bar"></div>
+      <p class="lead">Un día tipo en el programa: estructura clara con máximo aprovechamiento clínico.</p>
+    </div>
+    <div class="grid-4" style="margin-bottom:56px;">
+      {[
+        {n:'01', icon:'🖥️', t:'Planificación digital', d:'Revisión y diseño del plan quirúrgico con software de guía digital para cada caso clínico del día.'},
+        {n:'02', icon:'👁️', t:'Revisión por parejas',  d:'Validación del plan con el equipo docente antes de la intervención quirúrgica.'},
+        {n:'03', icon:'🦷', t:'Cirugía por tandas',    d:'4 rondas de cirugía guiada al día. El alumno opera como cirujano principal en cada tanda.'},
+        {n:'04', icon:'📊', t:'Verificación postop',   d:'Análisis planned vs. executed para medir la precisión al finalizar cada jornada.'},
+      ].map(s => (
+        <div class="card" style="text-align:center;">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div style="width:40px;height:40px;background:var(--sky800);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:#fff;font-weight:900;font-size:.8rem;">{s.n}</div>
+            <div style="font-size:1.7rem;margin-bottom:10px;">{s.icon}</div>
+            <h4 style="font-weight:800;font-size:.88rem;color:var(--sky900);margin-bottom:8px;word-wrap:break-word;">{s.t}</h4>
+            <p style="font-size:.79rem;color:var(--sl500);line-height:1.65;word-wrap:break-word;">{s.d}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3 style="font-weight:800;font-size:1.1rem;color:var(--sky900);margin-bottom:6px;">En Fortaleza tú eres el cirujano</h3>
+        <p style="font-size:.85rem;color:var(--sl500);">100% cirugías realizadas por alumnos · Supervisión experta continua · Diploma acreditado</p>
+      </div>
+      <a href="/inscripcion" class="btn btn-sky btn-lg">Inscribirme →</a>
+    </div>
+  </div>
+</div>
+
+</Layout>

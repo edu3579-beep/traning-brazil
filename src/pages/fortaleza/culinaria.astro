@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Culinaria – DGIS Fortaleza 2026" lang="es">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Fortaleza</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Culinaria</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:620px;">La gastronomía de Fortaleza es una celebración del mar, la tierra y la cultura nordestina. Sabores únicos que convierten cada comida en una experiencia memorable.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <!-- Intro -->
+    <div class="grid-2" style="gap:56px;align-items:start;margin-bottom:72px;">
+      <div>
+        <span class="eyebrow">Gastronomía nordestina</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Una cocina con identidad propia</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:18px;">Fortaleza es sinónimo de langosta, camarón y pez fresco directamente del Atlántico. La cocina cearense fusiona ingredientes del litoral con la tradición del sertão — carne de sol, feijão verde, macaxeira — creando una oferta gastronómica inigualable en Brasil.</p>
+        <p class="lead" style="margin-bottom:28px;">Las barracas de playa, los restaurantes de Beira Mar y los mercados locales son el escenario perfecto para descubrir una cultura culinaria auténtica, accesible y vibrante.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--sky50);border:1.5px solid var(--sky200);border-radius:14px;padding:28px 32px;">
+          <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--sky600);margin-bottom:16px;">Platos imprescindibles</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            {[
+              { dish: 'Lagosta grelhada', desc: 'Langosta atlántica a la brasa, estandarte de la gastronomía cearense.' },
+              { dish: 'Moqueca de camarão', desc: 'Guiso de camarón en leche de coco y aceite de dendê. Aroma inconfundible.' },
+              { dish: 'Carne de sol com macaxeira', desc: 'Carne curada al sol servida con yuca frita. Emblema del nordeste.' },
+              { dish: 'Baião de dois', desc: 'Arroz con feijão verde, queijo coalho y charque. Comfort food nordestino.' },
+              { dish: 'Tapioca', desc: 'Masa de yuca rellena dulce o salada. Desayuno y snack favorito local.' },
+            ].map(p => (
+              <div style="border-bottom:1px solid var(--sky100);padding-bottom:10px;">
+                <div style="font-weight:800;font-size:.86rem;color:var(--sky900);">{p.dish}</div>
+                <div style="font-size:.78rem;color:var(--sl500);margin-top:2px;">{p.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tipos de restaurantes / experiencias -->
+    <div style="margin-bottom:64px;">
+      <div class="center" style="margin-bottom:36px;">
+        <span class="eyebrow">Experiencias</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Dónde y cómo comer en Fortaleza</h2>
+        <div class="sky-bar" style="margin:12px auto 0;"></div>
+      </div>
+      <div class="grid-3" style="gap:24px;">
+        {[
+          {
+            icon: '🌴',
+            title: 'Barracas de playa',
+            badge: 'Imprescindible',
+            desc: 'Locales informales a pie de arena. Las barracas de la Praia do Futuro son famosas en todo Brasil por sus mariscos frescos y ambiente festivo.',
+            tip: 'Recomendada: Barraca da Miriam',
+          },
+          {
+            icon: '🦞',
+            title: 'Restaurantes de Beira Mar',
+            badge: 'Gastronómico',
+            desc: 'La avenida costanera concentra los mejores restaurantes de la ciudad. Langosta, pez pargo y camarão con vistas al Atlántico.',
+            tip: 'Zona: Av. Beira Mar, Meireles',
+          },
+          {
+            icon: '🍺',
+            title: 'Mercado dos Pinhões',
+            badge: 'Cultura local',
+            desc: 'Mercado gastronómico en el corazón del centro histórico. Artesanía, especias, tucumã y los sabores más auténticos del Ceará.',
+            tip: 'Centro histórico de Fortaleza',
+          },
+          {
+            icon: '🥥',
+            title: 'Coco gelado',
+            badge: 'Refresco local',
+            desc: 'Agua de coco directamente del cocotero. Omnipresente en playas y esquinas de la ciudad. El refresco oficial de Fortaleza.',
+            tip: 'Disponible en toda la ciudad',
+          },
+          {
+            icon: '🎉',
+            title: 'Cenas de grupo',
+            badge: 'Para el programa',
+            desc: 'La organización coordina cenas opcionales de grupo para los participantes del DGIS en restaurantes representativos de la gastronomía local.',
+            tip: 'Incluido en la agenda social',
+          },
+          {
+            icon: '☕',
+            title: 'Cafés y panaderías',
+            badge: 'Día a día',
+            desc: 'El café cearense — fuerte y dulce — y los bolos (bizcochos) son el ritual matutino perfecto antes de cada jornada formativa.',
+            tip: 'Cerca de CliniCare Training',
+          },
+        ].map(c => (
+          <div class="card">
+            <div class="card-accent"></div>
+            <div class="card-body">
+              <div style="font-size:1.8rem;margin-bottom:10px;">{c.icon}</div>
+              <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;margin-bottom:8px;">{c.badge}</div>
+              <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:6px;">{c.title}</h3>
+              <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;margin-bottom:10px;">{c.desc}</p>
+              <p style="font-size:.73rem;color:var(--sky600);font-weight:700;">📍 {c.tip}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bebidas -->
+    <div style="background:var(--sky900);border-radius:14px;padding:44px;margin-bottom:64px;color:#fff;">
+      <div class="grid-2" style="gap:48px;align-items:center;">
+        <div>
+          <span class="eyebrow-white">Bebidas típicas</span>
+          <h2 class="sec-h2-white" style="margin-top:10px;margin-bottom:20px;">Para brindar en Fortaleza</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            {[
+              { name: 'Caipirinha', desc: 'La caipirinha con cachaça artesanal del interior del Ceará es insuperable. Limón tahití, azúcar y mucho hielo.' },
+              { name: 'Caju Amigo', desc: 'Licor suave de marañón (caju), la fruta tropical emblemática del estado de Ceará. Suave y frutal.' },
+              { name: 'Suco de frutas nordestinas', desc: 'Zumos frescos de graviola, cajá, umbu y cupuaçu. Sabores imposibles de encontrar fuera del nordeste.' },
+              { name: 'Cerveja gelada', desc: 'La cerveza fría es el acompañamiento de cualquier barraca de playa. Chopp (tirada) en los bares de Beira Mar.' },
+            ].map(b => (
+              <div style="display:flex;gap:12px;">
+                <div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:8px;"></div>
+                <div>
+                  <span style="font-weight:800;font-size:.88rem;color:#fff;">{b.name} — </span>
+                  <span style="font-size:.84rem;color:rgba(255,255,255,.72);">{b.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:28px;">
+          <div style="font-size:1.4rem;margin-bottom:12px;">🥭</div>
+          <h3 style="font-weight:800;font-size:1rem;color:#fff;margin-bottom:8px;">Frutas exóticas del Ceará</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:16px;">El nordeste de Brasil ofrece una biodiversidad frutal única. No te vayas sin probar:</p>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            {['Cajá (ciruela tropical amarilla)','Graviola (guanábana cremosa)','Seriguela (ciruela nordestina)','Sapoti (zapotico dulce y suave)','Pitanga (cereza brasileña)'].map(f => (
+              <div style="font-size:.8rem;color:rgba(255,255,255,.8);">• {f}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <div>
+        <p style="font-size:.95rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Fortaleza te espera</p>
+        <p style="font-size:.84rem;color:var(--sl500);">8 días de formación intensiva y gastronomía nordestina inolvidable. Noviembre 2026.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/inscripcion" class="btn btn-sky btn-lg">Inscribirme →</a>
+        <a href="/fortaleza/ciudad" class="btn btn-outline">La Ciudad →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</Layout>

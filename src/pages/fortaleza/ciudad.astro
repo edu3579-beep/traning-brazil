@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="La Ciudad – DGIS Fortaleza 2026" lang="es">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Fortaleza</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">La Ciudad</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:620px;">Fortaleza, capital del estado de Ceará, es una metrópolis vibrante en el noreste de Brasil con 2,7 millones de habitantes, playas interminables y una energía única que la convierte en destino inigualable.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <!-- Hero stats strip -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--sky100);border-radius:14px;overflow:hidden;margin-bottom:64px;">
+      {[
+        { val: '2,7M', lbl: 'Habitantes' },
+        { val: '27°C', lbl: 'Temperatura media' },
+        { val: '5.ª', lbl: 'Ciudad más grande de Brasil' },
+        { val: '365', lbl: 'Días de sol al año' },
+      ].map(s => (
+        <div style="background:#fff;padding:28px 20px;text-align:center;">
+          <div style="font-size:2rem;font-weight:900;color:var(--sky700);line-height:1;">{s.val}</div>
+          <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--sl400);margin-top:6px;">{s.lbl}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- About the city -->
+    <div class="grid-2" style="gap:56px;align-items:start;margin-bottom:72px;">
+      <div>
+        <span class="eyebrow">Conoce Fortaleza</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Una ciudad que enamora</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:18px;">Fortaleza combina el dinamismo de una gran metrópolis con la hospitalidad genuina del nordeste brasileño. Sus playas urbanas, su oferta cultural y su escena gastronómica la convierten en una experiencia completa más allá del programa formativo.</p>
+        <p class="lead" style="margin-bottom:28px;">La ciudad es el centro económico y cultural de Ceará, con una infraestructura hotelera de primer nivel, conexiones aéreas internacionales directas y un clima tropical que garantiza sol durante todo el año.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          {[
+            { icon: '🏖️', title: 'Playa de Iracema', desc: 'La playa urbana más icónica, a minutos del centro histórico y la Beira Mar.' },
+            { icon: '🌊', title: 'Praia do Futuro', desc: 'Playa extensa y animada, con barracas y ambiente inigualable al atardecer.' },
+            { icon: '🏛️', title: 'Centro histórico', desc: 'Catedral, Teatro José de Alencar y la arquitectura colonial del siglo XIX.' },
+            { icon: '🛍️', title: 'Centro Dragão do Mar', desc: 'Complejo cultural con museos, cine, teatro y restaurantes.' },
+          ].map(p => (
+            <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--sky100);border-radius:10px;background:#fff;">
+              <div style="font-size:1.4rem;flex-shrink:0;">{p.icon}</div>
+              <div>
+                <div style="font-weight:800;font-size:.88rem;color:var(--sky900);margin-bottom:3px;">{p.title}</div>
+                <div style="font-size:.8rem;color:var(--sl500);line-height:1.6;">{p.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="img-frame">
+          <img src="/pptx_images/fortaleza-hero.jpg.jpg" alt="Fortaleza desde el aire" style="width:100%;height:340px;object-fit:cover;object-position:center;" />
+          <div class="img-cap">Vista aérea de Fortaleza · Costa del Ceará</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/image2.jpeg" alt="CliniCare Training Fortaleza" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="img-cap">📍 CliniCare Training · Sede del programa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cómo llegar -->
+    <div style="background:var(--sky50);border:1.5px solid var(--sky200);border-radius:14px;padding:44px;margin-bottom:64px;">
+      <span class="eyebrow">Logística</span>
+      <h2 class="sec-h2" style="margin-top:10px;margin-bottom:28px;">Cómo llegar a Fortaleza</h2>
+      <div class="grid-3" style="gap:24px;">
+        {[
+          { icon: '✈️', title: 'Aeropuerto Internacional', desc: 'Aeropuerto Pinto Martins (FOR). Conexiones directas desde Lisboa, Madrid, Miami y principales capitales de Brasil. A 10 min del centro.' },
+          { icon: '🏨', title: 'Alojamiento', desc: 'Amplia oferta hotelera en todas las categorías en la Beira Mar y playa de Iracema, a menos de 15 minutos de CliniCare Training.' },
+          { icon: '🚗', title: 'Traslados', desc: 'Uber disponible en toda la ciudad. La organización coordina traslados colectivos desde el aeropuerto para los participantes del programa.' },
+        ].map(c => (
+          <div style="background:#fff;border-radius:10px;padding:24px;border:1px solid var(--sky200);">
+            <div style="font-size:1.8rem;margin-bottom:12px;">{c.icon}</div>
+            <div style="font-weight:800;font-size:.9rem;color:var(--sky900);margin-bottom:8px;">{c.title}</div>
+            <div style="font-size:.81rem;color:var(--sl500);line-height:1.7;">{c.desc}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <div>
+        <p style="font-size:.95rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">¿Listo para vivir Fortaleza?</p>
+        <p style="font-size:.84rem;color:var(--sl500);">Consulta disponibilidad y reserva tu plaza en el programa DGIS 2026.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/inscripcion" class="btn btn-sky btn-lg">Inscribirme →</a>
+        <a href="/fortaleza/culinaria" class="btn btn-outline">Gastronomía →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</Layout>

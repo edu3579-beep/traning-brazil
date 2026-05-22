@@ -1,0 +1,99 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout title="The City – DGIS Fortaleza 2026" lang="en">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Fortaleza</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">The City</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:620px;">Fortaleza, capital of Ceará state, is a vibrant metropolis in northeastern Brazil with 2.7 million inhabitants, endless beaches and a unique energy that makes it an unmissable destination.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--sky100);border-radius:14px;overflow:hidden;margin-bottom:64px;">
+      {[
+        { val: '2.7M', lbl: 'Inhabitants' },
+        { val: '27°C', lbl: 'Average temperature' },
+        { val: '5th', lbl: 'Largest city in Brazil' },
+        { val: '365', lbl: 'Sunny days per year' },
+      ].map(s => (
+        <div style="background:#fff;padding:28px 20px;text-align:center;">
+          <div style="font-size:2rem;font-weight:900;color:var(--sky700);line-height:1;">{s.val}</div>
+          <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--sl400);margin-top:6px;">{s.lbl}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="grid-2" style="gap:56px;align-items:start;margin-bottom:72px;">
+      <div>
+        <span class="eyebrow">Discover Fortaleza</span>
+        <h2 class="sec-h2" style="margin-top:10px;">A city that captivates</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:18px;">Fortaleza blends the dynamism of a major metropolis with the genuine hospitality of northeastern Brazil. Its urban beaches, cultural scene and culinary offer make it a complete experience beyond the training programme.</p>
+        <p class="lead" style="margin-bottom:28px;">The city is the economic and cultural hub of Ceará, with first-class hotel infrastructure, direct international flight connections and a tropical climate that guarantees sunshine all year round.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          {[
+            { icon: '🏖️', title: 'Praia de Iracema', desc: 'The most iconic urban beach, minutes from the historic centre and Beira Mar avenue.' },
+            { icon: '🌊', title: 'Praia do Futuro', desc: 'A long, lively beach with barracas and unrivalled sunset atmosphere.' },
+            { icon: '🏛️', title: 'Historic Centre', desc: 'Cathedral, Teatro José de Alencar and 19th-century colonial architecture.' },
+            { icon: '🛍️', title: 'Dragão do Mar Centre', desc: 'Cultural complex with museums, cinema, theatre and restaurants.' },
+          ].map(p => (
+            <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--sky100);border-radius:10px;background:#fff;">
+              <div style="font-size:1.4rem;flex-shrink:0;">{p.icon}</div>
+              <div>
+                <div style="font-weight:800;font-size:.88rem;color:var(--sky900);margin-bottom:3px;">{p.title}</div>
+                <div style="font-size:.8rem;color:var(--sl500);line-height:1.6;">{p.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="img-frame">
+          <img src="/pptx_images/fortaleza-hero.jpg.jpg" alt="Fortaleza aerial view" style="width:100%;height:340px;object-fit:cover;object-position:center;" />
+          <div class="img-cap">Aerial view of Fortaleza · Coast of Ceará</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/image2.jpeg" alt="CliniCare Training Fortaleza" style="width:100%;height:200px;object-fit:cover;" />
+          <div class="img-cap">📍 CliniCare Training · Programme venue</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--sky50);border:1.5px solid var(--sky200);border-radius:14px;padding:44px;margin-bottom:64px;">
+      <span class="eyebrow">Logistics</span>
+      <h2 class="sec-h2" style="margin-top:10px;margin-bottom:28px;">Getting to Fortaleza</h2>
+      <div class="grid-3" style="gap:24px;">
+        {[
+          { icon: '✈️', title: 'International Airport', desc: 'Pinto Martins Airport (FOR). Direct connections from Lisbon, Miami and major Brazilian cities. 10 minutes from the city centre.' },
+          { icon: '🏨', title: 'Accommodation', desc: 'Wide hotel offer in all categories along Beira Mar and Praia de Iracema, less than 15 minutes from CliniCare Training.' },
+          { icon: '🚗', title: 'Transfers', desc: 'Uber available throughout the city. The organisation coordinates shared airport transfers for programme participants.' },
+        ].map(c => (
+          <div style="background:#fff;border-radius:10px;padding:24px;border:1px solid var(--sky200);">
+            <div style="font-size:1.8rem;margin-bottom:12px;">{c.icon}</div>
+            <div style="font-weight:800;font-size:.9rem;color:var(--sky900);margin-bottom:8px;">{c.title}</div>
+            <div style="font-size:.81rem;color:var(--sl500);line-height:1.7;">{c.desc}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <p style="font-size:.95rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Ready to experience Fortaleza?</p>
+        <p style="font-size:.84rem;color:var(--sl500);">Check availability and reserve your place in the DGIS 2026 programme.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/en/registration" class="btn btn-sky btn-lg">Apply now →</a>
+        <a href="/en/fortaleza/cuisine" class="btn btn-outline">Cuisine →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</Layout>

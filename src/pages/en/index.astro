@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="DGIS Fortaleza 2026 – Digital Guided Implant Surgery Immersion Program" lang="en">
+
+<section style="min-height:92vh;display:grid;grid-template-columns:56fr 44fr;overflow:hidden;">
+  <div style="background:linear-gradient(145deg,#f0f9ff 0%,#e0f2fe 100%);display:flex;flex-direction:column;justify-content:space-between;padding:72px 56px 52px;">
+    <div>
+      <div class="gold-bar" style="margin-bottom:32px;"></div>
+      <span class="eyebrow">Clinical course · Fortaleza, Brazil</span>
+      <h1 class="page-h1" style="margin-top:10px;margin-bottom:8px;">Digital Guided<br/>Implant Surgery</h1>
+      <h2 style="font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:var(--sky600);margin-bottom:6px;">Immersion Program</h2>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:var(--sky800);color:#fff;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:.5px;">
+        📅 November 6–13, 2026
+      </div>
+      <p class="lead" style="max-width:440px;margin-bottom:12px;">Discover the capital of Ceará: the perfect setting for your professional growth.</p>
+      <p style="font-size:.95rem;color:var(--sl700);line-height:1.8;max-width:440px;margin-bottom:36px;word-wrap:break-word;">
+        A week of real surgical immersion. <strong>You operate. You learn.</strong> Digital guided planning, expert supervision and an accredited diploma.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/en/registration" class="btn btn-sky btn-lg">Reserve my spot →</a>
+        <a href="/en/program"      class="btn btn-outline btn-lg">View programme</a>
+      </div>
+    </div>
+    <div>
+      <div class="gold-bar" style="margin-top:48px;margin-bottom:20px;"></div>
+      <div style="font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--sl400);margin-bottom:12px;">Supported by</div>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <div style="background:#1a1a1a;border-radius:6px;padding:5px 10px;display:inline-flex;">
+          <img src="/images2/p01_03_2000x1000.jpeg" alt="CliniCare Training" style="height:28px;object-fit:contain;" />
+        </div>
+        <img src="/images2/p01_04_516x150.jpeg" alt="NACAR" style="height:30px;object-fit:contain;mix-blend-mode:multiply;" />
+        <img src="/images2/p01_05_300x150.jpeg" alt="Neodent" style="height:26px;object-fit:contain;mix-blend-mode:multiply;" />
+      </div>
+    </div>
+  </div>
+  <div style="overflow:hidden;position:relative;min-height:500px;">
+    <img src="/pptx_images/image1.jpeg" alt="Fortaleza, Brazil"
+      style="position:absolute;top:50%;left:50%;width:100vw;height:auto;max-width:none;transform:translate(-50%,-50%) rotate(-90deg);" />
+  </div>
+</section>
+
+<div class="sec-dark" style="padding:32px 24px;">
+  <div class="container" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;padding:0;">
+    {[
+      {v:'7',    u:'Days of immersion'},
+      {v:'100%', u:'Surgeries by students'},
+      {v:'4',    u:'Surgical sessions/day'},
+      {v:'✓',    u:'Accredited diploma'},
+    ].map(s => (
+      <div><div class="stat-val">{s.v}</div><div class="stat-lbl">{s.u}</div></div>
+    ))}
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="align-items:center;gap:56px;">
+      <div>
+        <span class="eyebrow">About the programme</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Real surgical immersion on live patients</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:20px;">In Fortaleza every surgery is performed by the students themselves. Direct clinical practice with expert supervision and digital guided planning.</p>
+        <p class="lead" style="margin-bottom:28px;">CliniCare Training is a state-of-the-art facility for high-level surgical training, with 4K streaming auditoriums and a complete digital workflow.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/en/program" class="btn btn-sky">View full programme →</a>
+          <a href="/en/registration" class="btn btn-outline">Apply now</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;">
+        <div class="img-frame" style="flex:1;">
+          <img src="/pptx_images/image3.jpeg" alt="CliniCare Training" style="height:250px;width:100%;object-fit:cover;" />
+          <div class="img-cap">📍 CliniCare Training · Fortaleza, Brazil</div>
+        </div>
+        <div class="img-frame" style="flex:1;">
+          <img src="/pptx_images/image7.jpeg" alt="Lecture room" style="height:250px;width:100%;object-fit:cover;" />
+          <div class="img-cap">🎬 Live 4K surgical broadcast</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-light">
+  <div class="section">
+    <div class="center mx-auto" style="margin-bottom:48px;">
+      <span class="eyebrow">Included</span>
+      <h2 class="sec-h2" style="margin-top:10px;">What does the programme include?</h2>
+      <div class="sky-bar"></div>
+      <p class="lead">Everything you need for a week of intensive surgical learning.</p>
+    </div>
+    <div class="grid-3">
+      {[
+        {icon:'🖥️', title:'Daily digital planning',    desc:'Guided surgery software for every clinical case. Plan review and design before each intervention.', href:'/en/program'},
+        {icon:'🦷', title:'3 surgical protocols',      desc:'Guided Implantology, OneDay OnePiece and All-on-Four. From basic to advanced in a single week.', href:'/en/techniques'},
+        {icon:'📊', title:'Planned/executed check',    desc:'Accuracy analysis at the end of each day. Learn by measuring the gap between your plan and the real result.', href:'/en/schedule'},
+        {icon:'🏆', title:'Accredited diploma',        desc:'Official certification upon programme completion. International recognition of your digital surgical training.', href:'/en/registration'},
+        {icon:'📍', title:'Fortaleza, Brazil',         desc:'Capital of Ceará. Premium infrastructure, tropical climate and direct flights from Europe.', href:'/en/venue'},
+        {icon:'👨‍⚕️', title:'Expert faculty',           desc:'Dr. Juan Méndez and Prof. Assis Filipe. International leaders in guided implantology and oral surgery.', href:'/en/faculty'},
+      ].map(c => (
+        <div class="card">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div style="font-size:2rem;margin-bottom:12px;">{c.icon}</div>
+            <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:8px;word-wrap:break-word;">{c.title}</h3>
+            <p style="font-size:.82rem;color:var(--sl500);line-height:1.7;margin-bottom:14px;word-wrap:break-word;">{c.desc}</p>
+            <a href={c.href} style="font-size:.8rem;font-weight:700;color:var(--sky600);">Learn more →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-3">
+      <div class="img-frame">
+        <img src="/pptx_images/image8.jpeg" alt="Hands-on surgery" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Hands-on surgery with real patient</div>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image4.jpeg" alt="Surgeon with loupe" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Surgery with magnification loupe</div>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image5.jpeg" alt="Live streaming" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Live surgical streaming in real time</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-mid" style="padding:56px 24px;">
+  <div class="container" style="text-align:center;padding:0;">
+    <span class="eyebrow-white">Very limited spots · November 2026</span>
+    <h2 class="sec-h2-white" style="margin-top:10px;margin-bottom:14px;">Small cohort for maximum individual supervision</h2>
+    <p class="lead-white" style="max-width:520px;margin:0 auto 32px;">Secure your place before they run out. Contact us now via WhatsApp or fill in the registration form.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="/en/registration" class="btn btn-white btn-lg">Apply now →</a>
+      <a href="https://wa.me/34651039967" target="_blank" class="btn btn-wa btn-lg">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+</Layout>

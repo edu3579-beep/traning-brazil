@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Venue – DGIS Fortaleza 2026" lang="en">
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Programme venue</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">CliniCare Training · Fortaleza</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:600px;">State-of-the-art facilities designed for high-level surgical training. Fortaleza, Brazil.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="gap:48px;align-items:center;margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--sky100);">
+      <div>
+        <span class="eyebrow">Facilities</span>
+        <h2 class="sec-h2" style="margin-top:10px;">CliniCare Training</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">A leading surgical training centre in Brazil. Specifically designed for the teaching of advanced oral surgery with the latest technologies.</p>
+        <p class="lead" style="margin-bottom:24px;">Located in the heart of Fortaleza (Rua Tomas Acioli, 1069), the centre has fully digitally equipped operating rooms and a 4K live streaming auditorium.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:24px;">
+          {['Digital operating rooms with integrated 3D planning','Live 4K broadcast from the surgical field','Auditorium with individual workstations and screens','Latest generation digital guidance software','Professional clinical support team'].map(i=>(
+            <li style="display:flex;gap:10px;font-size:.87rem;color:var(--sl700);word-wrap:break-word;"><svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}</li>
+          ))}
+        </ul>
+        <div style="background:var(--sky50);border:1px solid var(--sky200);border-radius:8px;padding:14px 18px;font-size:.84rem;color:var(--sky800);">📍 Rua Tomas Acioli, 1069 · Fortaleza/CE · Brazil</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="img-frame"><img src="/pptx_images/image2.jpeg" alt="CliniCare Training" style="height:260px;width:100%;object-fit:cover;" /><div class="img-cap">CliniCare Training · Fortaleza, Brazil</div></div>
+        <div class="img-frame"><img src="/pptx_images/image3.jpeg" alt="Training room" style="height:200px;width:100%;object-fit:cover;" /><div class="img-cap">Auditorium with 4K live broadcast</div></div>
+      </div>
+    </div>
+    <div class="grid-2" style="gap:48px;align-items:center;margin-bottom:56px;">
+      <div style="overflow:hidden;border-radius:12px;border:1.5px solid var(--sky100);min-height:350px;position:relative;">
+        <img src="/pptx_images/image1.jpeg" alt="Fortaleza" style="position:absolute;top:50%;left:50%;width:200%;height:auto;max-width:none;transform:translate(-50%,-50%) rotate(-90deg);" />
+      </div>
+      <div>
+        <span class="eyebrow">The city</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Fortaleza, Capital of Ceará</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">Fortaleza is Brazil's fifth largest city, combining world-class infrastructure with a year-round tropical climate.</p>
+        <div class="grid-2" style="gap:14px;margin-bottom:24px;">
+          {[{icon:'✈️',t:'Direct flights',d:'Direct flights from Madrid with Iberia/TAP'},{icon:'🌡️',t:'Tropical climate',d:'26–30°C in November. Guaranteed sunshine'},{icon:'🏖️',t:'Beach 15 min away',d:'Iracema beach 15 minutes from the centre'},{icon:'🏨',t:'Premium hotels',d:'Wide range of 4–5 star hotels available'}].map(f=>(
+            <div style="background:var(--sky50);border:1px solid var(--sky100);border-radius:8px;padding:14px;"><div style="font-size:1.4rem;margin-bottom:6px;">{f.icon}</div><div style="font-weight:700;font-size:.82rem;color:var(--sky900);margin-bottom:3px;">{f.t}</div><div style="font-size:.78rem;color:var(--sl500);">{f.d}</div></div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="cta-banner"><div><h3 style="font-weight:800;font-size:1.1rem;color:var(--sky900);margin-bottom:6px;">Need accommodation information?</h3><p style="font-size:.85rem;color:var(--sl500);">Upon registration you will receive all hotel details, transfers and full logistics.</p></div><a href="/en/registration" class="btn btn-sky btn-lg">Apply now →</a></div>
+  </div>
+</div>
+</Layout>

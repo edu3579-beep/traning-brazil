@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Descargar Programa – DGIS Fortaleza 2026" lang="es">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Descarga</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Programa completo en PDF</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:600px;">Descarga toda la información del DGIS Fortaleza 2026 en un único documento PDF.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="gap:48px;align-items:start;">
+
+      <!-- Download card -->
+      <div>
+        <div class="card" style="margin-bottom:24px;">
+          <div class="card-accent"></div>
+          <div class="card-body" style="text-align:center;padding:44px 36px;">
+            <div style="font-size:4rem;margin-bottom:16px;">📄</div>
+            <h2 style="font-weight:900;font-size:1.4rem;color:var(--sky900);margin-bottom:8px;">DGIS Fortaleza 2026</h2>
+            <p style="font-size:.88rem;color:var(--sl400);margin-bottom:6px;">Digital Guided Implant Surgery Immersion Program</p>
+            <p style="font-size:.8rem;color:var(--sl400);margin-bottom:28px;">Fortaleza, Brasil · 6–13 Noviembre 2026</p>
+            <a href="/downloads/DGIS-Fortaleza-2026-Programa.pdf" download class="btn btn-sky btn-lg" style="justify-content:center;width:100%;margin-bottom:12px;">
+              ⬇ Descargar PDF
+            </a>
+            <a href="/downloads/DGIS-Fortaleza-2026-Programa.pdf" target="_blank" class="btn btn-outline" style="justify-content:center;width:100%;">
+              👁 Ver en el navegador
+            </a>
+          </div>
+        </div>
+
+        <div style="background:var(--sky50);border:1px solid var(--sky200);border-radius:10px;padding:20px 24px;">
+          <p style="font-size:.82rem;color:var(--sky800);line-height:1.7;">
+            <strong>El PDF incluye:</strong> Presentación del programa, horario completo, técnicas quirúrgicas, perfiles del equipo docente, información de la sede e instrucciones de inscripción.
+          </p>
+        </div>
+      </div>
+
+      <!-- Content index -->
+      <div>
+        <span class="eyebrow">Contenido del documento</span>
+        <h2 class="sec-h2" style="margin-top:10px;">¿Qué encontrarás en el PDF?</h2>
+        <div class="sky-bar"></div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+          {[
+            {n:'01', t:'Presentación del programa', d:'Concepto DGIS, objetivos formativos y metodología única de inmersión quirúrgica.'},
+            {n:'02', t:'Horario semanal completo', d:'Programa día a día del 6 al 13 de noviembre 2026 con todos los horarios.'},
+            {n:'03', t:'Técnicas quirúrgicas', d:'Implantología Guiada, OneDay OnePiece y All-on-Four. Descripción detallada de cada protocolo.'},
+            {n:'04', t:'Equipo docente', d:'CV completo de Dr. Juan Méndez y Prof. Assis Filipe. Trayectoria y especialización.'},
+            {n:'05', t:'Sede y logística', d:'CliniCare Training, alojamiento, traslados y todo lo que necesitas saber para viajar.'},
+            {n:'06', t:'Inscripción', d:'Condiciones, precios y proceso de reserva de plaza. Contacto directo con el coordinador.'},
+          ].map(s => (
+            <div style="display:flex;gap:14px;align-items:flex-start;padding:14px;background:#fff;border:1px solid var(--sky100);border-radius:8px;">
+              <div style="width:32px;height:32px;background:var(--sky800);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:900;flex-shrink:0;">{s.n}</div>
+              <div>
+                <div style="font-weight:700;font-size:.88rem;color:var(--sky900);margin-bottom:2px;">{s.t}</div>
+                <div style="font-size:.78rem;color:var(--sl500);word-wrap:break-word;">{s.d}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="cta-banner" style="grid-template-columns:1fr;">
+          <div>
+            <h3 style="font-weight:800;font-size:1rem;color:var(--sky900);margin-bottom:6px;">¿Tienes dudas después de leerlo?</h3>
+            <p style="font-size:.84rem;color:var(--sl500);margin-bottom:14px;">Escríbenos por WhatsApp — respondemos en menos de 24h.</p>
+            <a href="https://wa.me/34651039967" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</Layout>

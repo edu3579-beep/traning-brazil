@@ -1,0 +1,124 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout title="Cuisine – DGIS Fortaleza 2026" lang="en">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Fortaleza</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Cuisine</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:620px;">Fortaleza's gastronomy is a celebration of the sea, the land and northeastern Brazilian culture — unique flavours that turn every meal into a memorable experience.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <div class="grid-2" style="gap:56px;align-items:start;margin-bottom:72px;">
+      <div>
+        <span class="eyebrow">Northeastern cuisine</span>
+        <h2 class="sec-h2" style="margin-top:10px;">A cuisine with its own identity</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:18px;">Fortaleza is synonymous with lobster, prawns and fresh fish straight from the Atlantic. Cearense cuisine fuses coastal ingredients with the tradition of the sertão — sun-dried beef, green beans, cassava — creating a culinary offer unmatched anywhere else in Brazil.</p>
+        <p class="lead" style="margin-bottom:28px;">Beach barracas, Beira Mar restaurants and local markets are the perfect setting to discover an authentic, accessible and vibrant food culture.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--sky50);border:1.5px solid var(--sky200);border-radius:14px;padding:28px 32px;">
+          <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--sky600);margin-bottom:16px;">Must-try dishes</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            {[
+              { dish: 'Grilled lobster (Lagosta grelhada)', desc: 'Atlantic lobster on the grill — the flagship of Cearense gastronomy.' },
+              { dish: 'Prawn moqueca (Moqueca de camarão)', desc: 'Prawn stew in coconut milk and dendê oil. An unmistakable aroma.' },
+              { dish: 'Sun-dried beef with cassava', desc: 'Carne de sol served with fried manioc. The emblem of the northeast.' },
+              { dish: 'Baião de dois', desc: 'Rice with green beans, coalho cheese and jerked beef. Northeastern comfort food.' },
+              { dish: 'Tapioca', desc: 'Cassava flatbread with sweet or savoury fillings. The local breakfast and snack favourite.' },
+            ].map(p => (
+              <div style="border-bottom:1px solid var(--sky100);padding-bottom:10px;">
+                <div style="font-weight:800;font-size:.86rem;color:var(--sky900);">{p.dish}</div>
+                <div style="font-size:.78rem;color:var(--sl500);margin-top:2px;">{p.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:64px;">
+      <div class="center" style="margin-bottom:36px;">
+        <span class="eyebrow">Experiences</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Where and how to eat in Fortaleza</h2>
+        <div class="sky-bar" style="margin:12px auto 0;"></div>
+      </div>
+      <div class="grid-3" style="gap:24px;">
+        {[
+          { icon: '🌴', title: 'Beach barracas', badge: 'Essential', desc: 'Informal spots at the water\'s edge. The barracas at Praia do Futuro are famous throughout Brazil for fresh seafood and a festive vibe.', tip: 'Try: Barraca da Miriam' },
+          { icon: '🦞', title: 'Beira Mar restaurants', badge: 'Gastronomic', desc: 'The coastal avenue concentrates the best restaurants in the city. Lobster, red snapper and prawns with Atlantic views.', tip: 'Area: Av. Beira Mar, Meireles' },
+          { icon: '🏛️', title: 'Mercado dos Pinhões', badge: 'Local culture', desc: 'Food market in the heart of the historic centre. Crafts, spices, tucumã and the most authentic flavours of Ceará.', tip: 'Fortaleza historic centre' },
+          { icon: '🥥', title: 'Coco gelado', badge: 'Local refreshment', desc: 'Coconut water straight from the coconut. Ubiquitous on beaches and street corners. Fortaleza\'s official soft drink.', tip: 'Available city-wide' },
+          { icon: '🎉', title: 'Group dinners', badge: 'For the programme', desc: 'The organisation coordinates optional group dinners for DGIS participants at restaurants showcasing the best of local cuisine.', tip: 'Included in the social agenda' },
+          { icon: '☕', title: 'Cafés & bakeries', badge: 'Daily ritual', desc: 'Strong, sweet Cearense coffee and bolos (cakes) are the perfect morning ritual before each training day.', tip: 'Near CliniCare Training' },
+        ].map(c => (
+          <div class="card">
+            <div class="card-accent"></div>
+            <div class="card-body">
+              <div style="font-size:1.8rem;margin-bottom:10px;">{c.icon}</div>
+              <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;margin-bottom:8px;">{c.badge}</div>
+              <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:6px;">{c.title}</h3>
+              <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;margin-bottom:10px;">{c.desc}</p>
+              <p style="font-size:.73rem;color:var(--sky600);font-weight:700;">📍 {c.tip}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div style="background:var(--sky900);border-radius:14px;padding:44px;margin-bottom:64px;color:#fff;">
+      <div class="grid-2" style="gap:48px;align-items:center;">
+        <div>
+          <span class="eyebrow-white">Drinks</span>
+          <h2 class="sec-h2-white" style="margin-top:10px;margin-bottom:20px;">Raise a glass in Fortaleza</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            {[
+              { name: 'Caipirinha', desc: 'Made with artisan cachaça from the Ceará interior — unbeatable. Lime, sugar and plenty of ice.' },
+              { name: 'Caju Amigo', desc: 'Soft cashew-fruit liqueur, the emblematic tropical fruit of Ceará state. Gentle and fruity.' },
+              { name: 'Fresh tropical juices', desc: 'Juices of graviola, cajá, umbu and cupuaçu. Flavours impossible to find outside the northeast.' },
+              { name: 'Ice-cold beer', desc: 'Cold beer accompanies any beach barraca. Draft beer (chopp) in the Beira Mar bars.' },
+            ].map(b => (
+              <div style="display:flex;gap:12px;">
+                <div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:8px;"></div>
+                <div>
+                  <span style="font-weight:800;font-size:.88rem;color:#fff;">{b.name} — </span>
+                  <span style="font-size:.84rem;color:rgba(255,255,255,.72);">{b.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:28px;">
+          <div style="font-size:1.4rem;margin-bottom:12px;">🥭</div>
+          <h3 style="font-weight:800;font-size:1rem;color:#fff;margin-bottom:8px;">Exotic fruits of Ceará</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:16px;">Northeastern Brazil offers unique fruit biodiversity. Don't leave without trying:</p>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            {['Cajá (yellow tropical plum)','Graviola (soursop, creamy and sweet)','Seriguela (northeastern plum)','Sapoti (sweet and velvety sapodilla)','Pitanga (Brazilian cherry)'].map(f => (
+              <div style="font-size:.8rem;color:rgba(255,255,255,.8);">• {f}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <p style="font-size:.95rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Fortaleza awaits</p>
+        <p style="font-size:.84rem;color:var(--sl500);">8 days of intensive training and unforgettable northeastern cuisine. November 2026.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/en/registration" class="btn btn-sky btn-lg">Apply now →</a>
+        <a href="/en/fortaleza/ciudad" class="btn btn-outline">The City →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</Layout>

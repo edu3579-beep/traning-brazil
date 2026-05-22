@@ -1,0 +1,277 @@
+---
+const { title, lang = 'es' } = Astro.props;
+const path = Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === '/' || href === '/en/') return path === href;
+  return path === href || path.startsWith(href + '/');
+};
+
+const navES = [
+  { href: '/',            label: 'Inicio', children: [
+    { href: '/directores', label: 'Dirección' },
+  ]},
+  { href: '/programa',    label: 'Programa' },
+  { href: '/horario',     label: 'Horario' },
+  { href: '/tecnicas',    label: 'Técnicas' },
+  { href: '/fortaleza/ciudad', label: 'Fortaleza', children: [
+    { href: '/fortaleza/ciudad',    label: 'La Ciudad' },
+    { href: '/fortaleza/culinaria', label: 'Culinaria' },
+  ]},
+  { href: '/sede',        label: 'Sede' },
+  { href: '/inscripcion', label: 'Inscripción' },
+  { href: '/descargar',   label: '⬇ Descargar' },
+];
+const navEN = [
+  { href: '/en/',          label: 'Home', children: [
+    { href: '/en/faculty', label: 'Faculty' },
+  ]},
+  { href: '/en/program',      label: 'Programme' },
+  { href: '/en/schedule',     label: 'Schedule' },
+  { href: '/en/techniques',   label: 'Techniques' },
+  { href: '/en/fortaleza/ciudad', label: 'Fortaleza', children: [
+    { href: '/en/fortaleza/ciudad',  label: 'The City' },
+    { href: '/en/fortaleza/cuisine', label: 'Cuisine' },
+  ]},
+  { href: '/en/venue',        label: 'Venue' },
+  { href: '/en/registration', label: 'Registration' },
+  { href: '/en/download',     label: '⬇ Download' },
+];
+const nav = lang === 'en' ? navEN : navES;
+const altHref  = lang === 'en' ? '/' : '/en/';
+const altLabel = lang === 'en' ? '🇪🇸 ES' : '🇬🇧 EN';
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content="Digital Guided Implant Surgery Immersion Program – Fortaleza, Brasil, 6–13 Noviembre 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ═══ TOP NAV ═══════════════════════════════════════════════════ -->
+<header>
+  <div class="header-inner">
+    <a href={lang === 'en' ? '/en/' : '/'} class="logo">
+      <span class="logo-dgis">DGIS</span>
+      <span class="logo-sub">Fortaleza 2026</span>
+    </a>
+    <nav class="nav-tabs">
+      {nav.map(n => n.children ? (
+        <div class="nav-dropdown">
+          <a href={n.href} class:list={['nav-link', 'nav-drop-trigger', { active: isActive(n.href) || n.children.some((c: {href:string}) => isActive(c.href)) }]}>
+            {n.label}
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            {n.children.map((c: {href:string,label:string}) => (
+              <a href={c.href} class:list={['nav-dropdown-item', { active: isActive(c.href) }]}>{c.label}</a>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <a href={n.href} class:list={['nav-link', { active: isActive(n.href) }]}>{n.label}</a>
+      ))}
+    </nav>
+    <div class="header-actions">
+      <a href={altHref} class="btn-lang">{altLabel}</a>
+      <a href="https://wa.me/34651039967" target="_blank" class="btn-wa-header">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main><slot /></main>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">DGIS · Fortaleza 2026</div>
+      <p class="footer-desc">Digital Guided Implant Surgery Immersion Program.<br/>6–13 Noviembre 2026 · Fortaleza, Brasil.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">{lang === 'en' ? 'Quick links' : 'Accesos rápidos'}</div>
+      <ul class="footer-links">
+        {nav.slice(0,6).map(n => <li><a href={n.href}>{n.label}</a></li>)}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">{lang === 'en' ? 'Contact' : 'Contacto'}</div>
+      <p style="font-size:.82rem;color:#94a3b8;line-height:1.8;">📞 +34 651 039 967<br/>✉ formacion@clinicasnacar.com<br/>👤 Eduardo Burger</p>
+      <a href="https://wa.me/34651039967" target="_blank" class="btn-wa-footer">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 DGIS Fortaleza · CliniCare Training · NACAR Clínicas Dentales</div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/34651039967" target="_blank" class="wa-fab">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<style is:global>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #fff; color: #1e293b; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+  main { flex: 1; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  :root {
+    --sky900: #0c4a6e; --sky800: #075985; --sky700: #0369a1;
+    --sky600: #0284c7; --sky500: #0ea5e9; --sky400: #38bdf8;
+    --sky300: #7dd3fc; --sky200: #bae6fd; --sky100: #e0f2fe; --sky50: #f0f9ff;
+    --sl50: #f8fafc; --sl100: #f1f5f9; --sl200: #e2e8f0;
+    --sl300: #cbd5e1; --sl400: #94a3b8; --sl500: #64748b; --sl700: #334155; --sl900: #0f172a;
+    --green: #059669; --gold: #c8963c; --white: #fff;
+  }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--sl200); box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+  .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 20px; }
+  .logo { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
+  .logo-dgis { font-size: 1.15rem; font-weight: 900; color: var(--sky700); letter-spacing: -.5px; }
+  .logo-sub { font-size: .62rem; font-weight: 600; color: var(--sl400); text-transform: uppercase; letter-spacing: 1px; }
+  .nav-tabs { display: flex; align-items: center; gap: 2px; flex: 1; overflow: visible; }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-link { white-space: nowrap; padding: 6px 11px; font-size: .78rem; font-weight: 600; color: var(--sl500); border-radius: 6px; border-bottom: 2px solid transparent; transition: color .15s, background .15s; }
+  .nav-link:hover { color: var(--sky600); background: var(--sky50); }
+  .nav-link.active { color: var(--sky700); background: var(--sky50); border-bottom-color: var(--sky500); font-weight: 700; }
+  .header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .btn-lang { font-size: .72rem; font-weight: 700; color: var(--sl500); border: 1px solid var(--sl200); border-radius: 6px; padding: 5px 9px; transition: all .15s; }
+  .btn-lang:hover { border-color: var(--sky400); color: var(--sky700); }
+  .btn-wa-header { display: flex; align-items: center; gap: 5px; background: #25d366; color: #fff; font-size: .76rem; font-weight: 700; padding: 6px 12px; border-radius: 6px; transition: background .15s; }
+  .btn-wa-header:hover { background: #1ebe5d; }
+
+  /* Layout */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 72px 24px; max-width: 1200px; margin: 0 auto; }
+  .section-sm { padding: 48px 24px; max-width: 1200px; margin: 0 auto; }
+  .sec-white { background: #fff; border-bottom: 1px solid var(--sl200); }
+  .sec-light { background: var(--sky50); border-top: 1px solid var(--sky100); border-bottom: 1px solid var(--sky100); }
+  .sec-dark  { background: var(--sky900); color: #fff; }
+  .sec-mid   { background: var(--sky800); color: #fff; }
+
+  /* Grids */
+  .grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+
+  /* Typography */
+  .eyebrow { display: inline-block; font-size: .63rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--sky600); background: var(--sky50); border: 1px solid var(--sky200); border-radius: 4px; padding: 3px 10px; margin-bottom: 14px; }
+  .eyebrow-white { display: inline-block; font-size: .63rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,.85); background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 4px; padding: 3px 10px; margin-bottom: 14px; }
+  .page-h1 { font-size: clamp(2rem,3.5vw,3rem); font-weight: 900; color: var(--sky900); line-height: 1.1; word-wrap: break-word; }
+  .page-h1-white { font-size: clamp(2rem,3.5vw,3rem); font-weight: 900; color: #fff; line-height: 1.1; word-wrap: break-word; }
+  .sec-h2 { font-size: clamp(1.3rem,2.5vw,1.9rem); font-weight: 800; color: var(--sky900); line-height: 1.2; word-wrap: break-word; }
+  .sec-h2-white { font-size: clamp(1.3rem,2.5vw,1.9rem); font-weight: 800; color: #fff; line-height: 1.2; }
+  .lead { font-size: .95rem; color: var(--sl500); line-height: 1.8; word-wrap: break-word; }
+  .lead-white { font-size: .95rem; color: rgba(255,255,255,.78); line-height: 1.8; }
+  .sky-bar { width: 44px; height: 3px; background: var(--sky500); border-radius: 2px; margin: 12px 0 18px; }
+  .gold-bar { width: 44px; height: 3px; background: var(--gold); border-radius: 2px; margin: 12px 0 18px; }
+  .center { text-align: center; }
+  .mx-auto { max-width: 680px; margin-left: auto; margin-right: auto; }
+  .center .sky-bar { margin-left: auto; margin-right: auto; }
+
+  /* Cards */
+  .card { background: #fff; border: 1.5px solid var(--sky100); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.04),0 4px 12px rgba(14,165,233,.05); transition: box-shadow .2s,transform .2s; }
+  .card:hover { box-shadow: 0 6px 20px rgba(14,165,233,.12); transform: translateY(-2px); }
+  .card-accent       { height: 4px; background: var(--sky500); }
+  .card-accent-green { height: 4px; background: var(--green); }
+  .card-accent-gold  { height: 4px; background: var(--gold); }
+  .card-body { padding: 26px; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; gap: 6px; font-size: .87rem; font-weight: 700; padding: 10px 20px; border-radius: 8px; transition: all .15s; cursor: pointer; border: none; white-space: nowrap; font-family: inherit; }
+  .btn-sky  { background: var(--sky600); color: #fff; }
+  .btn-sky:hover  { background: var(--sky700); }
+  .btn-lg   { padding: 13px 28px; font-size: .93rem; }
+  .btn-outline { background: transparent; color: var(--sky700); border: 2px solid var(--sky400); }
+  .btn-outline:hover { background: var(--sky50); }
+  .btn-white { background: #fff; color: var(--sky800); }
+  .btn-white:hover { background: var(--sky50); }
+  .btn-wa { background: #25d366; color: #fff; }
+  .btn-wa:hover { background: #1ebe5d; }
+  .btn-dark { background: var(--sky900); color: #fff; }
+  .btn-dark:hover { background: var(--sky800); }
+
+  /* Image frame */
+  .img-frame { border-radius: 12px; overflow: hidden; border: 1.5px solid var(--sky100); box-shadow: 0 2px 12px rgba(14,165,233,.07); }
+  .img-cap { font-size: .71rem; color: var(--sl400); font-weight: 600; padding: 7px 12px; background: var(--sky50); border-top: 1px solid var(--sky100); }
+
+  /* Badges */
+  .badge-basic    { background: #dcfce7; color: #166534; font-size: .68rem; font-weight: 700; border-radius: 4px; padding: 2px 8px; white-space: nowrap; }
+  .badge-mid      { background: var(--sky100); color: var(--sky800); font-size: .68rem; font-weight: 700; border-radius: 4px; padding: 2px 8px; white-space: nowrap; }
+  .badge-advanced { background: #ede9fe; color: #6d28d9; font-size: .68rem; font-weight: 700; border-radius: 4px; padding: 2px 8px; white-space: nowrap; }
+
+  /* Form */
+  .form-group { display: flex; flex-direction: column; gap: 5px; }
+  .form-label { font-size: .78rem; font-weight: 700; color: var(--sl700); }
+  .form-input { padding: 10px 14px; border: 1.5px solid var(--sl200); border-radius: 8px; font-size: .87rem; font-family: inherit; transition: border-color .15s,box-shadow .15s; background: #fff; width: 100%; }
+  .form-input:focus { outline: none; border-color: var(--sky500); box-shadow: 0 0 0 3px rgba(14,165,233,.12); }
+
+  /* Timeline */
+  .tl-item { display: grid; grid-template-columns: 110px 1fr; border-bottom: 1px solid var(--sky100); }
+  .tl-day { background: var(--sky800); color: #fff; padding: 18px 14px; font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; line-height: 1.5; }
+  .tl-body { padding: 18px 22px; background: #fff; }
+  .tl-body h4 { font-weight: 800; font-size: .92rem; color: var(--sky900); margin-bottom: 10px; word-wrap: break-word; }
+  .tl-row { display: flex; gap: 10px; font-size: .82rem; color: var(--sl500); margin-bottom: 5px; line-height: 1.5; word-wrap: break-word; }
+  .tl-time { font-weight: 700; color: var(--sky700); min-width: 48px; flex-shrink: 0; }
+
+  /* CTA banner */
+  .cta-banner { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; background: var(--sky50); border: 1.5px solid var(--sky200); border-radius: 14px; padding: 34px 44px; }
+
+  /* Stats */
+  .stat-val { font-size: 2.4rem; font-weight: 900; color: #fff; line-height: 1; }
+  .stat-lbl { font-size: .63rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: rgba(255,255,255,.6); margin-top: 6px; }
+
+  /* Footer */
+  footer { background: var(--sl900); color: #fff; margin-top: auto; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 52px 24px 36px; display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 48px; }
+  .footer-col {}
+  .footer-logo { font-size: 1.05rem; font-weight: 900; color: var(--sky400); margin-bottom: 10px; }
+  .footer-desc { font-size: .8rem; color: #94a3b8; line-height: 1.7; }
+  .footer-heading { font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--sky400); margin-bottom: 12px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .footer-links a { font-size: .8rem; color: #94a3b8; transition: color .15s; }
+  .footer-links a:hover { color: var(--sky400); }
+  .btn-wa-footer { display: inline-flex; align-items: center; gap: 6px; background: #25d366; color: #fff; font-size: .76rem; font-weight: 700; padding: 7px 13px; border-radius: 6px; margin-top: 12px; transition: background .15s; }
+  .btn-wa-footer:hover { background: #1ebe5d; }
+  .footer-bottom { border-top: 1px solid #1e293b; text-align: center; padding: 14px 24px; font-size: .7rem; color: #475569; }
+
+  /* FAB */
+  .wa-fab { position: fixed; bottom: 26px; right: 26px; width: 54px; height: 54px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,.4); z-index: 999; transition: transform .2s; }
+  .wa-fab:hover { transform: scale(1.1); }
+
+  /* Dropdown nav */
+  .nav-dropdown { position: relative; }
+  .nav-drop-trigger { display: flex; align-items: center; gap: 4px; }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border: 1.5px solid var(--sky100);
+    border-radius: 10px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.11);
+    min-width: 148px;
+    z-index: 300;
+    padding: 6px;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .nav-dropdown:hover .nav-dropdown-menu { display: flex; }
+  .nav-dropdown-item { display: block; padding: 8px 12px; font-size: .78rem; font-weight: 600; color: var(--sl500); border-radius: 7px; transition: color .15s, background .15s; white-space: nowrap; }
+  .nav-dropdown-item:hover { color: var(--sky600); background: var(--sky50); }
+  .nav-dropdown-item.active { color: var(--sky700); background: var(--sky50); font-weight: 700; }
+</style>
+</body>
+</html>

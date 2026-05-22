@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="The Programme – DGIS Fortaleza 2026" lang="en">
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">The Programme</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Real surgical immersion on live patients</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:600px;">In Fortaleza every surgery is performed by the students themselves. Direct clinical practice with expert supervision and digital guided planning.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="gap:48px;align-items:start;margin-bottom:64px;">
+      <div style="display:flex;flex-direction:column;gap:36px;">
+        <div>
+          <span class="eyebrow">Clinical approach</span>
+          <h2 class="sec-h2" style="margin-top:10px;">You are the lead surgeon</h2>
+          <div class="sky-bar"></div>
+          <p class="lead" style="margin-bottom:14px;">Unlike other training programmes, in DGIS Fortaleza students do not attend as observers: they <strong>operate</strong>. Each student acts as lead surgeon in every surgical session, with direct supervision from the teaching team.</p>
+          <p class="lead">The programme covers three digital guided surgery protocols, from most to least complex, with postoperative verification sessions (planned vs. executed) at the end of each day.</p>
+        </div>
+        <div>
+          <span class="eyebrow">Methodology</span>
+          <h2 class="sec-h2" style="margin-top:10px;">Complete digital workflow</h2>
+          <div class="sky-bar"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+            {[
+              'Digital planning of each case before surgery',
+              'Peer review and validation with the teaching team',
+              'Execution of surgery as lead surgeon',
+              'Postoperative planned vs. executed verification',
+              'Precision analysis and clinical feedback',
+            ].map(i => (
+              <li style="display:flex;gap:10px;font-size:.88rem;color:var(--sl700);word-wrap:break-word;">
+                <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="img-frame"><img src="/pptx_images/image8.jpeg" alt="Team surgery" style="height:220px;width:100%;object-fit:cover;" /><div class="img-cap">Hands-on surgery with real patient</div></div>
+        <div class="img-frame"><img src="/pptx_images/image4.jpeg" alt="Surgeon with loupe" style="height:180px;width:100%;object-fit:cover;" /><div class="img-cap">Optical magnification in guided surgery</div></div>
+        <div class="img-frame"><img src="/pptx_images/image5.jpeg" alt="Live streaming" style="height:160px;width:100%;object-fit:cover;" /><div class="img-cap">Live surgical broadcast</div></div>
+      </div>
+    </div>
+    <div class="center mx-auto" style="margin-bottom:36px;">
+      <span class="eyebrow">Every day</span>
+      <h2 class="sec-h2" style="margin-top:10px;">Daily Digital Guided Surgery flow</h2>
+      <div class="sky-bar"></div>
+      <p class="lead">A typical programme day: clear structure with maximum clinical value.</p>
+    </div>
+    <div class="grid-4" style="margin-bottom:56px;">
+      {[
+        {n:'01', icon:'🖥️', t:'Digital planning', d:'Review and design of the surgical plan using digital guide software for each clinical case of the day.'},
+        {n:'02', icon:'👁️', t:'Peer review',      d:'Validation of the plan with the teaching team before the surgical intervention.'},
+        {n:'03', icon:'🦷', t:'Surgery sessions', d:'4 rounds of guided surgery per day. The student operates as lead surgeon in each session.'},
+        {n:'04', icon:'📊', t:'Post-op check',    d:'Planned vs. executed analysis to measure precision at the end of each working day.'},
+      ].map(s => (
+        <div class="card" style="text-align:center;">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div style="width:40px;height:40px;background:var(--sky800);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:#fff;font-weight:900;font-size:.8rem;">{s.n}</div>
+            <div style="font-size:1.7rem;margin-bottom:10px;">{s.icon}</div>
+            <h4 style="font-weight:800;font-size:.88rem;color:var(--sky900);margin-bottom:8px;">{s.t}</h4>
+            <p style="font-size:.79rem;color:var(--sl500);line-height:1.65;word-wrap:break-word;">{s.d}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="cta-banner">
+      <div>
+        <h3 style="font-weight:800;font-size:1.1rem;color:var(--sky900);margin-bottom:6px;">In Fortaleza you are the surgeon</h3>
+        <p style="font-size:.85rem;color:var(--sl500);">100% surgeries by students · Continuous expert supervision · Accredited diploma</p>
+      </div>
+      <a href="/en/registration" class="btn btn-sky btn-lg">Apply now →</a>
+    </div>
+  </div>
+</div>
+</Layout>

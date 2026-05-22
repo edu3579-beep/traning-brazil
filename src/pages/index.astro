@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="DGIS Fortaleza 2026 – Inmersión Quirúrgica Guiada Digital" lang="es">
+
+<!-- ── HERO ──────────────────────────────────────────────────────── -->
+<section style="min-height:92vh;display:grid;grid-template-columns:56fr 44fr;overflow:hidden;">
+  <!-- LEFT -->
+  <div style="background:linear-gradient(145deg,#f0f9ff 0%,#e0f2fe 100%);display:flex;flex-direction:column;justify-content:space-between;padding:72px 56px 52px;">
+    <div>
+      <div class="gold-bar" style="margin-bottom:32px;"></div>
+      <span class="eyebrow">Curso clínico · Fortaleza, Brasil</span>
+      <h1 class="page-h1" style="margin-top:10px;margin-bottom:8px;">Digital Guided<br/>Implant Surgery</h1>
+      <h2 style="font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:var(--sky600);margin-bottom:6px;">Immersion Program</h2>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:var(--sky800);color:#fff;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:.5px;">
+        📅 6–13 Noviembre 2026
+      </div>
+      <p class="lead" style="max-width:440px;margin-bottom:12px;">Descubra la capital de Ceará: el escenario perfecto para su crecimiento profesional.</p>
+      <p style="font-size:.95rem;color:var(--sl700);line-height:1.8;max-width:440px;margin-bottom:36px;word-wrap:break-word;">
+        Una semana de inmersión quirúrgica real. <strong>Tú operas. Tú aprendes.</strong> Planificación digital guiada, supervisión experta y diploma acreditado.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/inscripcion" class="btn btn-sky btn-lg">Reservar mi plaza →</a>
+        <a href="/programa"   class="btn btn-outline btn-lg">Ver el programa</a>
+      </div>
+    </div>
+    <!-- Logos -->
+    <div>
+      <div class="gold-bar" style="margin-top:48px;margin-bottom:20px;"></div>
+      <div style="font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--sl400);margin-bottom:12px;">Con el apoyo de</div>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <div style="background:#1a1a1a;border-radius:6px;padding:5px 10px;display:inline-flex;">
+          <img src="/images2/p01_03_2000x1000.jpeg" alt="CliniCare Training" style="height:28px;object-fit:contain;" />
+        </div>
+        <img src="/images2/p01_04_516x150.jpeg" alt="NACAR clínicas dentales" style="height:30px;object-fit:contain;mix-blend-mode:multiply;" />
+        <img src="/images2/p01_05_300x150.jpeg" alt="Neodent" style="height:26px;object-fit:contain;mix-blend-mode:multiply;" />
+      </div>
+    </div>
+  </div>
+  <!-- RIGHT: Fortaleza aerial photo -->
+  <div style="overflow:hidden;position:relative;min-height:500px;">
+    <img src="/pptx_images/fortaleza-hero.jpg.jpg" alt="Fortaleza, Brasil"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
+  </div>
+</section>
+
+<!-- ── STATS STRIP ────────────────────────────────────────────────── -->
+<div class="sec-dark" style="padding:32px 24px;">
+  <div class="container" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;padding:0;">
+    {[
+      {v:'7',    u:'Días de inmersión'},
+      {v:'100%', u:'Cirugías por alumnos'},
+      {v:'4',    u:'Tandas quirúrgicas/día'},
+      {v:'✓',    u:'Diploma acreditado'},
+    ].map(s => (
+      <div><div class="stat-val">{s.v}</div><div class="stat-lbl">{s.u}</div></div>
+    ))}
+  </div>
+</div>
+
+<!-- ── ABOUT ──────────────────────────────────────────────────────── -->
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="align-items:center;gap:56px;">
+      <div>
+        <span class="eyebrow">Sobre el programa</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Inmersión quirúrgica real sobre pacientes</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:20px;">En Fortaleza todas las cirugías son realizadas por los propios alumnos. Práctica clínica directa con supervisión experta y planificación digital guiada.</p>
+        <p class="lead" style="margin-bottom:28px;">CliniCare Training es una instalación de vanguardia diseñada para la formación quirúrgica de alto nivel, con auditorios de transmisión 4K y flujo digital completo.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/programa" class="btn btn-sky">Ver el programa completo →</a>
+          <a href="/inscripcion" class="btn btn-outline">Inscribirme</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;">
+        <div class="img-frame" style="flex:1;">
+          <img src="/pptx_images/image3.jpeg" alt="CliniCare Training" style="height:250px;width:100%;object-fit:cover;" />
+          <div class="img-cap">📍 CliniCare Training · Fortaleza, Brasil</div>
+        </div>
+        <div class="img-frame" style="flex:1;">
+          <img src="/pptx_images/image7.jpeg" alt="Sala de formación" style="height:250px;width:100%;object-fit:cover;" />
+          <div class="img-cap">🎬 Transmisión quirúrgica en directo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FEATURE CARDS ──────────────────────────────────────────────── -->
+<div class="sec-light">
+  <div class="section">
+    <div class="center mx-auto" style="margin-bottom:48px;">
+      <span class="eyebrow">Incluye</span>
+      <h2 class="sec-h2" style="margin-top:10px;">¿Qué incluye el programa?</h2>
+      <div class="sky-bar"></div>
+      <p class="lead">Todo lo que necesitas para una semana de aprendizaje quirúrgico intensivo.</p>
+    </div>
+    <div class="grid-3">
+      {[
+        {icon:'🖥️', title:'Planificación digital diaria', desc:'Software de guía digital para cada caso. Revisión y diseño del plan quirúrgico antes de cada intervención.', badge:'', href:'/programa'},
+        {icon:'🦷', title:'3 protocolos quirúrgicos', desc:'Implantología guiada, OneDay OnePiece y All-on-Four. Del nivel básico al avanzado en una sola semana.', badge:'', href:'/tecnicas'},
+        {icon:'📊', title:'Verificación planned/executed', desc:'Análisis de precisión al finalizar cada jornada. Aprende midiendo la diferencia entre el plan y el resultado real.', badge:'', href:'/horario'},
+        {icon:'🏆', title:'Diploma acreditado', desc:'Certificación oficial al finalizar el programa. Reconocimiento de tu formación en cirugía guiada digital.', badge:'', href:'/inscripcion'},
+        {icon:'📍', title:'Fortaleza, Brasil', desc:'Capital de Ceará. Infraestructura premium, clima tropical y vuelos directos desde Madrid con Iberia/TAP.', badge:'', href:'/sede'},
+        {icon:'👨‍⚕️', title:'Dirección experta', desc:'Dr. Juan Méndez y Prof. Assis Filipe. Referentes internacionales en implantología guiada y cirugía oral.', badge:'', href:'/directores'},
+      ].map(c => (
+        <div class="card">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div style="font-size:2rem;margin-bottom:12px;">{c.icon}</div>
+            <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:8px;word-wrap:break-word;">{c.title}</h3>
+            <p style="font-size:.82rem;color:var(--sl500);line-height:1.7;margin-bottom:14px;word-wrap:break-word;">{c.desc}</p>
+            <a href={c.href} style="font-size:.8rem;font-weight:700;color:var(--sky600);">Más información →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- ── PHOTO STRIP ────────────────────────────────────────────────── -->
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-3">
+      <div class="img-frame">
+        <img src="/pptx_images/image8.jpeg" alt="Cirugía hands-on" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Cirugía hands-on con paciente real</div>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image4.jpeg" alt="Cirujano con lupa" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Cirugía con lupa de magnificación</div>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image5.jpeg" alt="Transmisión en directo" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Transmisión quirúrgica en tiempo real</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA BANNER ────────────────────────────────────────────────── -->
+<div class="sec-mid" style="padding:56px 24px;">
+  <div class="container" style="text-align:center;padding:0;">
+    <span class="eyebrow-white">Plazas muy limitadas · Noviembre 2026</span>
+    <h2 class="sec-h2-white" style="margin-top:10px;margin-bottom:14px;">Cupo reducido para máxima supervisión individual</h2>
+    <p class="lead-white" style="max-width:520px;margin:0 auto 32px;">Asegura tu plaza antes de que se agoten. Contacta ahora por WhatsApp o completa el formulario de inscripción.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="/inscripcion" class="btn btn-white btn-lg">Inscribirme ahora →</a>
+      <a href="https://wa.me/34651039967" target="_blank" class="btn btn-wa btn-lg">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+</Layout>
