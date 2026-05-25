@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Techniques – DGIS Fortaleza 2026" lang="fr">
+<div class="sec-dark" style="padding:36px 24px 32px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Protocoles cliniques</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Techniques chirurgicales</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:560px;">Trois protocoles d'implantologie guidée numérique, du niveau fondamental au niveau avancé.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    {[
+      { color:'var(--sky700)', label:'Module 1 — Fondamental', title:'Implantologie Guidée Numérique', desc:'Protocole de base de la chirurgie implantaire guidée par guide stéréolithographique. Le participant apprend à planifier, concevoir et réaliser une implantation unitaire ou multiple avec précision millimétrique.', items:['Flux CBCT → Logiciel → Guide → Chirurgie','Conception et impression du guide chirurgical','Positionnement guidé avec contrôle de l\'axe et de la profondeur','Analyse de précision planifié/exécuté'], badge:'Fondamental' },
+      { color:'var(--sky500)', label:'Module 2 — Intermédiaire', title:'OneDay OnePiece', desc:'Protocole de mise en charge immédiate avec implants monoblocs. Solution minimaliste de haute fiabilité pour réhabilitation partielle ou totale en une seule séance clinique.', items:['Sélection et planification de l\'implant monobloc','Chirurgie minimalement invasive sans lambeau','Prothèse provisoire en charge immédiate','Protocole de suivi et contrôle à 48 h'], badge:'Intermédiaire' },
+      { color:'#7c3aed', label:'Module 3 — Avancé', title:'All-on-Four Guidé', desc:'Réhabilitation totale de l\'arcade avec 4 implants en charge immédiate le jour même. Le protocole le plus demandé en implantologie avancée, enseigné avec flux numérique complet.', items:['Planification All-on-Four avec logiciel dédié','Inclinaison des implants distaux : technique et justification','Réalisation chirurgicale complète sous supervision','Prothèse temporaire en résine le jour J'], badge:'Avancé' },
+    ].map(m => (
+      <div style={`border-left:4px solid ${m.color};padding:24px 28px;background:var(--sky50);border-radius:0 12px 12px 0;margin-bottom:28px;`}>
+        <div style={`font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:${m.color};margin-bottom:6px;`}>{m.label}</div>
+        <h2 style="font-weight:900;font-size:1.2rem;color:var(--sky900);margin-bottom:8px;">{m.title}</h2>
+        <p style="font-size:.84rem;color:var(--sl500);line-height:1.7;margin-bottom:14px;">{m.desc}</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+          {m.items.map(i => (
+            <li style="display:flex;gap:8px;font-size:.8rem;color:var(--sl700);">
+              <svg width="13" height="13" style="flex-shrink:0;margin-top:2px;" fill="none" stroke={m.color} stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+    <div class="cta-banner" style="margin-top:8px;">
+      <div>
+        <p style="font-weight:700;color:var(--sky900);margin-bottom:4px;">Prêt à pratiquer ces protocoles ?</p>
+        <p style="font-size:.82rem;color:var(--sl500);">Réservez votre place pour novembre 2026.</p>
+      </div>
+      <a href="/fr/inscription" class="btn btn-sky btn-lg">S'inscrire →</a>
+    </div>
+  </div>
+</div>
+</Layout>

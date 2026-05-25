@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const faqs = [
+  { q: 'À qui ce programme est-il destiné ?', a: 'Le programme s\'adresse aux chirurgiens-dentistes, chirurgiens maxillo-faciaux et spécialistes en implantologie souhaitant mettre à jour leurs connaissances en chirurgie guidée numérique et protocoles de mise en charge immédiate.' },
+  { q: 'Quel niveau de connaissances préalables est requis ?', a: 'Une expérience clinique de base en implantologie est recommandée. Le programme couvre les concepts fondamentaux jusqu\'aux techniques avancées, avec une approche essentiellement pratique.' },
+  { q: 'Combien de participants y a-t-il par édition ?', a: 'Le programme est conçu pour des groupes réduits de 12 participants maximum, garantissant ainsi une attention personnalisée et un accès direct aux directeurs durant toutes les sessions.' },
+  { q: 'Les sessions pratiques se déroulent-elles sur de vrais patients ?', a: 'Oui. Une partie essentielle du programme comprend des chirurgies supervisées sur de vrais patients dans les installations de CliniCare Training, sous la supervision directe du Dr. Juan Méndez, du Dr. Manuel Gonzales et du Prof. Assis Filipe.' },
+  { q: 'Quel logiciel de planification 3D est utilisé ?', a: 'Le programme utilise les principaux logiciels du marché : EXocad, Exoplan et d\'autres systèmes de planification guidée numérique, avec des sessions théoriques et pratiques sur chaque plateforme.' },
+  { q: 'Le programme inclut-il l\'hébergement et les transferts ?', a: 'Le programme comprend l\'hébergement. L\'organisation recommande des hôtels proches de CliniCare Training et coordonne des transferts collectifs depuis l\'aéroport.' },
+  { q: 'Un certificat est-il délivré à l\'issue du programme ?', a: 'Oui. Les participants ayant terminé le programme recevront un certificat de présence et de réussite délivré conjointement par DGIS Fortaleza, CliniCare Training et NACAR Clínicas Dentales.' },
+  { q: 'Dans quelle langue le programme est-il dispensé ?', a: 'Le programme est dispensé en espagnol, avec des supports également disponibles en portugais pour faciliter la compréhension des participants brésiliens.' },
+  { q: 'Comment réserver ma place ?', a: 'Vous pouvez réserver votre place via le formulaire d\'inscription sur ce site, ou en contactant directement Eduardo Burger par WhatsApp au +34 651 039 967. Les places sont limitées et attribuées par ordre d\'inscription.' },
+  { q: 'Quelle est la politique d\'annulation ?', a: 'En cas d\'annulation plus de 60 jours à l\'avance, 80 % du montant payé est remboursé. Dans les 60 jours, nous proposons la possibilité de transférer la place vers une autre édition du programme.' },
+];
+---
+<Layout title="Questions fréquentes – DGIS Fortaleza 2026" lang="fr">
+<div class="sec-dark" style="padding:40px 24px 36px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Informations</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Questions fréquentes</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:580px;">Tout ce que vous devez savoir avant de vous inscrire au programme.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+      {faqs.map(item => (
+        <details style="border:1.5px solid var(--sky100);border-radius:10px;overflow:hidden;background:#fff;">
+          <summary style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:.88rem;font-weight:700;color:var(--sky900);cursor:pointer;list-style:none;gap:16px;">
+            <span>{item.q}</span>
+            <svg style="flex-shrink:0;transition:transform .2s;" width="16" height="16" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div style="padding:14px 20px 18px;font-size:.84rem;color:var(--sl500);line-height:1.75;border-top:1px solid var(--sky100);">{item.a}</div>
+        </details>
+      ))}
+    </div>
+    <div class="cta-banner" style="margin-top:40px;max-width:780px;margin-left:auto;margin-right:auto;">
+      <div>
+        <p style="font-size:.92rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Une autre question ?</p>
+        <p style="font-size:.82rem;color:var(--sl500);">Contactez-nous directement via WhatsApp.</p>
+      </div>
+      <a href="https://wa.me/34651039967" class="btn btn-sky btn-lg">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+<style>
+  details[open] summary svg { transform:rotate(180deg); }
+  details[open] { background:var(--sky50); }
+  summary::-webkit-details-marker { display:none; }
+</style>
+</Layout>

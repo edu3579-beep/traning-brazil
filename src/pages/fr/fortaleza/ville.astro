@@ -1,0 +1,82 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout title="Fortaleza – DGIS 2026" lang="fr">
+<div class="sec-dark" style="padding:36px 24px 32px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Destination</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Fortaleza, Brésil</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:560px;">Capitale du Ceará, Fortaleza allie infrastructure médicale de pointe et cadre tropical exceptionnel.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="align-items:start;margin-bottom:48px;">
+      <div>
+        <span class="eyebrow">La ville</span>
+        <h2 class="sec-h2" style="margin-top:8px;">Une métropole dynamique en bord de mer</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">Avec plus de 2,7 millions d'habitants, Fortaleza est la cinquième ville du Brésil. Elle offre un climat tropical toute l'année, des plages de sable fin et une infrastructure hôtelière et gastronomique de haut niveau.</p>
+        <p class="lead" style="margin-bottom:16px;">La ville dispose d'un aéroport international bien connecté avec l'Europe et les principales capitales brésiliennes, ce qui en fait une destination facilement accessible.</p>
+        <div class="grid-2" style="gap:12px;margin-top:20px;">
+          {[
+            {icon:'☀️', t:'Climat tropical', d:'Soleil toute l\'année, 28–32°C en novembre'},
+            {icon:'🏖️', t:'Plages urbaines', d:'Iracema, Meireles, Praia do Futuro'},
+            {icon:'🏨', t:'Hôtellerie 4★/5★', d:'Toutes catégories à 15 min de CliniCare'},
+            {icon:'✈️', t:'Vols directs', d:'Depuis Lisbonne, Madrid, Paris et Miami'},
+          ].map(c => (
+            <div style="background:var(--sky50);border:1px solid var(--sky100);border-radius:10px;padding:14px;">
+              <div style="font-size:1.3rem;margin-bottom:4px;">{c.icon}</div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--sky900);margin-bottom:2px;">{c.t}</div>
+              <div style="font-size:.74rem;color:var(--sl500);">{c.d}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="img-frame">
+          <img src="/pptx_images/fortaleza-hero2.jpg.jpg" alt="Fortaleza vue aérienne" style="width:100%;height:260px;object-fit:cover;object-position:center;" />
+          <div class="img-cap">Vue aérienne de Fortaleza · Côte du Ceará</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/playa-iracema.avif" alt="Plage d'Iracema" style="width:100%;height:200px;object-fit:cover;object-position:center;" />
+          <div class="img-cap">📍 Plage d'Iracema · Fortaleza</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/fortaleza-centro.jpg.jpeg" alt="Centre historique" style="width:100%;height:200px;object-fit:cover;object-position:center;" />
+          <div class="img-cap">📍 Centre historique · Fortaleza</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/praia-do-futuro.avif" alt="Praia do Futuro" style="width:100%;height:200px;object-fit:cover;object-position:center;" />
+          <div class="img-cap">📍 Praia do Futuro · Fortaleza</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--sky50);border:1.5px solid var(--sky200);border-radius:14px;padding:36px;margin-bottom:48px;">
+      <span class="eyebrow">Logistique</span>
+      <h2 class="sec-h2" style="margin-top:8px;margin-bottom:24px;">Comment arriver à Fortaleza</h2>
+      <div class="grid-3" style="gap:20px;">
+        {[
+          {icon:'✈️', t:'Aéroport International', d:'Aéroport Pinto Martins (FOR). Connexions directes depuis Lisbonne, Madrid, Miami et principales capitales du Brésil. À 10 min du centre.'},
+          {icon:'🏨', t:'Hébergement', d:'Large offre hôtelière dans toutes les catégories sur la Beira Mar et la plage d\'Iracema, à moins de 15 minutes de CliniCare Training.'},
+          {icon:'🚗', t:'Transferts', d:'Uber disponible dans toute la ville. L\'organisation coordonne des transferts collectifs depuis l\'aéroport pour les participants du programme.'},
+        ].map(c => (
+          <div style="background:#fff;border-radius:10px;padding:20px;border:1px solid var(--sky200);">
+            <div style="font-size:1.6rem;margin-bottom:10px;">{c.icon}</div>
+            <h3 style="font-weight:800;font-size:.9rem;color:var(--sky900);margin-bottom:6px;">{c.t}</h3>
+            <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;">{c.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="cta-banner">
+      <div>
+        <p style="font-weight:700;color:var(--sky900);margin-bottom:4px;">Prêt à vivre cette expérience à Fortaleza ?</p>
+        <p style="font-size:.82rem;color:var(--sl500);">Réservez votre place pour novembre 2026.</p>
+      </div>
+      <a href="/fr/inscription" class="btn btn-sky btn-lg">S'inscrire →</a>
+    </div>
+  </div>
+</div>
+</Layout>

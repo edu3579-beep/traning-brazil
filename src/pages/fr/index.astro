@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="DGIS Fortaleza 2026 – Programme d'Immersion en Chirurgie Implantaire Guidée" lang="fr">
+
+<section style="min-height:92vh;display:grid;grid-template-columns:56fr 44fr;overflow:hidden;">
+  <div style="background:linear-gradient(145deg,#f0f9ff 0%,#e0f2fe 100%);display:flex;flex-direction:column;justify-content:space-between;padding:72px 56px 52px;">
+    <div>
+      <div class="gold-bar" style="margin-bottom:32px;"></div>
+      <span class="eyebrow">Cours clinique · Fortaleza, Brésil</span>
+      <h1 class="page-h1" style="margin-top:10px;margin-bottom:8px;">Chirurgie Implantaire<br/>Guidée Numérique</h1>
+      <h2 style="font-size:clamp(1.2rem,2vw,1.6rem);font-weight:700;color:var(--sky600);margin-bottom:6px;">Programme d'Immersion</h2>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:var(--sky800);color:#fff;font-size:.75rem;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:.5px;">
+        📅 6–13 Novembre 2026
+      </div>
+      <p class="lead" style="max-width:440px;margin-bottom:12px;">Découvrez la capitale du Ceará : le cadre idéal pour votre développement professionnel.</p>
+      <p style="font-size:.95rem;color:var(--sl700);line-height:1.8;max-width:440px;margin-bottom:36px;word-wrap:break-word;">
+        Une semaine d'immersion chirurgicale réelle. <strong>Vous opérez. Vous apprenez.</strong> Planification guidée numérique, supervision d'experts et diplôme accrédité.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/fr/inscription" class="btn btn-sky btn-lg">Réserver ma place →</a>
+        <a href="/fr/programme"   class="btn btn-outline btn-lg">Voir le programme</a>
+      </div>
+    </div>
+    <div>
+      <div class="gold-bar" style="margin-top:48px;margin-bottom:20px;"></div>
+      <div style="font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--sl400);margin-bottom:12px;">Avec le soutien de</div>
+      <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+        <img src="/pptx_images/logo-clinicare.png.png" alt="CliniCare Training" style="height:44px;object-fit:contain;mix-blend-mode:multiply;" />
+        <img src="/pptx_images/logo-straumann.png.png" alt="Straumann Group"    style="height:30px;object-fit:contain;mix-blend-mode:multiply;" />
+        <img src="/pptx_images/logo-nacar.png.png"     alt="NACAR clínicas dentales" style="height:42px;object-fit:contain;mix-blend-mode:multiply;" />
+      </div>
+    </div>
+  </div>
+  <div style="overflow:hidden;position:relative;min-height:500px;">
+    <img src="/pptx_images/fortaleza-hero2.jpg.jpg" alt="Fortaleza, Brésil"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
+  </div>
+</section>
+
+<div class="sec-dark" style="padding:32px 24px;">
+  <div class="container" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;padding:0;">
+    {[
+      {v:'7',    u:'Jours d\'immersion'},
+      {v:'100%', u:'Chirurgies réalisées par les étudiants'},
+      {v:'4',    u:'Sessions chirurgicales/jour'},
+      {v:'✓',    u:'Diplôme accrédité'},
+    ].map(s => (
+      <div><div class="stat-val">{s.v}</div><div class="stat-lbl">{s.u}</div></div>
+    ))}
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="align-items:center;gap:56px;">
+      <div>
+        <span class="eyebrow">À propos du programme</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Immersion chirurgicale réelle sur patients vivants</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:20px;">À Fortaleza, chaque chirurgie est réalisée par les étudiants eux-mêmes. Pratique clinique directe avec supervision d'experts et planification guidée numérique.</p>
+        <p class="lead" style="margin-bottom:28px;">CliniCare Training est un équipement de pointe pour la formation chirurgicale de haut niveau, avec des auditoriums de streaming 4K et un flux de travail numérique complet.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="/fr/programme"   class="btn btn-sky">Voir le programme complet →</a>
+          <a href="/fr/inscription" class="btn btn-outline">S'inscrire</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;">
+        <div class="img-frame" style="flex:1;">
+          <img src="/pptx_images/image3.jpeg" alt="CliniCare Training" style="height:250px;width:100%;object-fit:cover;" />
+          <div class="img-cap">📍 CliniCare Training · Fortaleza, Brésil</div>
+        </div>
+        <div class="img-frame" style="flex:1;">
+          <img src="/pptx_images/image7.jpeg" alt="Salle de cours" style="height:250px;width:100%;object-fit:cover;" />
+          <div class="img-cap">🎬 Diffusion chirurgicale 4K en direct</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-light">
+  <div class="section">
+    <div class="center mx-auto" style="margin-bottom:48px;">
+      <span class="eyebrow">Inclus</span>
+      <h2 class="sec-h2" style="margin-top:10px;">Que comprend le programme ?</h2>
+      <div class="sky-bar"></div>
+      <p class="lead">Tout ce dont vous avez besoin pour une semaine d'apprentissage chirurgical intensif.</p>
+    </div>
+    <div class="grid-3">
+      {[
+        {icon:'🖥️', title:'Planification numérique quotidienne', desc:'Logiciel de chirurgie guidée pour chaque cas clinique. Révision et conception du plan avant chaque intervention.', href:'/fr/programme'},
+        {icon:'🦷', title:'3 protocoles chirurgicaux',           desc:'Implantologie guidée, OneDay OnePiece et All-on-Four. Du basique à l\'avancé en une seule semaine.', href:'/fr/techniques'},
+        {icon:'📊', title:'Contrôle planifié/exécuté',          desc:'Analyse de précision en fin de journée. Apprenez en mesurant l\'écart entre votre plan et le résultat réel.', href:'/fr/horaire'},
+        {icon:'🏆', title:'Diplôme accrédité',                  desc:'Certification officielle à l\'issue du programme. Reconnaissance internationale de votre formation chirurgicale numérique.', href:'/fr/inscription'},
+        {icon:'📍', title:'Fortaleza, Brésil',                  desc:'Capitale du Ceará. Infrastructure premium, climat tropical et vols directs depuis l\'Europe.', href:'/fr/lieu'},
+        {icon:'👨‍⚕️', title:'Corps enseignant expert',           desc:'Dr. Juan Méndez, Dr. Manuel Gonzales et Prof. Assis Filipe. Leaders internationaux en implantologie guidée et chirurgie orale.', href:'/fr/directeurs'},
+      ].map(c => (
+        <div class="card">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div style="font-size:2rem;margin-bottom:12px;">{c.icon}</div>
+            <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:8px;word-wrap:break-word;">{c.title}</h3>
+            <p style="font-size:.82rem;color:var(--sl500);line-height:1.7;margin-bottom:14px;word-wrap:break-word;">{c.desc}</p>
+            <a href={c.href} style="font-size:.8rem;font-weight:700;color:var(--sky600);">En savoir plus →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-3">
+      <div class="img-frame">
+        <img src="/pptx_images/image8.jpeg" alt="Chirurgie pratique" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Chirurgie pratique sur patient réel</div>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image4.jpeg" alt="Chirurgien avec loupe" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Chirurgie avec loupe de grossissement</div>
+      </div>
+      <div class="img-frame">
+        <img src="/pptx_images/image5.jpeg" alt="Streaming en direct" style="height:230px;width:100%;object-fit:cover;" />
+        <div class="img-cap">Streaming chirurgical en direct</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-mid" style="padding:56px 24px;">
+  <div class="container" style="text-align:center;padding:0;">
+    <span class="eyebrow-white">Places très limitées · Novembre 2026</span>
+    <h2 class="sec-h2-white" style="margin-top:10px;margin-bottom:14px;">Petit groupe pour une supervision individuelle maximale</h2>
+    <p class="lead-white" style="max-width:520px;margin:0 auto 32px;">Réservez votre place avant qu'elles ne soient épuisées. Contactez-nous via WhatsApp ou remplissez le formulaire d'inscription.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="/fr/inscription" class="btn btn-white btn-lg">S'inscrire maintenant →</a>
+      <a href="https://wa.me/34651039967" target="_blank" class="btn btn-wa btn-lg">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+</Layout>

@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Inscription – DGIS Fortaleza 2026" lang="fr">
+<div class="sec-dark" style="padding:36px 24px 32px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Rejoignez le programme</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Inscription</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:560px;">Places limitées à 12 participants. Réservez la vôtre avant qu'elles ne soient épuisées.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="gap:48px;align-items:start;">
+      <div>
+        <span class="eyebrow">Formulaire d'inscription</span>
+        <h2 class="sec-h2" style="margin-top:8px;margin-bottom:20px;">Réservez votre place</h2>
+        <form style="display:flex;flex-direction:column;gap:16px;" onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label">Nom complet *</label>
+            <input class="form-input" type="text" placeholder="Dr. Prénom Nom" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email professionnel *</label>
+            <input class="form-input" type="email" placeholder="nom@clinique.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Téléphone / WhatsApp *</label>
+            <input class="form-input" type="tel" placeholder="+33 6 00 00 00 00" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pays</label>
+            <input class="form-input" type="text" placeholder="France" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Spécialité</label>
+            <input class="form-input" type="text" placeholder="Implantologie, Chirurgie orale..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message (optionnel)</label>
+            <textarea class="form-input" rows="3" placeholder="Questions, besoins spécifiques..."></textarea>
+          </div>
+          <a href="https://wa.me/34651039967" target="_blank" class="btn btn-sky btn-lg" style="justify-content:center;">
+            Envoyer via WhatsApp →
+          </a>
+        </form>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card"><div class="card-accent"></div><div class="card-body">
+          <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:12px;">📋 Ce qui est inclus</h3>
+          {['7 jours de formation chirurgicale','Accès complet à CliniCare Training','Logiciels EXocad & Exoplan','Matériel chirurgical pour les pratiques','Hébergement inclus','Transferts aéroport-hôtel','Diplôme accrédité DGIS Fortaleza','Dîner de bienvenue et soirée de clôture'].map(i => (
+            <div style="display:flex;gap:8px;font-size:.82rem;color:var(--sl700);margin-bottom:6px;">
+              <svg width="14" height="14" style="flex-shrink:0;margin-top:1px;" fill="none" stroke="var(--green)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+            </div>
+          ))}
+        </div></div>
+        <div class="card"><div class="card-accent-gold"></div><div class="card-body">
+          <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:8px;">📅 Informations pratiques</h3>
+          <p style="font-size:.82rem;color:var(--sl500);line-height:1.7;"><strong>Dates :</strong> 6–13 novembre 2026<br/><strong>Lieu :</strong> CliniCare Training, Fortaleza, Brésil<br/><strong>Places :</strong> Maximum 12 participants<br/><strong>Langue :</strong> Espagnol (supports en portugais)</p>
+        </div></div>
+        <div class="card"><div class="card-accent-green"></div><div class="card-body">
+          <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:8px;">⬇ Télécharger le programme</h3>
+          <p style="font-size:.82rem;color:var(--sl500);margin-bottom:12px;">Consultez le programme complet en PDF avant de vous inscrire.</p>
+          <a href="/downloads/DGIS-Fortaleza-2026-Programa.pdf" download class="btn btn-dark" style="width:100%;justify-content:center;">⬇ Télécharger PDF</a>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</Layout>

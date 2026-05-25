@@ -1,20 +1,279 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Horario – DGIS Fortaleza 2026" lang="es">
+<Layout title="Horario & Sílabo – DGIS Fortaleza 2026" lang="es">
 
 <div class="sec-dark" style="padding:52px 24px 48px;">
   <div class="container" style="padding:0;">
-    <span class="eyebrow-white">Organización semanal</span>
-    <h1 class="page-h1-white" style="margin-top:10px;">Horario del programa</h1>
+    <span class="eyebrow-white">Organización académica</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Horario & Sílabo</h1>
     <div class="gold-bar"></div>
-    <p class="lead-white" style="max-width:600px;">Fortaleza, Brasil · 6–13 Noviembre 2026. Siete días de inmersión quirúrgica completa.</p>
+    <p class="lead-white" style="max-width:640px;">Fortaleza, Brasil · 6–13 Noviembre 2026. Siete días de inmersión quirúrgica con metodología académica estructurada y evaluación continua.</p>
+    <div style="margin-top:28px;">
+      <a href="/downloads/DGIS-Fortaleza-2026-Programa.pdf" download class="btn btn-white" style="gap:8px;">
+        ⬇ Descargar Sílabo PDF
+      </a>
+    </div>
   </div>
 </div>
 
+<!-- ══ SÍLABO ══════════════════════════════════════════════════════ -->
+<div class="sec-light">
+  <div class="section" style="padding-top:52px;padding-bottom:52px;">
+
+    <!-- Header info -->
+    <div class="grid-4" style="gap:16px;margin-bottom:52px;">
+      {[
+        { icon:'📍', label:'Sede', val:'CliniCare Training · Fortaleza, BR' },
+        { icon:'📅', label:'Fechas', val:'6 – 13 Noviembre 2026' },
+        { icon:'⏱', label:'Duración', val:'7 días · 40 h clínicas' },
+        { icon:'🎓', label:'Título', val:'Diploma DGIS · Acreditado' },
+      ].map(s => (
+        <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:12px;padding:18px 20px;">
+          <div style="font-size:1.4rem;margin-bottom:6px;">{s.icon}</div>
+          <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sl400);margin-bottom:2px;">{s.label}</div>
+          <div style="font-size:.84rem;font-weight:700;color:var(--sky900);">{s.val}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Objetivos generales -->
+    <div class="grid-2" style="gap:40px;margin-bottom:52px;align-items:start;">
+      <div>
+        <span class="eyebrow">Objetivos del programa</span>
+        <h2 class="sec-h2" style="margin-top:10px;margin-bottom:14px;">Competencias al finalizar</h2>
+        <div class="sky-bar"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:18px;">
+          {[
+            'Dominar el flujo de trabajo digital completo en implantología guiada (CBCT → planificación → férula quirúrgica → cirugía)',
+            'Ejecutar protocolos All-on-Four con carga inmediata de forma autónoma',
+            'Aplicar técnicas de carga inmediata OneDay OnePiece en casos seleccionados',
+            'Desarrollar criterios clínicos para la selección de casos en implantología guiada',
+            'Integrarse en un equipo quirúrgico multidisciplinar de alto rendimiento',
+            'Gestionar complicaciones intraoperatorias en cirugía guiada avanzada',
+          ].map(o => (
+            <li style="display:flex;gap:10px;font-size:.83rem;color:var(--sl700);line-height:1.6;">
+              <svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{o}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Metodología</span>
+        <h2 class="sec-h2" style="margin-top:10px;margin-bottom:14px;">Cómo aprendemos</h2>
+        <div class="sky-bar"></div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:18px;">
+          {[
+            { icon:'🔬', t:'Inmersión quirúrgica directa', d:'Cada alumno opera en pacientes reales bajo supervisión directa del equipo docente, con ratio máximo 2:1.' },
+            { icon:'📐', t:'Planificación asistida por software', d:'Sesiones de planificación en software 3D (coDiagnostiX / Implant Studio) previas a cada jornada quirúrgica.' },
+            { icon:'🎥', t:'Transmisión en directo', d:'Cirugías retransmitidas al aula mediante cámaras HD. Análisis en tiempo real con el equipo.' },
+            { icon:'📋', t:'Presentación de casos', d:'Cada alumno presenta sus propios casos clínicos al inicio de cada jornada para análisis y debate.' },
+          ].map(m => (
+            <div style="display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--sky100);border-radius:10px;padding:14px 16px;">
+              <div style="font-size:1.3rem;flex-shrink:0;">{m.icon}</div>
+              <div>
+                <div style="font-weight:800;font-size:.84rem;color:var(--sky900);margin-bottom:3px;">{m.t}</div>
+                <div style="font-size:.78rem;color:var(--sl500);line-height:1.6;">{m.d}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Módulos académicos -->
+    <span class="eyebrow">Contenido académico</span>
+    <h2 class="sec-h2" style="margin-top:10px;margin-bottom:28px;">Módulos del programa</h2>
+
+    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:52px;">
+
+      <!-- Módulo 1 -->
+      <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:4px 1fr;">
+          <div style="background:var(--sky500);"></div>
+          <div style="padding:24px 28px;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+              <div style="background:var(--sky800);color:#fff;font-size:.65rem;font-weight:900;padding:4px 10px;border-radius:6px;">MÓDULO 1</div>
+              <span class="badge-basic">Nivel básico–intermedio</span>
+              <span style="font-size:.75rem;color:var(--sl400);">Lunes 8 y Martes 9 de Noviembre</span>
+            </div>
+            <h3 style="font-weight:900;font-size:1.1rem;color:var(--sky900);margin-bottom:12px;">Implantología Guiada Digital</h3>
+            <div class="grid-3" style="gap:20px;">
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Contenido teórico</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Flujo digital: CBCT → STL → planificación','Software de planificación 3D (coDiagnostiX)','Tipos de férulas: mucosoportadas, dentosoportadas, óseas','Parámetros biomecánicos del implante guiado','Manejo de limitaciones anatómicas'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:var(--sky500);flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Práctica clínica</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['4 tandas quirúrgicas / día en paciente real','Colocación guiada con control de torque','Cierre de colgajo y sutura','Protocolo postoperatorio','Seguimiento radiológico inmediato'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:var(--sky500);flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Competencia evaluada</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Ejecución autónoma de cirugía guiada','Lectura e interpretación de CBCT','Manejo del kit de cirugía guiada','Criterios de selección de casos','Resolución de incidencias intraop.'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:var(--sky500);flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Módulo 2 -->
+      <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:4px 1fr;">
+          <div style="background:var(--sky400);"></div>
+          <div style="padding:24px 28px;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+              <div style="background:var(--sky700);color:#fff;font-size:.65rem;font-weight:900;padding:4px 10px;border-radius:6px;">MÓDULO 2</div>
+              <span class="badge-mid">Nivel intermedio</span>
+              <span style="font-size:.75rem;color:var(--sl400);">Miércoles 10 de Noviembre</span>
+            </div>
+            <h3 style="font-weight:900;font-size:1.1rem;color:var(--sky900);margin-bottom:12px;">OneDay OnePiece · Carga Inmediata Guiada</h3>
+            <div class="grid-3" style="gap:20px;">
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Contenido teórico</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Concepto OneDay OnePiece','Criterios de estabilidad primaria','Planificación protésica previa','Selección de implante monobloque','Protocolo de carga el mismo día'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:var(--sky400);flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Práctica clínica</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Cirugía guiada con carga inmediata','Colocación de corona provisional','Ajuste oclusal inmediato','Verificación de torque mínimo','Instrucciones al paciente'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:var(--sky400);flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Competencia evaluada</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Protocolo completo OneDay','Criterios de selección del caso','Gestión del provisionalizado','Toma de decisiones intraop.','Documentación del caso'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:var(--sky400);flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Módulo 3 -->
+      <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;">
+        <div style="display:grid;grid-template-columns:4px 1fr;">
+          <div style="background:#7c3aed;"></div>
+          <div style="padding:24px 28px;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+              <div style="background:#5b21b6;color:#fff;font-size:.65rem;font-weight:900;padding:4px 10px;border-radius:6px;">MÓDULO 3</div>
+              <span class="badge-advanced">Nivel avanzado</span>
+              <span style="font-size:.75rem;color:var(--sl400);">Jueves 11 y Viernes 12 de Noviembre</span>
+            </div>
+            <h3 style="font-weight:900;font-size:1.1rem;color:var(--sky900);margin-bottom:12px;">All-on-Four · Rehabilitación Total Guiada</h3>
+            <div class="grid-3" style="gap:20px;">
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Contenido teórico</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Concepto All-on-Four y variantes','Angulación distal: biomecánica','Planificación 3D arco completo','Selección y diseño de provisional','Protocolo de carga inmediata total'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:#7c3aed;flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Práctica clínica</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Extracción y colocación All-on-Four','Implantes rectos y angulados 30°–45°','Impresión y carga del provisional','Ajuste oclusal arco completo','Cierre y protocolo postoperatorio'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:#7c3aed;flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Competencia evaluada</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
+                  {['Protocolo All-on-Four completo','Ejecución de implante angulado','Gestión de la fase protésica','Planificación preoperatoria 3D','Criterios de éxito y seguimiento'].map(t=>(
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                      <span style="color:#7c3aed;flex-shrink:0;">·</span>{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluación + certificación -->
+    <div class="grid-2" style="gap:32px;margin-bottom:0;">
+      <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:14px;padding:28px 30px;">
+        <h3 style="font-weight:900;font-size:1rem;color:var(--sky900);margin-bottom:16px;">📋 Sistema de evaluación</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          {[
+            { item:'Evaluación continua por el equipo docente', pct:'40%' },
+            { item:'Presentación y defensa de casos clínicos propios', pct:'30%' },
+            { item:'Participación activa en jornadas quirúrgicas', pct:'20%' },
+            { item:'Asistencia mínima al 90% de las sesiones', pct:'10%' },
+          ].map(e => (
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--sky100);">
+              <span style="font-size:.8rem;color:var(--sl700);">{e.item}</span>
+              <span style="font-size:.8rem;font-weight:800;color:var(--sky700);flex-shrink:0;margin-left:12px;">{e.pct}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:14px;padding:28px 30px;">
+        <h3 style="font-weight:900;font-size:1rem;color:var(--sky900);margin-bottom:16px;">🎓 Certificación y materiales</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          {[
+            '✅ Diploma DGIS — Fortaleza 2026 firmado por la dirección',
+            '✅ Acceso a software de planificación durante el curso',
+            '✅ Materiales quirúrgicos incluidos (implantes, férulas, suturas)',
+            '✅ Documentación fotográfica de cada caso operado',
+            '✅ Dossier académico completo en formato digital',
+            '✅ Acceso a sesiones de seguimiento online post-programa',
+          ].map(m => (
+            <div style="font-size:.8rem;color:var(--sl700);line-height:1.6;">{m}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ HORARIO SEMANAL ═══════════════════════════════════════════════ -->
 <div class="sec-white">
-  <div class="section">
-    <div style="border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;margin-bottom:48px;">
+  <div class="section" style="padding-top:52px;padding-bottom:52px;">
+    <span class="eyebrow">Semana clínica</span>
+    <h2 class="sec-h2" style="margin-top:10px;margin-bottom:28px;">Horario día a día</h2>
+
+    <div style="border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;margin-bottom:40px;">
 
       <div class="tl-item">
         <div class="tl-day" style="background:var(--sky900);">SÁB<span style="font-size:1.1rem;font-weight:900;display:block;">6</span>NOV</div>
@@ -36,7 +295,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="tl-item">
         <div class="tl-day" style="background:var(--sky800);">LUN<span style="font-size:1.1rem;font-weight:900;display:block;">8</span>NOV</div>
         <div class="tl-body">
-          <h4>🔬 Jornada quirúrgica completa <span class="badge-basic" style="margin-left:8px;">Implantología Guiada</span></h4>
+          <h4>🔬 Jornada quirúrgica completa <span class="badge-basic" style="margin-left:8px;">Módulo 1 · Implantología Guiada</span></h4>
           <div class="tl-row"><span class="tl-time">07:00</span><span>Recogida en el hotel</span></div>
           <div class="tl-row"><span class="tl-time">08:00</span><span>Presentación del curso — personal, auxiliares y profesores</span></div>
           <div class="tl-row"><span class="tl-time">09:00</span><span>Presentación de casos clínicos (alumnos)</span></div>
@@ -51,7 +310,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="tl-item">
         <div class="tl-day" style="background:var(--sky800);">MAR<span style="font-size:1.1rem;font-weight:900;display:block;">9</span>NOV</div>
         <div class="tl-body">
-          <h4>🔬 Jornada quirúrgica completa <span class="badge-basic" style="margin-left:8px;">Implantología Guiada</span></h4>
+          <h4>🔬 Jornada quirúrgica completa <span class="badge-basic" style="margin-left:8px;">Módulo 1 · Implantología Guiada</span></h4>
           <div class="tl-row"><span class="tl-time">08:00</span><span>Recogida en el hotel</span></div>
           <div class="tl-row"><span class="tl-time">09:00</span><span>Presentación de casos clínicos (alumnos)</span></div>
           <div class="tl-row"><span class="tl-time">10:00</span><span>1ª tanda · 12:00 2ª tanda · 14:00 3ª tanda · 16:00 4ª tanda</span></div>
@@ -62,7 +321,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="tl-item">
         <div class="tl-day" style="background:var(--sky600);">MIÉ<span style="font-size:1.1rem;font-weight:900;display:block;">10</span>NOV</div>
         <div class="tl-body">
-          <h4>🔷 OneDay OnePiece + Tarde libre <span class="badge-mid" style="margin-left:8px;">Carga Inmediata</span></h4>
+          <h4>🔷 OneDay OnePiece + Tarde libre <span class="badge-mid" style="margin-left:8px;">Módulo 2 · Carga Inmediata</span></h4>
           <div class="tl-row"><span class="tl-time">08:00</span><span>Recogida en el hotel</span></div>
           <div class="tl-row"><span class="tl-time">09:00</span><span>Presentación de casos</span></div>
           <div class="tl-row"><span class="tl-time">10:00</span><span>1ª tanda — Cirugía Guiada con Carga Inmediata (OneDay OnePiece)</span></div>
@@ -73,7 +332,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="tl-item">
         <div class="tl-day" style="background:var(--sky800);">JUE<span style="font-size:1.1rem;font-weight:900;display:block;">11</span>NOV</div>
         <div class="tl-body">
-          <h4>🦷 Jornada All-on-Four <span class="badge-advanced" style="margin-left:8px;">Avanzado</span></h4>
+          <h4>🦷 Jornada All-on-Four <span class="badge-advanced" style="margin-left:8px;">Módulo 3 · Avanzado</span></h4>
           <div class="tl-row"><span class="tl-time">08:00</span><span>Recogida en el hotel</span></div>
           <div class="tl-row"><span class="tl-time">09:00</span><span>Presentación de casos clínicos (alumnos)</span></div>
           <div class="tl-row"><span class="tl-time">10:00</span><span>1ª tanda — Cirugías All-on-Four</span></div>
@@ -102,13 +361,13 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
+    <!-- Download + WhatsApp CTAs -->
     <div class="grid-2" style="gap:24px;">
-      <div class="cta-banner" style="grid-template-columns:1fr;">
-        <div>
-          <h3 style="font-weight:800;font-size:1.05rem;color:var(--sky900);margin-bottom:6px;">📄 Descarga el programa completo</h3>
-          <p style="font-size:.84rem;color:var(--sl500);margin-bottom:18px;">Horarios completos y detalles logísticos en PDF.</p>
-          <a href="/descargar" class="btn btn-dark">⬇ Descargar PDF</a>
-        </div>
+      <div style="background:var(--sky900);border-radius:14px;padding:32px 36px;display:flex;flex-direction:column;gap:12px;">
+        <div style="font-size:1.8rem;">📄</div>
+        <h3 style="font-weight:900;font-size:1.05rem;color:#fff;margin-bottom:4px;">Descargar Sílabo completo</h3>
+        <p style="font-size:.83rem;color:rgba(255,255,255,.72);margin-bottom:6px;">Sílabo académico, horarios detallados y guía logística en un único documento PDF.</p>
+        <a href="/downloads/DGIS-Fortaleza-2026-Programa.pdf" download class="btn btn-white" style="width:fit-content;">⬇ Descargar PDF</a>
       </div>
       <div class="cta-banner" style="grid-template-columns:1fr;">
         <div>
@@ -118,6 +377,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+
   </div>
 </div>
+
 </Layout>

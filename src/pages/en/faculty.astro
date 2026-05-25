@@ -2,65 +2,145 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout title="Faculty – DGIS Fortaleza 2026" lang="en">
-<div class="sec-dark" style="padding:52px 24px 48px;">
+
+<div class="sec-dark" style="padding:36px 24px 32px;">
   <div class="container" style="padding:0;">
     <span class="eyebrow-white">Teaching team</span>
-    <h1 class="page-h1-white" style="margin-top:10px;">Programme directors</h1>
+    <h1 class="page-h1-white" style="margin-top:8px;">Programme directors</h1>
     <div class="gold-bar"></div>
-    <p class="lead-white" style="max-width:600px;">An internationally recognised team in digital guided implantology and advanced oral surgery.</p>
+    <p class="lead-white" style="max-width:560px;">An internationally recognised team in digital guided implantology and advanced oral surgery.</p>
   </div>
 </div>
+
 <div class="sec-white">
   <div class="section">
-    <div class="grid-2" style="gap:48px;align-items:start;margin-bottom:64px;padding-bottom:64px;border-bottom:1.5px solid var(--sky100);">
-      <div style="display:flex;flex-direction:column;gap:14px;">
-        <div class="img-frame"><img src="/pptx_images/image23.jpeg" alt="Dr. Juan Méndez" style="width:100%;height:400px;object-fit:cover;object-position:center top;" /></div>
-        <div class="img-frame"><img src="/pptx_images/image8.jpeg" alt="Surgical supervision" style="width:100%;height:180px;object-fit:cover;" /><div class="img-cap">Direct surgical supervision</div></div>
+
+    <!-- Dr. Juan Méndez -->
+    <div class="director-card" style="border-bottom:1.5px solid var(--sky100);padding-bottom:36px;margin-bottom:36px;">
+      <div class="img-frame director-photo">
+        <img src="/pptx_images/image23.jpeg" alt="Dr. Juan Méndez" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
       </div>
-      <div>
-        <div style="display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky700);background:var(--sky50);border:1px solid var(--sky200);border-radius:4px;padding:4px 10px;margin-bottom:12px;">Programme Director</div>
-        <h2 style="font-weight:900;font-size:1.9rem;color:var(--sky900);line-height:1.1;margin-bottom:4px;">Dr. Juan Méndez</h2>
-        <p style="font-size:.88rem;color:var(--sl400);margin-bottom:24px;">Implantology · Madrid, Spain</p>
+      <div class="director-bio">
+        <div class="dir-badge" style="color:var(--sky700);background:var(--sky50);border-color:var(--sky200);">Programme Director</div>
+        <h2 class="dir-name">Dr. Juan Méndez</h2>
+        <p class="dir-sub">Implantology · Madrid, Spain</p>
         <div class="sky-bar"></div>
-        <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--sky700);margin-bottom:12px;margin-top:20px;">Education &amp; Career</h3>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
-          {['Dentist, Universidad Autónoma de Santo Domingo','Master in Implantology and Oral Rehabilitation — ESORIB, Madrid','Diploma in Periodontics and Implants — Clínica Gingiva, Madrid','University Diploma in Oral and Maxillofacial Implantology — Paris XII','Expert in Periodontal Plastic Surgery — Prof. Massimo de Sanctis, Barcelona','Expert in Bone Regeneration — Prof. Carlo Tinti, Italy','Former Director, International Implantology Programme — CIDESID, Barcelona 2000–2020'].map(i=>(
-            <li style="display:flex;gap:10px;font-size:.84rem;color:var(--sl700);line-height:1.6;word-wrap:break-word;"><div style="width:5px;height:5px;background:var(--sky600);border-radius:50%;flex-shrink:0;margin-top:8px;"></div>{i}</li>
+        <p class="dir-section-label" style="color:var(--sky700);">Education & Career</p>
+        <ul class="dir-list">
+          {[
+            'Dentist, Universidad Autónoma de Santo Domingo',
+            'Master in Implantology and Oral Rehabilitation — ESORIB, Madrid',
+            'Diploma in Periodontics and Implants — Clínica Gingiva, Madrid',
+            'University Diploma in Oral and Maxillofacial Implantology — Paris XII',
+            'Expert in Periodontal Plastic Surgery — Prof. Massimo de Sanctis, Barcelona',
+            'Expert in Bone Regeneration — Prof. Carlo Tinti, Italy',
+            'Former Teaching Collaborator, Master in Implantology — Universitat Internacional de Catalunya',
+            'Former Director, International Implantology Programme — CIDESID, Barcelona 2000–2020',
+          ].map(i => (
+            <li><span class="dot" style="background:var(--sky600);"></span>{i}</li>
           ))}
         </ul>
-        <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--sky700);margin-bottom:12px;">Clinical specialisation</h3>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          {['Digital guided surgery with 3D planning','Immediate loading All-on-Four protocols','Guided bone regeneration (GBR)','Advanced periodontal plastic surgery'].map(i=>(
-            <li style="display:flex;gap:10px;font-size:.84rem;color:var(--sl700);word-wrap:break-word;"><svg width="15" height="15" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}</li>
+        <p class="dir-section-label" style="color:var(--sky700);">Clinical specialisation</p>
+        <ul class="dir-chips">
+          {['Digital guided surgery 3D','Immediate loading All-on-Four','Guided bone regeneration (GBR)','Periodontal plastic surgery'].map(i => (
+            <li>{i}</li>
           ))}
         </ul>
       </div>
     </div>
-    <div class="grid-2" style="gap:48px;align-items:start;margin-bottom:48px;">
-      <div>
-        <div style="display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--sky500);background:var(--sky50);border:1px solid var(--sky200);border-radius:4px;padding:4px 10px;margin-bottom:12px;">Brazil Coordinator</div>
-        <h2 style="font-weight:900;font-size:1.9rem;color:var(--sky900);line-height:1.1;margin-bottom:4px;">Prof. Assis Filipe</h2>
-        <p style="font-size:.88rem;color:var(--sl400);margin-bottom:24px;">CTBMF-PhD · Fortaleza, Brazil</p>
-        <div class="sky-bar"></div>
-        <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--sky500);margin-bottom:12px;margin-top:20px;">Education &amp; Career</h3>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
-          {['Residency in Oral & Maxillofacial Surgery / Implantology — HUOL/UFRN','Specialist, CFO & Brazilian College of Oral and Maxillofacial Surgery','PhD and Master in Dental Clinics (Oral & Maxillofacial Surgery) — UFC','Postdoctoral Fellow in Dental Clinics (Oral & Maxillofacial Surgery) — UFC','Fellowship in Cleft Lip and Palate Surgery — Hospital Infantil Albert Sabin (HIAS)','Oral & Maxillofacial Surgeon, Hospital Infantil Albert Sabin (HIAS)','Oral & Maxillofacial Surgeon, Associação Beija-Flor / FUNFACE','Oral & Maxillofacial Surgeon, SMILE TRAIN (Cleft Lip and Palate) — USA','Preceptor, Fellowship in Craniofacial Deformity & Multiprofessional Residency — HIAS','Preceptor, Residency in OMFS, Hospital Universitário Walter Cantídio — UFC'].map(i=>(
-            <li style="display:flex;gap:10px;font-size:.84rem;color:var(--sl700);line-height:1.6;word-wrap:break-word;"><div style="width:5px;height:5px;background:var(--sky500);border-radius:50%;flex-shrink:0;margin-top:8px;"></div>{i}</li>
-          ))}
-        </ul>
-        <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--sky500);margin-bottom:12px;">Clinical specialisation</h3>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          {['Advanced oral and maxillofacial surgery','Digital guided implantology with 3D software','Cleft lip and palate surgery','Bone and soft tissue regeneration'].map(i=>(
-            <li style="display:flex;gap:10px;font-size:.84rem;color:var(--sl700);word-wrap:break-word;"><svg width="15" height="15" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}</li>
-          ))}
-        </ul>
+
+    <!-- Dr. Manuel Gonzales -->
+    <div class="director-card" style="border-bottom:1.5px solid var(--sky100);padding-bottom:36px;margin-bottom:36px;">
+      <div class="img-frame director-photo">
+        <img src="/pptx_images/mendez-portrait2.jpg" alt="Dr. Manuel Gonzales" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
       </div>
-      <div style="display:flex;flex-direction:column;gap:14px;">
-        <div class="img-frame"><img src="/images2/p17_05_642x928.jpeg" alt="Prof. Assis Filipe" style="width:100%;height:400px;object-fit:cover;object-position:center top;" /></div>
-        <div class="img-frame"><img src="/pptx_images/image2.jpeg" alt="CliniCare Training" style="width:100%;height:180px;object-fit:cover;" /><div class="img-cap">📍 CliniCare Training · Fortaleza, Brazil</div></div>
+      <div class="director-bio">
+        <div class="dir-badge" style="color:var(--sky700);background:var(--sky50);border-color:var(--sky200);">Programme Director</div>
+        <h2 class="dir-name">Dr. Manuel Gonzales</h2>
+        <p class="dir-sub">Dentistry · Murcia, Spain</p>
+        <div class="sky-bar"></div>
+        <p class="dir-section-label" style="color:var(--sky700);">Education & Career</p>
+        <ul class="dir-list">
+          {[
+            'Degree in Dentistry, Faculty of Medicine, Murcia (2001)',
+            'Master in Implantology and Prosthodontics — Centro Internacional de Estudios Superiores de Implantología Dental, Universidad Católica de Santo Domingo. Best Student Award (2002–2003)',
+            'Research & Development, Tricortical Implant Excalibur (2004–2005) — Speaker, SCDO Científica, Barcelona',
+            'Master in Oral Implantology and Implant-Assisted Prosthodontics — Prof. Dr. Raúl Caffsse & Prof. Dr. Jorge Galante, 300 hrs., Elche (2007–2008)',
+            'Master in Ageing: Health Sciences, Universidad de Murcia (2015)',
+            'Specialist in Perioral Aesthetics — UCAM, Universidad Católica San Antonio, Murcia (2016)',
+            'Master in Occlusion and Oral Rehabilitation — Prof. Dr. Aníbal Alonso',
+            'Expert in 3D Planning and Guided Surgery — Formación Dental Avanzada C3D, Dr. Xulio Pouso',
+            'Expert in EXocasd-Exoplan (online) — UCAM, Dr. Pérez GiuGovaz',
+          ].map(i => (
+            <li><span class="dot" style="background:var(--sky600);"></span>{i}</li>
+          ))}
+        </ul>
+        <p class="dir-section-label" style="color:var(--sky700);">Clinical specialisation</p>
+        <ul class="dir-chips">
+          {['Digital guided implantology','Guided surgery 3D','Oral and implant rehabilitation','Perioral aesthetics'].map(i => (
+            <li>{i}</li>
+          ))}
+        </ul>
       </div>
     </div>
-    <div class="cta-banner"><div><p style="font-size:.95rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">+ High-level international guest faculty</p><p style="font-size:.84rem;color:var(--sl500);">Leading specialists who participate in specific sessions throughout the programme.</p></div><a href="/en/registration" class="btn btn-sky btn-lg">Apply now →</a></div>
+
+    
+    <!-- Prof. Assis Filipe -->
+    <div class="director-card" style="margin-bottom:36px;">
+      <div class="img-frame director-photo">
+        <img src="/pptx_images/assis-filipe-portrait.png" alt="Prof. Assis Filipe" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+      </div>
+      <div class="director-bio">
+        <div class="dir-badge" style="color:var(--sky500);background:var(--sky50);border-color:var(--sky200);">Brazil Coordinator</div>
+        <h2 class="dir-name">Prof. Assis Filipe</h2>
+        <p class="dir-sub">CTBMF-PhD · Fortaleza, Brazil</p>
+        <div class="sky-bar"></div>
+        <p class="dir-section-label" style="color:var(--sky500);">Education & Career</p>
+        <ul class="dir-list">
+          {[
+            'Residency in Oral & Maxillofacial Surgery / Implantology — HUOL/UFRN',
+            'Specialist, CFO & Brazilian College of Oral and Maxillofacial Surgery',
+            'PhD and Master in Dental Clinics (Oral & Maxillofacial Surgery) — UFC',
+            'Postdoctoral Fellow in Oral & Maxillofacial Surgery — UFC',
+            'Fellowship in Cleft Lip and Palate Surgery — Hospital Infantil Albert Sabin (HIAS)',
+            'Oral & Maxillofacial Surgeon — HIAS · Associação Beija-Flor/FUNFACE · SMILE TRAIN (USA)',
+            'Preceptor, Residency in OMFS — Hospital Universitário Walter Cantídio · UFC',
+          ].map(i => (
+            <li><span class="dot" style="background:var(--sky500);"></span>{i}</li>
+          ))}
+        </ul>
+        <p class="dir-section-label" style="color:var(--sky500);">Clinical specialisation</p>
+        <ul class="dir-chips">
+          {['Advanced oral & maxillofacial surgery','Digital guided implantology 3D','Cleft lip and palate surgery','Bone and soft tissue regeneration'].map(i => (
+            <li>{i}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <p style="font-size:.88rem;font-weight:700;color:var(--sky900);margin-bottom:3px;">+ High-level international guest faculty</p>
+        <p style="font-size:.78rem;color:var(--sl500);">Leading specialists who participate in specific sessions throughout the programme.</p>
+      </div>
+      <a href="/en/registration" class="btn btn-sky btn-lg">Apply now →</a>
+    </div>
+
   </div>
 </div>
+
+<style>
+  .director-card { display:grid; grid-template-columns:210px 1fr; gap:28px; align-items:start; }
+  .director-photo { width:210px; height:270px; flex-shrink:0; }
+  .director-bio { display:flex; flex-direction:column; }
+  .dir-badge { display:inline-block; font-size:.58rem; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; border:1px solid; border-radius:4px; padding:2px 8px; margin-bottom:6px; width:fit-content; }
+  .dir-name { font-weight:900; font-size:1.35rem; color:var(--sky900); line-height:1.15; margin-bottom:2px; }
+  .dir-sub { font-size:.78rem; color:var(--sl400); margin-bottom:10px; }
+  .dir-section-label { font-size:.6rem; font-weight:800; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:7px; margin-top:4px; }
+  .dir-list { list-style:none; display:flex; flex-direction:column; gap:5px; margin-bottom:14px; }
+  .dir-list li { display:flex; gap:7px; font-size:.76rem; color:var(--sl700); line-height:1.5; }
+  .dot { width:4px; height:4px; border-radius:50%; flex-shrink:0; margin-top:6px; }
+  .dir-chips { list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin-bottom:4px; }
+  .dir-chips li { font-size:.72rem; font-weight:600; color:var(--sky700); background:var(--sky50); border:1px solid var(--sky200); border-radius:20px; padding:3px 10px; }
+</style>
 </Layout>

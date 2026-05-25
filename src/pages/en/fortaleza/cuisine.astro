@@ -52,18 +52,20 @@ import Layout from '../../../layouts/Layout.astro';
       </div>
       <div class="grid-3" style="gap:24px;">
         {[
-          { icon: '🌴', title: 'Beach barracas', badge: 'Essential', desc: 'Informal spots at the water\'s edge. The barracas at Praia do Futuro are famous throughout Brazil for fresh seafood and a festive vibe.', tip: 'Try: Barraca da Miriam' },
-          { icon: '🦞', title: 'Beira Mar restaurants', badge: 'Gastronomic', desc: 'The coastal avenue concentrates the best restaurants in the city. Lobster, red snapper and prawns with Atlantic views.', tip: 'Area: Av. Beira Mar, Meireles' },
-          { icon: '🏛️', title: 'Mercado dos Pinhões', badge: 'Local culture', desc: 'Food market in the heart of the historic centre. Crafts, spices, tucumã and the most authentic flavours of Ceará.', tip: 'Fortaleza historic centre' },
-          { icon: '🥥', title: 'Coco gelado', badge: 'Local refreshment', desc: 'Coconut water straight from the coconut. Ubiquitous on beaches and street corners. Fortaleza\'s official soft drink.', tip: 'Available city-wide' },
-          { icon: '🎉', title: 'Group dinners', badge: 'For the programme', desc: 'The organisation coordinates optional group dinners for DGIS participants at restaurants showcasing the best of local cuisine.', tip: 'Included in the social agenda' },
-          { icon: '☕', title: 'Cafés & bakeries', badge: 'Daily ritual', desc: 'Strong, sweet Cearense coffee and bolos (cakes) are the perfect morning ritual before each training day.', tip: 'Near CliniCare Training' },
+          { icon: '🌴', title: 'Beach barracas', badge: 'Essential', desc: 'Informal spots at the water\'s edge. The barracas at Praia do Futuro are famous throughout Brazil for fresh seafood and a festive vibe.', tip: 'Try: Barraca da Miriam', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Fortaleza_do_Futuro.jpg', imgAlt: 'Praia do Futuro, Fortaleza' },
+          { icon: '🦞', title: 'Beira Mar restaurants', badge: 'Gastronomic', desc: 'The coastal avenue concentrates the best restaurants in the city. Lobster, red snapper and prawns with Atlantic views.', tip: 'Area: Av. Beira Mar, Meireles', img: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Avenida_Beira_Mar_%28Fortaleza%29_01.jpg', imgAlt: 'Avenida Beira Mar, Fortaleza' },
+          { icon: '🍺', title: 'Mercado dos Pinhões', badge: 'Local culture', desc: 'Food market in the heart of the historic centre. Crafts, spices, tucumã and the most authentic flavours of Ceará.', tip: 'Fortaleza historic centre', img: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Mercado_dos_Pinh%C3%B5es_01.jpg', imgAlt: 'Mercado dos Pinhões, Fortaleza' },
+          { icon: '🥥', title: 'Coco gelado', badge: 'Local refreshment', desc: 'Coconut water straight from the coconut. Ubiquitous on beaches and street corners. Fortaleza\'s official soft drink.', tip: 'Available city-wide', img: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Coconut_drink.jpg', imgAlt: 'Coco gelado' },
+          { icon: '🎉', title: 'Group dinners', badge: 'For the programme', desc: 'The organisation coordinates optional group dinners for DGIS participants at restaurants showcasing the best of local cuisine.', tip: 'Included in the social agenda', img: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Restaurant_in_Olinda.jpg', imgAlt: 'Group restaurant dinner' },
+          { icon: '☕', title: 'Cafés & bakeries', badge: 'Daily ritual', desc: 'Strong, sweet Cearense coffee and bolos (cakes) are the perfect morning ritual before each training day.', tip: 'Near CliniCare Training', img: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Evento14cafe.JPG', imgAlt: 'Brazilian café' },
         ].map(c => (
           <div class="card">
-            <div class="card-accent"></div>
+            <img src={c.img} alt={c.imgAlt} style="width:100%;height:160px;object-fit:cover;" />
             <div class="card-body">
-              <div style="font-size:1.8rem;margin-bottom:10px;">{c.icon}</div>
-              <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;margin-bottom:8px;">{c.badge}</div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="font-size:1.4rem;">{c.icon}</span>
+                <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;">{c.badge}</div>
+              </div>
               <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:6px;">{c.title}</h3>
               <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;margin-bottom:10px;">{c.desc}</p>
               <p style="font-size:.73rem;color:var(--sky600);font-weight:700;">📍 {c.tip}</p>

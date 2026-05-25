@@ -1,0 +1,178 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout title="Gastronomie – DGIS Fortaleza 2026" lang="fr">
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Fortaleza</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Gastronomie</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:620px;">La gastronomie de Fortaleza est une célébration de la mer, de la terre et de la culture nordestine. Des saveurs uniques qui font de chaque repas une expérience inoubliable.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <!-- Intro -->
+    <div class="grid-2" style="gap:56px;align-items:start;margin-bottom:72px;">
+      <div>
+        <span class="eyebrow">Cuisine nordestine</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Une cuisine à l'identité propre</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:18px;">Fortaleza est synonyme de homard, de crevettes et de poisson frais directement pêché dans l'Atlantique. La cuisine cearense fusionne les ingrédients du littoral avec la tradition du sertão — carne de sol, feijão verde, manioc — créant une offre gastronomique incomparable au Brésil.</p>
+        <p class="lead" style="margin-bottom:28px;">Les barracas de plage, les restaurants de Beira Mar et les marchés locaux sont le cadre idéal pour découvrir une culture culinaire authentique, accessible et vibrante.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--sky50);border:1.5px solid var(--sky200);border-radius:14px;padding:28px 32px;">
+          <h3 style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--sky600);margin-bottom:16px;">Plats incontournables</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            {[
+              { dish: 'Lagosta grelhada', desc: 'Homard atlantique grillé, emblème de la gastronomie cearense.' },
+              { dish: 'Moqueca de camarão', desc: 'Ragoût de crevettes au lait de coco et à l\'huile de dendê. Un arôme inoubliable.' },
+              { dish: 'Carne de sol com macaxeira', desc: 'Viande séchée au soleil servie avec du manioc frit. L\'emblème du nordeste.' },
+              { dish: 'Baião de dois', desc: 'Riz au feijão verde, queijo coalho et charque. Le comfort food nordestino.' },
+              { dish: 'Tapioca', desc: 'Galette de manioc garnie sucrée ou salée. Le petit-déjeuner et en-cas local favori.' },
+            ].map(p => (
+              <div style="border-bottom:1px solid var(--sky100);padding-bottom:10px;">
+                <div style="font-weight:800;font-size:.86rem;color:var(--sky900);">{p.dish}</div>
+                <div style="font-size:.78rem;color:var(--sl500);margin-top:2px;">{p.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expériences -->
+    <div style="margin-bottom:64px;">
+      <div class="center" style="margin-bottom:36px;">
+        <span class="eyebrow">Expériences</span>
+        <h2 class="sec-h2" style="margin-top:10px;">Où et comment manger à Fortaleza</h2>
+        <div class="sky-bar" style="margin:12px auto 0;"></div>
+      </div>
+      <div class="grid-3" style="gap:24px;">
+        {[
+          {
+            icon: '🌴',
+            title: 'Barracas de plage',
+            badge: 'Incontournable',
+            desc: 'Lieux informels en bord de sable. Les barracas de la Praia do Futuro sont célèbres dans tout le Brésil pour leurs fruits de mer frais et leur ambiance festive.',
+            tip: 'Recommandée : Barraca da Miriam',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Fortaleza_do_Futuro.jpg',
+            imgAlt: 'Praia do Futuro, Fortaleza',
+          },
+          {
+            icon: '🦞',
+            title: 'Restaurants de Beira Mar',
+            badge: 'Gastronomique',
+            desc: 'L\'avenue côtière concentre les meilleurs restaurants de la ville. Homard, vivaneau et crevettes avec vue sur l\'Atlantique.',
+            tip: 'Zone : Av. Beira Mar, Meireles',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Avenida_Beira_Mar_%28Fortaleza%29_01.jpg',
+            imgAlt: 'Avenida Beira Mar, Fortaleza',
+          },
+          {
+            icon: '🍺',
+            title: 'Mercado dos Pinhões',
+            badge: 'Culture locale',
+            desc: 'Marché gastronomique au cœur du centre historique. Artisanat, épices, tucumã et les saveurs les plus authentiques du Ceará.',
+            tip: 'Centre historique de Fortaleza',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Mercado_dos_Pinh%C3%B5es_01.jpg',
+            imgAlt: 'Mercado dos Pinhões, Fortaleza',
+          },
+          {
+            icon: '🥥',
+            title: 'Coco gelado',
+            badge: 'Rafraîchissement local',
+            desc: 'Eau de coco directement de la noix de coco. Omniprésente sur les plages et les coins de rue. Le rafraîchissement officiel de Fortaleza.',
+            tip: 'Disponible dans toute la ville',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Coconut_drink.jpg',
+            imgAlt: 'Coco gelado',
+          },
+          {
+            icon: '🎉',
+            title: 'Dîners de groupe',
+            badge: 'Pour le programme',
+            desc: 'L\'organisation coordonne des dîners de groupe optionnels pour les participants du DGIS dans des restaurants représentatifs de la gastronomie locale.',
+            tip: 'Inclus dans l\'agenda social',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Restaurant_in_Olinda.jpg',
+            imgAlt: 'Restaurant de groupe',
+          },
+          {
+            icon: '☕',
+            title: 'Cafés & boulangeries',
+            badge: 'Quotidien',
+            desc: 'Le café cearense — fort et sucré — et les bolos (gâteaux) sont le rituel matinal parfait avant chaque journée de formation.',
+            tip: 'Près de CliniCare Training',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Evento14cafe.JPG',
+            imgAlt: 'Café brésilien',
+          },
+        ].map(c => (
+          <div class="card">
+            <img src={c.img} alt={c.imgAlt} style="width:100%;height:160px;object-fit:cover;" />
+            <div class="card-body">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="font-size:1.4rem;">{c.icon}</span>
+                <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;">{c.badge}</div>
+              </div>
+              <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:6px;">{c.title}</h3>
+              <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;margin-bottom:10px;">{c.desc}</p>
+              <p style="font-size:.73rem;color:var(--sky600);font-weight:700;">📍 {c.tip}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Boissons -->
+    <div style="background:var(--sky900);border-radius:14px;padding:44px;margin-bottom:64px;color:#fff;">
+      <div class="grid-2" style="gap:48px;align-items:center;">
+        <div>
+          <span class="eyebrow-white">Boissons typiques</span>
+          <h2 class="sec-h2-white" style="margin-top:10px;margin-bottom:20px;">Trinquer à Fortaleza</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            {[
+              { name: 'Caipirinha', desc: 'La caipirinha à la cachaça artisanale de l\'intérieur du Ceará est imbattable. Citron vert, sucre et beaucoup de glace.' },
+              { name: 'Caju Amigo', desc: 'Liqueur douce de cajou (caju), le fruit tropical emblématique de l\'état du Ceará. Doux et fruité.' },
+              { name: 'Sucos de fruits nordestinos', desc: 'Jus frais de graviola, cajá, umbu et cupuaçu. Des saveurs impossibles à trouver hors du nordeste.' },
+              { name: 'Cerveja gelada', desc: 'La bière fraîche accompagne toute barraca de plage. Chopp (pression) dans les bars de Beira Mar.' },
+            ].map(b => (
+              <div style="display:flex;gap:12px;">
+                <div style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:8px;"></div>
+                <div>
+                  <span style="font-weight:800;font-size:.88rem;color:#fff;">{b.name} — </span>
+                  <span style="font-size:.84rem;color:rgba(255,255,255,.72);">{b.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:28px;">
+          <div style="font-size:1.4rem;margin-bottom:12px;">🥭</div>
+          <h3 style="font-weight:800;font-size:1rem;color:#fff;margin-bottom:8px;">Fruits exotiques du Ceará</h3>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:16px;">Le nordeste du Brésil offre une biodiversité fruitière unique. Ne repartez pas sans avoir goûté :</p>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            {['Cajá (prune tropicale jaune)','Graviola (corossol crémeux)','Seriguela (prune nordestine)','Sapoti (sapotille douce et veloutée)','Pitanga (cerise brésilienne)'].map(f => (
+              <div style="font-size:.8rem;color:rgba(255,255,255,.8);">• {f}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <div>
+        <p style="font-size:.95rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Fortaleza vous attend</p>
+        <p style="font-size:.84rem;color:var(--sl500);">8 jours de formation intensive et de gastronomie nordestine inoubliable. Novembre 2026.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="/fr/inscription" class="btn btn-sky btn-lg">S'inscrire →</a>
+        <a href="/fr/fortaleza/ville" class="btn btn-outline">La Ville →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</Layout>

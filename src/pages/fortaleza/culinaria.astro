@@ -60,6 +60,8 @@ import Layout from '../../layouts/Layout.astro';
             badge: 'Imprescindible',
             desc: 'Locales informales a pie de arena. Las barracas de la Praia do Futuro son famosas en todo Brasil por sus mariscos frescos y ambiente festivo.',
             tip: 'Recomendada: Barraca da Miriam',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Fortaleza_do_Futuro.jpg',
+            imgAlt: 'Praia do Futuro, Fortaleza',
           },
           {
             icon: '🦞',
@@ -67,6 +69,8 @@ import Layout from '../../layouts/Layout.astro';
             badge: 'Gastronómico',
             desc: 'La avenida costanera concentra los mejores restaurantes de la ciudad. Langosta, pez pargo y camarão con vistas al Atlántico.',
             tip: 'Zona: Av. Beira Mar, Meireles',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Avenida_Beira_Mar_%28Fortaleza%29_01.jpg',
+            imgAlt: 'Avenida Beira Mar, Fortaleza',
           },
           {
             icon: '🍺',
@@ -74,6 +78,8 @@ import Layout from '../../layouts/Layout.astro';
             badge: 'Cultura local',
             desc: 'Mercado gastronómico en el corazón del centro histórico. Artesanía, especias, tucumã y los sabores más auténticos del Ceará.',
             tip: 'Centro histórico de Fortaleza',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Mercado_dos_Pinh%C3%B5es_01.jpg',
+            imgAlt: 'Mercado dos Pinhões, Fortaleza',
           },
           {
             icon: '🥥',
@@ -81,6 +87,8 @@ import Layout from '../../layouts/Layout.astro';
             badge: 'Refresco local',
             desc: 'Agua de coco directamente del cocotero. Omnipresente en playas y esquinas de la ciudad. El refresco oficial de Fortaleza.',
             tip: 'Disponible en toda la ciudad',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Coconut_drink.jpg',
+            imgAlt: 'Coco gelado',
           },
           {
             icon: '🎉',
@@ -88,6 +96,8 @@ import Layout from '../../layouts/Layout.astro';
             badge: 'Para el programa',
             desc: 'La organización coordina cenas opcionales de grupo para los participantes del DGIS en restaurantes representativos de la gastronomía local.',
             tip: 'Incluido en la agenda social',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Restaurant_in_Olinda.jpg',
+            imgAlt: 'Restaurante grupo',
           },
           {
             icon: '☕',
@@ -95,13 +105,17 @@ import Layout from '../../layouts/Layout.astro';
             badge: 'Día a día',
             desc: 'El café cearense — fuerte y dulce — y los bolos (bizcochos) son el ritual matutino perfecto antes de cada jornada formativa.',
             tip: 'Cerca de CliniCare Training',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Evento14cafe.JPG',
+            imgAlt: 'Café y restaurante brasileño',
           },
         ].map(c => (
           <div class="card">
-            <div class="card-accent"></div>
+            <img src={c.img} alt={c.imgAlt} style="width:100%;height:160px;object-fit:cover;" />
             <div class="card-body">
-              <div style="font-size:1.8rem;margin-bottom:10px;">{c.icon}</div>
-              <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;margin-bottom:8px;">{c.badge}</div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="font-size:1.4rem;">{c.icon}</span>
+                <div style="display:inline-block;font-size:.62rem;font-weight:700;background:var(--sky100);color:var(--sky700);border-radius:4px;padding:2px 7px;">{c.badge}</div>
+              </div>
               <h3 style="font-weight:800;font-size:.95rem;color:var(--sky900);margin-bottom:6px;">{c.title}</h3>
               <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;margin-bottom:10px;">{c.desc}</p>
               <p style="font-size:.73rem;color:var(--sky600);font-weight:700;">📍 {c.tip}</p>

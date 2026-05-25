@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Programme – DGIS Fortaleza 2026" lang="fr">
+<div class="sec-dark" style="padding:36px 24px 32px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Contenu académique</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Programme du cours</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:560px;">Une semaine d'immersion chirurgicale intensive avec planification numérique guidée, supervision directe et certification internationale.</p>
+  </div>
+</div>
+<div class="sec-light">
+  <div class="section">
+    <div class="grid-4" style="margin-bottom:48px;">
+      {[
+        {icon:'📅', label:'Dates', val:'6–13 Nov. 2026'},
+        {icon:'📍', label:'Lieu', val:'Fortaleza, Brésil'},
+        {icon:'👥', label:'Places', val:'Max. 12 participants'},
+        {icon:'🏆', label:'Certification', val:'Diplôme accrédité'},
+      ].map(s => (
+        <div style="background:#fff;border:1.5px solid var(--sky200);border-radius:12px;padding:20px;text-align:center;">
+          <div style="font-size:1.6rem;margin-bottom:6px;">{s.icon}</div>
+          <div style="font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:4px;">{s.label}</div>
+          <div style="font-size:.92rem;font-weight:700;color:var(--sky900);">{s.val}</div>
+        </div>
+      ))}
+    </div>
+    <div class="center mx-auto" style="margin-bottom:36px;">
+      <span class="eyebrow">Objectifs</span>
+      <h2 class="sec-h2" style="margin-top:8px;">Ce que vous allez apprendre</h2>
+      <div class="sky-bar"></div>
+    </div>
+    <div class="grid-3" style="margin-bottom:48px;">
+      {[
+        {icon:'🖥️', t:'Planification 3D complète', d:'Maîtrise des logiciels EXocad et Exoplan. Conception du guide chirurgical pour chaque patient.'},
+        {icon:'🦷', t:'Chirurgie guidée sur patients', d:'Chaque étudiant réalise des implantations complètes sur de vrais patients sous supervision directe.'},
+        {icon:'📡', t:'Flux numérique intégral', d:'Du scanner CBCT à la prothèse définitive : parcours clinique numérique complet.'},
+        {icon:'🔬', t:'Analyse de précision', d:'Comparaison planifié/exécuté après chaque chirurgie pour valider les résultats cliniques.'},
+        {icon:'📋', t:'Protocoles avancés', d:'All-on-Four, OneDay OnePiece et implantologie guidée. Trois protocoles en une semaine.'},
+        {icon:'🎓', t:'Certification internationale', d:'Diplôme reconnu internationalement délivré par DGIS Fortaleza et CliniCare Training.'},
+      ].map(c => (
+        <div class="card"><div class="card-accent"></div><div class="card-body">
+          <div style="font-size:1.8rem;margin-bottom:10px;">{c.icon}</div>
+          <h3 style="font-weight:800;font-size:.92rem;color:var(--sky900);margin-bottom:6px;">{c.t}</h3>
+          <p style="font-size:.8rem;color:var(--sl500);line-height:1.65;">{c.d}</p>
+        </div></div>
+      ))}
+    </div>
+    <div class="cta-banner">
+      <div>
+        <p style="font-weight:700;color:var(--sky900);margin-bottom:4px;">Téléchargez le programme complet en PDF</p>
+        <p style="font-size:.82rem;color:var(--sl500);">Calendrier détaillé, contenu académique et informations logistiques.</p>
+      </div>
+      <a href="/downloads/DGIS-Fortaleza-2026-Programa.pdf" download class="btn btn-sky btn-lg">⬇ Télécharger PDF</a>
+    </div>
+  </div>
+</div>
+</Layout>

@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Lieu – DGIS Fortaleza 2026" lang="fr">
+<div class="sec-dark" style="padding:36px 24px 32px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Infrastructure</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Lieu du programme</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:560px;">CliniCare Training — la référence en formation chirurgicale à Fortaleza, Brésil.</p>
+  </div>
+</div>
+<div class="sec-white">
+  <div class="section">
+    <div class="grid-2" style="align-items:center;gap:48px;margin-bottom:48px;">
+      <div>
+        <span class="eyebrow">CliniCare Training</span>
+        <h2 class="sec-h2" style="margin-top:8px;">Un équipement de formation de dernière génération</h2>
+        <div class="sky-bar"></div>
+        <p class="lead" style="margin-bottom:16px;">CliniCare Training est un centre dédié à la formation chirurgicale de haut niveau, équipé des technologies les plus avancées pour l'enseignement de l'implantologie guidée numérique.</p>
+        <p class="lead" style="margin-bottom:24px;">Les salles de chirurgie sont connectées à un auditorium avec diffusion 4K en direct, permettant à tous les participants de suivre chaque procédure en temps réel.</p>
+        <div class="grid-2" style="gap:12px;">
+          {[
+            {icon:'📡', t:'Streaming 4K', d:'Diffusion en direct de toutes les chirurgies'},
+            {icon:'🦷', t:'Blocs opératoires', d:'Equipement chirurgical de dernière génération'},
+            {icon:'🖥️', t:'Lab numérique', d:'Stations EXocad et Exoplan pour chaque participant'},
+            {icon:'📋', t:'Salle de cours', d:'Espace pédagogique pour sessions théoriques'},
+          ].map(c => (
+            <div style="background:var(--sky50);border:1px solid var(--sky100);border-radius:10px;padding:14px;">
+              <div style="font-size:1.3rem;margin-bottom:4px;">{c.icon}</div>
+              <div style="font-size:.78rem;font-weight:700;color:var(--sky900);margin-bottom:2px;">{c.t}</div>
+              <div style="font-size:.74rem;color:var(--sl500);">{c.d}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="img-frame">
+          <img src="/pptx_images/image3.jpeg" alt="CliniCare Training" style="width:100%;height:260px;object-fit:cover;" />
+          <div class="img-cap">📍 CliniCare Training · Fortaleza, Brésil</div>
+        </div>
+        <div class="img-frame">
+          <img src="/pptx_images/image7.jpeg" alt="Auditorium 4K" style="width:100%;height:180px;object-fit:cover;" />
+          <div class="img-cap">🎬 Auditorium avec streaming chirurgical 4K</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-banner">
+      <div>
+        <p style="font-weight:700;color:var(--sky900);margin-bottom:4px;">Découvrez le lieu en novembre 2026</p>
+        <p style="font-size:.82rem;color:var(--sl500);">Places limitées — réservez dès maintenant.</p>
+      </div>
+      <a href="/fr/inscription" class="btn btn-sky btn-lg">S'inscrire →</a>
+    </div>
+  </div>
+</div>
+</Layout>
