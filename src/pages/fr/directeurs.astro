@@ -141,5 +141,9 @@ import Layout from '../../layouts/Layout.astro';
   .dot { width:4px; height:4px; border-radius:50%; flex-shrink:0; margin-top:6px; }
   .dir-chips { list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin-bottom:4px; }
   .dir-chips li { font-size:.72rem; font-weight:600; color:var(--sky700); background:var(--sky50); border:1px solid var(--sky200); border-radius:20px; padding:3px 10px; }
+  @media (max-width: 680px) {
+    .director-card { grid-template-columns: 1fr !important; }
+    .director-photo { width: 100% !important; height: 240px !important; }
+  }
 </style>
 </Layout>

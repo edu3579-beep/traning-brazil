@@ -216,5 +216,14 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 20px;
     padding: 3px 10px;
   }
+  @media (max-width: 680px) {
+    .director-card {
+      grid-template-columns: 1fr !important;
+    }
+    .director-photo {
+      width: 100% !important;
+      height: 240px !important;
+    }
+  }
 </style>
 </Layout>
