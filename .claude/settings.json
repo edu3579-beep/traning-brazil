@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "agent",
+            "if": "Bash(git push *)",
+            "prompt": "The user is about to run a git push which will auto-deploy the DGIS Fortaleza 2026 website to Vercel. Run a pre-publish review before allowing this.\n\nProject directory: C:/Users/user/Documents/Claude projects/website for DGIS\n\nPerform these checks in order:\n\n1. BUILD — Run `npm run build` in the project directory. If it fails, block immediately with the build error.\n\n2. CHANGED FILES — Run `git diff HEAD~1 --name-only` to see what changed. Read every changed .astro file.\n\n3. CONTENT SCAN — In every changed file, look for: placeholder text (TODO, FIXME, Lorem ipsum, TBD, coming soon), wrong dates (course is Nov 6-13 2026), broken WhatsApp links, visible HTML tags as text.\n\n4. IMAGES — Check that every image filename referenced in changed files exists in public/images/.\n\n5. MULTILINGUAL — If a Spanish page changed, check the matching English (/en/) and French (/fr/) pages still have the same sections.\n\nIf any check fails:\n- Return: decision=block\n- reason: clearly list every issue found so the user can fix them before pushing\n\nIf all checks pass:\n- Return: decision=allow\n- reason: brief summary of what was reviewed and confirmed clean",
+            "timeout": 120,
+            "statusMessage": "Reviewing website before publishing to Vercel..."
+          }
+        ]
+      }
+    ]
+  }
+}
