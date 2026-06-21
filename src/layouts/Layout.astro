@@ -79,8 +79,8 @@ const langLinks = [
 <header>
   <div class="header-inner">
     <a href={lang === 'en' ? '/en/' : '/'} class="logo">
-      <span class="logo-dgis">DGIS</span>
-      <span class="logo-sub">Fortaleza 2026</span>
+      <img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" class="logo-ddx-img" />
+      <span class="logo-sub">Fortaleza 2027</span>
     </a>
     <nav class="nav-tabs">
       {nav.map(n => n.children ? (
@@ -154,7 +154,7 @@ const langLinks = [
 <footer>
   <div class="footer-inner">
     <div class="footer-col">
-      <div class="footer-logo">DGIS · Fortaleza 2026</div>
+      <div class="footer-logo"><img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" style="height:36px;object-fit:contain;filter:brightness(0) invert(1);" /></div>
       <p class="footer-desc">Digital Guided Implant Surgery Immersion Program.<br/>21.02.2027 – 27.02.2027 · Fortaleza, Brasil.</p>
     </div>
     <div class="footer-col">
@@ -174,7 +174,7 @@ const langLinks = [
     <img src="/pptx_images/logo-straumann.png.png" alt="Straumann Group" style="height:30px;object-fit:contain;" />
     <img src="/pptx_images/logo-nacar.png.png" alt="NACAR clínicas dentales" style="height:42px;object-fit:contain;" />
   </div>
-  <div class="footer-bottom">© 2026 DGIS Fortaleza · CliniCare Training · NACAR Clínicas Dentales</div>
+  <div class="footer-bottom">© 2027 DDX · CliniCare Training · NACAR Clínicas Dentales</div>
 </footer>
 
 <!-- WhatsApp FAB -->
@@ -414,8 +414,8 @@ const langLinks = [
   /* Header */
   header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--sl200); box-shadow: 0 1px 6px rgba(0,0,0,.06); }
   .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 20px; }
-  .logo { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; }
-  .logo-dgis { font-size: 1.15rem; font-weight: 900; color: var(--sky700); letter-spacing: -.5px; }
+  .logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .logo-ddx-img { height: 28px; object-fit: contain; }
   .logo-sub { font-size: .62rem; font-weight: 600; color: var(--sl400); text-transform: uppercase; letter-spacing: 1px; }
   .nav-tabs { display: flex; align-items: center; gap: 2px; flex: 1; overflow: visible; }
   .nav-tabs::-webkit-scrollbar { display: none; }
