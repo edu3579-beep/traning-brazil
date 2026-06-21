@@ -79,8 +79,50 @@ const langLinks = [
 <header>
   <div class="header-inner">
     <a href={lang === 'en' ? '/en/' : '/'} class="logo">
-      <img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" class="logo-ddx-img" />
-      <span class="logo-sub">Fortaleza 2027</span>
+      <!-- Animated digital implant surgery icon -->
+      <svg class="logo-anim" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer orbit ring -->
+        <ellipse cx="32" cy="32" rx="28" ry="10" stroke="rgba(125,211,252,0.5)" stroke-width="1" fill="none" class="ring-outer"/>
+        <!-- Middle orbit ring -->
+        <ellipse cx="32" cy="32" rx="20" ry="7" stroke="rgba(56,189,248,0.7)" stroke-width="1" fill="none" class="ring-mid"/>
+        <!-- Crosshair lines -->
+        <line x1="32" y1="4" x2="32" y2="18" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-v"/>
+        <line x1="32" y1="46" x2="32" y2="60" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-v"/>
+        <line x1="4" y1="32" x2="18" y2="32" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-h"/>
+        <line x1="46" y1="32" x2="60" y2="32" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-h"/>
+        <!-- Implant body -->
+        <rect x="27" y="14" width="10" height="26" rx="5" fill="url(#implantGrad)" class="implant-body"/>
+        <!-- Implant threads -->
+        <line x1="27" y1="22" x2="37" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <line x1="27" y1="26" x2="37" y2="26" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <line x1="27" y1="30" x2="37" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <line x1="27" y1="34" x2="37" y2="34" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <!-- Implant tip -->
+        <polygon points="27,40 37,40 32,47" fill="url(#implantGrad)"/>
+        <!-- Abutment collar -->
+        <rect x="25" y="11" width="14" height="5" rx="2" fill="#bae6fd"/>
+        <!-- Crown -->
+        <ellipse cx="32" cy="10" rx="8" ry="5" fill="url(#crownGrad)" class="crown"/>
+        <!-- Target dot center -->
+        <circle cx="32" cy="32" r="2" fill="#38bdf8" class="target-dot"/>
+        <!-- Orbit dot -->
+        <circle cx="60" cy="32" r="3" fill="#38bdf8" class="orbit-dot"/>
+        <defs>
+          <linearGradient id="implantGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0ea5e9"/>
+            <stop offset="50%" stop-color="#bae6fd"/>
+            <stop offset="100%" stop-color="#0284c7"/>
+          </linearGradient>
+          <linearGradient id="crownGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e0f2fe"/>
+            <stop offset="100%" stop-color="#7dd3fc"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="logo-text-block">
+        <span class="logo-name">DDX</span>
+        <span class="logo-sub">Digital Surgery · Fortaleza 2027</span>
+      </div>
     </a>
     <nav class="nav-tabs">
       {nav.map(n => n.children ? (
@@ -102,9 +144,9 @@ const langLinks = [
     <div class="header-actions">
       <div style="display:flex;gap:3px;">
         {langLinks.map(l => (
-          <a href={l.href} class="btn-lang" style={l.active ? 'border-color:var(--sky500);background:var(--sky50);box-shadow:0 0 0 2px var(--sky200);' : ''}>
+          <a href={l.href} class="btn-lang" style={l.active ? 'border-color:#7dd3fc;background:rgba(255,255,255,.18);box-shadow:0 0 0 2px rgba(125,211,252,.4);' : ''}>
             <img src={l.flag} alt={l.code} style="width:22px;height:15px;object-fit:cover;border-radius:2px;display:block;" />
-            <span style={`font-size:.58rem;font-weight:800;letter-spacing:.5px;color:${l.active ? 'var(--sky700)' : 'var(--sl400)'};`}>{l.code}</span>
+            <span style={`font-size:.58rem;font-weight:800;letter-spacing:.5px;color:${l.active ? '#fff' : 'rgba(255,255,255,.7)'};`}>{l.code}</span>
           </a>
         ))}
       </div>
@@ -412,21 +454,33 @@ const langLinks = [
   }
 
   /* Header */
-  header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--sl200); box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+  header { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg, #0c4a6e 0%, #075985 60%, #0369a1 100%); border-bottom: 1px solid rgba(255,255,255,.1); box-shadow: 0 2px 12px rgba(0,0,0,.25); }
   .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; gap: 20px; }
-  .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
-  .logo-ddx-img { height: 52px; object-fit: contain; border-radius: 6px; }
-  .logo-sub { font-size: .62rem; font-weight: 600; color: var(--sl400); text-transform: uppercase; letter-spacing: 1px; }
+  .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; text-decoration: none; }
+  .logo-anim { width: 56px; height: 56px; flex-shrink: 0; }
+  .logo-text-block { display: flex; flex-direction: column; gap: 1px; }
+  .logo-name { font-size: 1.4rem; font-weight: 900; color: #fff; letter-spacing: -.5px; line-height: 1; }
+  .logo-sub { font-size: .58rem; font-weight: 600; color: #7dd3fc; text-transform: uppercase; letter-spacing: 1.2px; }
   .nav-tabs { display: flex; align-items: center; gap: 2px; flex: 1; overflow: visible; }
   .nav-tabs::-webkit-scrollbar { display: none; }
-  .nav-link { white-space: nowrap; padding: 6px 11px; font-size: .78rem; font-weight: 600; color: var(--sl500); border-radius: 6px; border-bottom: 2px solid transparent; transition: color .15s, background .15s; }
-  .nav-link:hover { color: var(--sky600); background: var(--sky50); }
-  .nav-link.active { color: var(--sky700); background: var(--sky50); border-bottom-color: var(--sky500); font-weight: 700; }
+  .nav-link { white-space: nowrap; padding: 6px 11px; font-size: .78rem; font-weight: 600; color: rgba(255,255,255,.8); border-radius: 6px; border-bottom: 2px solid transparent; transition: color .15s, background .15s; }
+  .nav-link:hover { color: #fff; background: rgba(255,255,255,.12); }
+  .nav-link.active { color: #fff; background: rgba(255,255,255,.15); border-bottom-color: #7dd3fc; font-weight: 700; }
   .header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-  .btn-lang { display:flex; flex-direction:column; align-items:center; gap:1px; border: 1px solid var(--sl200); border-radius: 6px; padding: 4px 7px; transition: all .15s; text-decoration:none; }
-  .btn-lang:hover { border-color: var(--sky400); background: var(--sky50); }
+  .btn-lang { display:flex; flex-direction:column; align-items:center; gap:1px; border: 1px solid rgba(255,255,255,.25); border-radius: 6px; padding: 4px 7px; transition: all .15s; text-decoration:none; }
+  .btn-lang:hover { border-color: #7dd3fc; background: rgba(255,255,255,.1); }
   .btn-wa-header { display: flex; align-items: center; gap: 5px; background: #25d366; color: #fff; font-size: .76rem; font-weight: 700; padding: 6px 12px; border-radius: 6px; transition: background .15s; }
   .btn-wa-header:hover { background: #1ebe5d; }
+
+  /* Animated logo SVG */
+  .ring-outer { transform-origin: 32px 32px; animation: spinOrbit 6s linear infinite; }
+  .ring-mid   { transform-origin: 32px 32px; animation: spinOrbit 3.5s linear infinite reverse; }
+  .orbit-dot  { transform-origin: 32px 32px; animation: spinOrbit 3.5s linear infinite reverse; }
+  .target-dot { animation: pulse 2s ease-in-out infinite; }
+  .crown      { animation: glowCrown 2s ease-in-out infinite; }
+  @keyframes spinOrbit  { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes pulse      { 0%,100% { r:2; opacity:1; } 50% { r:3.5; opacity:.6; } }
+  @keyframes glowCrown  { 0%,100% { opacity:1; } 50% { opacity:.6; } }
 
   /* Layout */
   .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
