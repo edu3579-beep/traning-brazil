@@ -40,7 +40,7 @@ CANCELLATION POLICY:
 
 REGISTRATION & CONTACT:
 - Contact: Eduardo Burger
-- WhatsApp: +34 651 039 967
+- WhatsApp: +34 678 871 916
 - Email: edu@digitaldentaxperts.com
 - Registration form available on the website at /inscripcion (Spanish), /en/registration (English), /fr/inscription (French)
 - Places are limited and assigned on a first-come, first-served basis
@@ -53,7 +53,7 @@ SUPPORTED BY:
 INSTRUCTIONS FOR YOU:
 - Always respond in the same language the user writes in (Spanish, English, or French)
 - Be concise and helpful - answer directly
-- For registration or pricing questions, always refer to Eduardo Burger on WhatsApp: +34 651 039 967
+- For registration or pricing questions, always refer to Eduardo Burger on WhatsApp: +34 678 871 916
 - If you don't know something specific (like exact pricing), say so and direct them to WhatsApp
 - Be warm and professional - this is a premium surgical training programme
 - Keep answers brief (2-4 sentences max unless more detail is genuinely needed)`;

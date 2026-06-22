@@ -79,50 +79,7 @@ const langLinks = [
 <header>
   <div class="header-inner">
     <a href={lang === 'en' ? '/en/' : '/'} class="logo">
-      <!-- Animated digital implant surgery icon -->
-      <svg class="logo-anim" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Outer orbit ring -->
-        <ellipse cx="32" cy="32" rx="28" ry="10" stroke="rgba(125,211,252,0.5)" stroke-width="1" fill="none" class="ring-outer"/>
-        <!-- Middle orbit ring -->
-        <ellipse cx="32" cy="32" rx="20" ry="7" stroke="rgba(56,189,248,0.7)" stroke-width="1" fill="none" class="ring-mid"/>
-        <!-- Crosshair lines -->
-        <line x1="32" y1="4" x2="32" y2="18" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-v"/>
-        <line x1="32" y1="46" x2="32" y2="60" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-v"/>
-        <line x1="4" y1="32" x2="18" y2="32" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-h"/>
-        <line x1="46" y1="32" x2="60" y2="32" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="2 2" class="cross-h"/>
-        <!-- Implant body -->
-        <rect x="27" y="14" width="10" height="26" rx="5" fill="url(#implantGrad)" class="implant-body"/>
-        <!-- Implant threads -->
-        <line x1="27" y1="22" x2="37" y2="22" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-        <line x1="27" y1="26" x2="37" y2="26" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-        <line x1="27" y1="30" x2="37" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-        <line x1="27" y1="34" x2="37" y2="34" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-        <!-- Implant tip -->
-        <polygon points="27,40 37,40 32,47" fill="url(#implantGrad)"/>
-        <!-- Abutment collar -->
-        <rect x="25" y="11" width="14" height="5" rx="2" fill="#bae6fd"/>
-        <!-- Crown -->
-        <ellipse cx="32" cy="10" rx="8" ry="5" fill="url(#crownGrad)" class="crown"/>
-        <!-- Target dot center -->
-        <circle cx="32" cy="32" r="2" fill="#38bdf8" class="target-dot"/>
-        <!-- Orbit dot -->
-        <circle cx="60" cy="32" r="3" fill="#38bdf8" class="orbit-dot"/>
-        <defs>
-          <linearGradient id="implantGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#0ea5e9"/>
-            <stop offset="50%" stop-color="#bae6fd"/>
-            <stop offset="100%" stop-color="#0284c7"/>
-          </linearGradient>
-          <linearGradient id="crownGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#e0f2fe"/>
-            <stop offset="100%" stop-color="#7dd3fc"/>
-          </linearGradient>
-        </defs>
-      </svg>
-      <div class="logo-text-block">
-        <span class="logo-name">DDX</span>
-        <span class="logo-sub">Digital Surgery · Fortaleza 2027</span>
-      </div>
+      <img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" class="logo-ddx-img" />
     </a>
     <nav class="nav-tabs">
       {nav.map(n => n.children ? (
@@ -150,7 +107,7 @@ const langLinks = [
           </a>
         ))}
       </div>
-      <a href="https://wa.me/34651039967" target="_blank" class="btn-wa-header">
+      <a href="https://wa.me/34678871916" target="_blank" class="btn-wa-header">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         WhatsApp
       </a>
@@ -173,7 +130,7 @@ const langLinks = [
           <span style={`font-size:.58rem;font-weight:800;letter-spacing:.5px;color:${l.active ? 'var(--sky700)' : 'var(--sl400)'};`}>{l.code}</span>
         </a>
       ))}
-      <a href="https://wa.me/34651039967" target="_blank" class="btn-wa-header" style="margin-left:auto;">
+      <a href="https://wa.me/34678871916" target="_blank" class="btn-wa-header" style="margin-left:auto;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         WhatsApp
       </a>
@@ -207,12 +164,12 @@ const langLinks = [
     </div>
     <div class="footer-col">
       <div class="footer-heading">{lang === 'en' ? 'Contact' : 'Contacto'}</div>
-      <p style="font-size:.82rem;color:#94a3b8;line-height:1.8;">📞 +34 651 039 967<br/>✉ edu@digitaldentaxperts.com<br/>👤 Eduardo Burger</p>
-      <a href="https://wa.me/34651039967" target="_blank" class="btn-wa-footer">💬 WhatsApp</a>
+      <p style="font-size:.82rem;color:#94a3b8;line-height:1.8;">📞 +34 678 871 916<br/>✉ edu@digitaldentaxperts.com<br/>👤 Eduardo Burger</p>
+      <a href="https://wa.me/34678871916" target="_blank" class="btn-wa-footer">💬 WhatsApp</a>
     </div>
   </div>
   <div style="background:#fff;padding:24px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;">
-    <img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" style="height:64px;object-fit:contain;filter:grayscale(1) contrast(2) brightness(0);" />
+    <img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" style="height:64px;object-fit:contain;border-radius:6px;" />
     <img src="/pptx_images/logo-straumann.png.png" alt="Straumann Group" style="height:30px;object-fit:contain;" />
     <img src="/pptx_images/logo-clinicare.png.png" alt="CliniCare Training" style="height:44px;object-fit:contain;" />
   </div>
@@ -220,7 +177,7 @@ const langLinks = [
 </footer>
 
 <!-- WhatsApp FAB -->
-<a href="https://wa.me/34651039967" target="_blank" class="wa-fab">
+<a href="https://wa.me/34678871916" target="_blank" class="wa-fab">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
@@ -456,11 +413,8 @@ const langLinks = [
   /* Header */
   header { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg, #0c4a6e 0%, #075985 60%, #0369a1 100%); border-bottom: 1px solid rgba(255,255,255,.1); box-shadow: 0 2px 12px rgba(0,0,0,.25); }
   .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; gap: 20px; }
-  .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; text-decoration: none; }
-  .logo-anim { width: 56px; height: 56px; flex-shrink: 0; }
-  .logo-text-block { display: flex; flex-direction: column; gap: 1px; }
-  .logo-name { font-size: 1.4rem; font-weight: 900; color: #fff; letter-spacing: -.5px; line-height: 1; }
-  .logo-sub { font-size: .72rem; font-weight: 600; color: #7dd3fc; text-transform: uppercase; letter-spacing: 1.2px; }
+  .logo { display: flex; align-items: center; flex-shrink: 0; text-decoration: none; }
+  .logo-ddx-img { height: 64px; width: auto; object-fit: contain; border-radius: 6px; }
   .nav-tabs { display: flex; align-items: center; gap: 2px; flex: 1; overflow: visible; }
   .nav-tabs::-webkit-scrollbar { display: none; }
   .nav-link { white-space: nowrap; padding: 6px 11px; font-size: .78rem; font-weight: 600; color: rgba(255,255,255,.8); border-radius: 6px; border-bottom: 2px solid transparent; transition: color .15s, background .15s; }
