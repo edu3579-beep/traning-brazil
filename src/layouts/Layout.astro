@@ -79,6 +79,28 @@ const langLinks = [
 <header>
   <div class="header-inner">
     <a href={lang === 'en' ? '/en/' : '/'} class="logo">
+      <svg class="logo-implant-anim" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="32" cy="32" rx="28" ry="10" fill="none" stroke="rgba(125,211,252,.45)" stroke-width="1.2" class="ring-outer"/>
+        <ellipse cx="32" cy="32" rx="20" ry="7"  fill="none" stroke="rgba(125,211,252,.7)"  stroke-width="1"   class="ring-mid"/>
+        <line x1="32" y1="4"  x2="32" y2="60" stroke="rgba(125,211,252,.25)" stroke-width=".8"/>
+        <line x1="4"  y1="32" x2="60" y2="32" stroke="rgba(125,211,252,.25)" stroke-width=".8"/>
+        <defs>
+          <linearGradient id="hdrImplantGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#bae6fd"/>
+            <stop offset="50%"  stop-color="#7dd3fc"/>
+            <stop offset="100%" stop-color="#38bdf8"/>
+          </linearGradient>
+        </defs>
+        <rect x="28" y="14" width="8" height="28" rx="4" fill="url(#hdrImplantGrad)"/>
+        <rect x="27" y="18" width="1.5" height="3" rx=".7" fill="rgba(255,255,255,.55)"/>
+        <rect x="27" y="23" width="1.5" height="3" rx=".7" fill="rgba(255,255,255,.55)"/>
+        <rect x="27" y="28" width="1.5" height="3" rx=".7" fill="rgba(255,255,255,.55)"/>
+        <polygon points="32,40 28,46 36,46" fill="#7dd3fc"/>
+        <rect x="28" y="13" width="8" height="3" rx="1.5" fill="#bae6fd"/>
+        <rect x="26" y="10" width="12" height="4"  rx="2"   fill="#e0f2fe"/>
+        <circle cx="32" cy="32" r="2.5" fill="#fff" class="target-dot"/>
+        <circle cx="32" cy="22" r="1.8" fill="rgba(125,211,252,.8)" class="orbit-dot"/>
+      </svg>
       <img src="/ddx-logo-white.png" alt="DDX Digital Dental Xperts" class="logo-ddx-img" />
     </a>
     <nav class="nav-tabs">
@@ -153,7 +175,7 @@ const langLinks = [
 <footer>
   <div class="footer-inner">
     <div class="footer-col">
-      <div class="footer-logo"><img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" style="height:36px;object-fit:contain;filter:brightness(0) invert(1);" /></div>
+      <div class="footer-logo"><img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" style="height:64px;object-fit:contain;filter:brightness(0) invert(1);" /></div>
       <p class="footer-desc">Digital Guided Implant Surgery Immersion Program.<br/>21.02.2027 – 27.02.2027 · Fortaleza, Brasil.</p>
     </div>
     <div class="footer-col">
@@ -413,8 +435,9 @@ const langLinks = [
   /* Header */
   header { position: sticky; top: 0; z-index: 100; background: linear-gradient(135deg, #0c4a6e 0%, #075985 60%, #0369a1 100%); border-bottom: 1px solid rgba(255,255,255,.1); box-shadow: 0 2px 12px rgba(0,0,0,.25); }
   .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; gap: 20px; }
-  .logo { display: flex; align-items: center; flex-shrink: 0; text-decoration: none; }
+  .logo { display: flex; align-items: center; gap: 6px; flex-shrink: 0; text-decoration: none; }
   .logo-ddx-img { height: 72px; width: auto; object-fit: contain; }
+  .logo-implant-anim { width: 52px; height: 52px; flex-shrink: 0; }
   .nav-tabs { display: flex; align-items: center; gap: 2px; flex: 1; overflow: visible; }
   .nav-tabs::-webkit-scrollbar { display: none; }
   .nav-link { white-space: nowrap; padding: 6px 11px; font-size: .78rem; font-weight: 600; color: rgba(255,255,255,.8); border-radius: 6px; border-bottom: 2px solid transparent; transition: color .15s, background .15s; }
