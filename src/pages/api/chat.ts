@@ -1,4 +1,4 @@
-import type { APIRoute } from 'astro';
+﻿import type { APIRoute } from 'astro';
 import Anthropic from '@anthropic-ai/sdk';
 
 export const prerender = false;
@@ -41,7 +41,7 @@ CANCELLATION POLICY:
 REGISTRATION & CONTACT:
 - Contact: Eduardo Burger
 - WhatsApp: +34 651 039 967
-- Email: formacion@clinicasnacar.com
+- Email: edu@digitaldentaxperts.com
 - Registration form available on the website at /inscripcion (Spanish), /en/registration (English), /fr/inscription (French)
 - Places are limited and assigned on a first-come, first-served basis
 
