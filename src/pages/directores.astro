@@ -17,9 +17,12 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- ── Dr. Juan Méndez ── -->
     <div class="director-card" style="border-bottom:1.5px solid var(--sky100);padding-bottom:36px;margin-bottom:36px;">
-      <div class="img-frame director-photo">
-        <img src="/pptx_images/image23.jpeg" alt="Dr. Juan Méndez"
-          style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+      <div class="director-photo-wrap">
+        <div class="img-frame director-photo">
+          <img src="/dr-juan-mendez.jpg" alt="Dr. Juan Méndez"
+            style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="dir-photo-name">Dr. Juan Méndez</div>
       </div>
       <div class="director-bio">
         <div class="dir-badge" style="color:var(--sky700);background:var(--sky50);border-color:var(--sky200);">Director del Programa</div>
@@ -52,11 +55,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!--  Dr. Manuel Gonzales  -->
+    <!--  Dr. Manuel González  -->
     <div class="director-card" style="border-bottom:1.5px solid var(--sky100);padding-bottom:36px;margin-bottom:36px;">
-      <div class="img-frame director-photo">
-        <img src="/pptx_images/mendez-portrait2.jpg" alt="Dr. Manuel Gonzales"
-          style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+      <div class="director-photo-wrap">
+        <div class="img-frame director-photo">
+          <img src="/dr-manuel-gonzalez.jpg" alt="Dr. Manuel González"
+            style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="dir-photo-name">Dr. Manuel González</div>
       </div>
       <div class="director-bio">
         <div class="dir-badge" style="color:var(--sky700);background:var(--sky50);border-color:var(--sky200);">Director del Programa</div>
@@ -145,10 +151,26 @@ import Layout from '../layouts/Layout.astro';
     gap: 28px;
     align-items: start;
   }
+  .director-card > .director-photo-wrap { grid-column: 1; }
+  .director-photo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 210px;
+    flex-shrink: 0;
+  }
   .director-photo {
     width: 210px;
     height: 270px;
     flex-shrink: 0;
+  }
+  .dir-photo-name {
+    font-size: .82rem;
+    font-weight: 800;
+    color: var(--sky900);
+    text-align: center;
+    letter-spacing: .3px;
   }
   .director-bio { display: flex; flex-direction: column; }
   .dir-badge {
