@@ -633,7 +633,7 @@ const langLinks = [
 
   /* ── HAMBURGER ─────────────────────────────────────────────── */
   #hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:6px; border-radius:6px; flex-shrink:0; }
-  #hamburger span { display:block; width:22px; height:2.5px; background:var(--sl700); border-radius:2px; transition:transform .25s, opacity .25s; }
+  #hamburger span { display:block; width:22px; height:2.5px; background:rgba(255,255,255,.9); border-radius:2px; transition:transform .25s, opacity .25s; }
   #hamburger.open span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
   #hamburger.open span:nth-child(2) { opacity:0; }
   #hamburger.open span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
@@ -656,6 +656,11 @@ const langLinks = [
     #hamburger { display:flex; }
     .header-inner { gap:8px; padding:0 16px; }
     .header-actions { gap:4px; }
+
+    /* Hero left column — shrink the large inline padding */
+    section[style*="grid-template-columns"] > div:first-child { padding:36px 20px 28px !important; }
+    /* Hero: don't enforce 92vh on mobile — let it breathe */
+    section[style*="min-height:92vh"] { min-height:auto !important; }
 
     /* grids collapse to 1 column */
     .grid-2 { grid-template-columns:1fr !important; }
@@ -711,6 +716,10 @@ const langLinks = [
     div[style*="grid-template-columns: repeat(4"] {
       grid-template-columns: 1fr !important;
     }
+    /* Header logo smaller on small phones */
+    .logo-ddx-img { height:52px !important; }
+    /* Hero left col even more compact */
+    section[style*="grid-template-columns"] > div:first-child { padding:24px 16px 20px !important; }
     .logo-sub { display:none; }
     /* timeline — keep 2-col but shrink day column */
     .tl-item { grid-template-columns:62px 1fr; }
