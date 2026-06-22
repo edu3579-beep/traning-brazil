@@ -654,8 +654,11 @@ const langLinks = [
     .nav-tabs { display:none !important; }
     .btn-wa-header { display:none !important; }
     #hamburger { display:flex; }
-    .header-inner { gap:8px; padding:0 16px; }
-    .header-actions { gap:4px; }
+    /* logo left, flags+hamburger pushed to far right */
+    .header-inner { gap:8px; padding:0 16px; justify-content:space-between; }
+    .header-actions { gap:6px; margin-left:auto; }
+    /* bigger logo on mobile */
+    .logo-ddx-img { height:64px !important; }
 
     /* Hero left column — shrink the large inline padding */
     section[style*="grid-template-columns"] > div:first-child { padding:36px 20px 28px !important; }
@@ -716,8 +719,6 @@ const langLinks = [
     div[style*="grid-template-columns: repeat(4"] {
       grid-template-columns: 1fr !important;
     }
-    /* Header logo smaller on small phones */
-    .logo-ddx-img { height:52px !important; }
     /* Hero left col even more compact */
     section[style*="grid-template-columns"] > div:first-child { padding:24px 16px 20px !important; }
     .logo-sub { display:none; }
