@@ -1,5 +1,5 @@
-﻿import type { APIRoute } from 'astro';
-import Anthropic from '@anthropic-ai/sdk';
+﻿import type { APIRoute } from "astro";
+import Anthropic from "@anthropic-ai/sdk";
 
 export const prerender = false;
 
@@ -11,7 +11,7 @@ const SYSTEM_PROMPT = `You are a helpful assistant for the DGIS Fortaleza 2026 p
 
 KEY PROGRAMME INFORMATION:
 - Full name: Digital Guided Implant Surgery (DGIS) Immersion Program - Fortaleza 2026
-- Dates: 6-13 November 2026 (8 days)
+- Dates: 21-27 February 2027 (7 days)
 - Location: CliniCare Training, Fortaleza, Ceara, Brazil
 - Maximum participants: 12 (small groups, personalised attention)
 - Language: Programme delivered in Spanish; materials also available in Portuguese
@@ -41,7 +41,7 @@ CANCELLATION POLICY:
 REGISTRATION & CONTACT:
 - Contact: Eduardo Burger
 - WhatsApp: +34 678 871 916
-- Email: edu@digitaldentaxperts.com
+- Email: edu@digitaldentalxperts.com
 - Registration form available on the website at /inscripcion (Spanish), /en/registration (English), /fr/inscription (French)
 - Places are limited and assigned on a first-come, first-served basis
 
@@ -60,42 +60,52 @@ INSTRUCTIONS FOR YOU:
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const apiKey = (typeof __ANTHROPIC_KEY__ !== 'undefined' ? __ANTHROPIC_KEY__ : '') || process.env.ANTHROPIC_API_KEY;
+    const apiKey =
+      (typeof __ANTHROPIC_KEY__ !== "undefined" ? __ANTHROPIC_KEY__ : "") ||
+      process.env.ANTHROPIC_API_KEY;
     if (!apiKey) {
-      return new Response(JSON.stringify({ error: 'API key not configured' }), { status: 500 });
+      return new Response(JSON.stringify({ error: "API key not configured" }), {
+        status: 500,
+      });
     }
     const client = new Anthropic({ apiKey });
 
     const body = await request.json();
     const { message, history = [] } = body as {
       message: string;
-      history: Array<{ role: 'user' | 'assistant'; content: string }>;
+      history: Array<{ role: "user" | "assistant"; content: string }>;
     };
 
     if (!message?.trim()) {
-      return new Response(JSON.stringify({ error: 'No message provided' }), { status: 400 });
+      return new Response(JSON.stringify({ error: "No message provided" }), {
+        status: 400,
+      });
     }
 
-    const messages: Array<{ role: 'user' | 'assistant'; content: string }> = [
+    const messages: Array<{ role: "user" | "assistant"; content: string }> = [
       ...history.slice(-8),
-      { role: 'user', content: message },
+      { role: "user", content: message },
     ];
 
     const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
+      model: "claude-haiku-4-5-20251001",
       max_tokens: 512,
       system: SYSTEM_PROMPT,
       messages,
     });
 
-    const reply = response.content[0].type === 'text' ? response.content[0].text : '';
+    const reply =
+      response.content[0].type === "text" ? response.content[0].text : "";
 
     return new Response(JSON.stringify({ reply }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     });
   } catch (err: any) {
-    console.error('Chat API error:', err?.message || err);
-    return new Response(JSON.stringify({ error: err?.message || 'Internal server error' }), { status: 500 });
+    console.error("Chat API error:", err?.message || err);
+    return new Response(
+      JSON.stringify({ error: err?.message || "Internal server error" }),
+      { status: 500 },
+    );
   }
 };
