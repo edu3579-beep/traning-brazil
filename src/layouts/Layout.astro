@@ -730,6 +730,8 @@ const langLinks = [
 
     /* Flex rows — ensure wrapping */
     [style*="display:flex"], [style*="display: flex"] { flex-wrap:wrap !important; }
+    /* Checklist items must stay on one row */
+    li[style*="display:flex"], li[style*="display: flex"] { flex-wrap:nowrap !important; }
 
     /* Prevent text overflow */
     h1,h2,h3,h4,h5 { word-break:break-word; }
