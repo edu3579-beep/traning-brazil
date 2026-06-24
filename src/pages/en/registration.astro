@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 const WA = 'https://wa.me/34678871916';
 ---
-<Layout title="Registration – DDX Fortaleza 2026" lang="en">
+<Layout title="Registration – DDX Fortaleza 2027" lang="en">
 <div class="sec-dark" style="padding:52px 24px 48px;">
   <div class="container" style="padding:0;">
     <span class="eyebrow-white">Limited spots</span>
@@ -62,7 +62,7 @@ function sendWA() {
   const x = document.getElementById('r-exp').value;
   const m = document.getElementById('r-msg').value;
   if (!f||!l||!e||!t){alert('Please fill in the required fields (*)');return;}
-  const txt=encodeURIComponent(`Hello, I would like to register for DDX Fortaleza 2026.\n\n👤 Name: ${f} ${l}\n📧 Email: ${e}\n📞 Phone: ${t}`+(c?`\n🌍 Country: ${c}`:'')+(s?`\n🦷 Specialty: ${s}`:'')+(x?`\n📊 Experience: ${x}`:'')+(m?`\n\n💬 Message: ${m}`:''));
+  const txt=encodeURIComponent(`Hello, I would like to register for DDX Fortaleza 2027.\n\n👤 Name: ${f} ${l}\n📧 Email: ${e}\n📞 Phone: ${t}`+(c?`\n🌍 Country: ${c}`:'')+(s?`\n🦷 Specialty: ${s}`:'')+(x?`\n📊 Experience: ${x}`:'')+(m?`\n\n💬 Message: ${m}`:''));
   window.open(`https://wa.me/34678871916?text=${txt}`,'_blank');
 }
 </script>
