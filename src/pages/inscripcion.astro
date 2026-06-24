@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 const WA = 'https://wa.me/34678871916';
 ---
-<Layout title="Inscripción – DGIS Fortaleza 2026" lang="es">
+<Layout title="Inscripción – DDX Fortaleza 2026" lang="es">
 
 <div class="sec-dark" style="padding:52px 24px 48px;">
   <div class="container" style="padding:0;">
@@ -136,7 +136,7 @@ function enviarWA() {
   const ms = document.getElementById('f-mensaje').value;
   if (!n || !ap || !em || !tel) { alert('Por favor rellena los campos obligatorios (*)'); return; }
   const txt = encodeURIComponent(
-    `Hola, me gustaría inscribirme al DGIS Fortaleza 2026.\n\n` +
+    `Hola, me gustaría inscribirme al DDX Fortaleza 2026.\n\n` +
     `👤 Nombre: ${n} ${ap}\n📧 Email: ${em}\n📞 Teléfono: ${tel}\n` +
     (pa  ? `🌍 País/Ciudad: ${pa}\n` : '') +
     (es  ? `🦷 Especialidad: ${es}\n` : '') +
