@@ -33,8 +33,8 @@ import Layout from '../../layouts/Layout.astro';
               'Postoperative planned vs. executed verification',
               'Precision analysis and clinical feedback',
             ].map(i => (
-              <li style="display:flex;gap:10px;font-size:.88rem;color:var(--sl700);word-wrap:break-word;">
-                <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--sl700);word-wrap:break-word;">
+                <svg width="16" height="16" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>{i}</span>
               </li>
             ))}
           </ul>

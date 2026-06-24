@@ -23,8 +23,8 @@ import Layout from '../../layouts/Layout.astro';
         <p style="font-size:.84rem;color:var(--sl500);line-height:1.7;margin-bottom:14px;">{m.desc}</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
           {m.items.map(i => (
-            <li style="display:flex;gap:8px;font-size:.8rem;color:var(--sl700);">
-              <svg width="13" height="13" style="flex-shrink:0;margin-top:2px;" fill="none" stroke={m.color} stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{i}
+            <li style="display:flex;align-items:flex-start;gap:8px;font-size:.8rem;color:var(--sl700);">
+              <svg width="13" height="13" style="flex-shrink:0;margin-top:2px;" fill="none" stroke={m.color} stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>{i}</span>
             </li>
           ))}
         </ul>

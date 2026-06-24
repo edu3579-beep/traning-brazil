@@ -52,8 +52,8 @@ import Layout from '../layouts/Layout.astro';
             'Integrarse en un equipo quirúrgico multidisciplinar de alto rendimiento',
             'Gestionar complicaciones intraoperatorias en cirugía guiada avanzada',
           ].map(o => (
-            <li style="display:flex;gap:10px;font-size:.83rem;color:var(--sl700);line-height:1.6;">
-              <svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{o}
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:.83rem;color:var(--sl700);line-height:1.6;">
+              <svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>{o}</span>
             </li>
           ))}
         </ul>
@@ -103,7 +103,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Contenido teórico</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Flujo digital: CBCT → STL → planificación','Software de planificación 3D (coDiagnostiX)','Tipos de férulas: mucosoportadas, dentosoportadas, óseas','Parámetros biomecánicos del implante guiado','Manejo de limitaciones anatómicas'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:var(--sky500);flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -113,7 +113,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Práctica clínica</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['4 tandas quirúrgicas / día en paciente real','Colocación guiada con control de torque','Cierre de colgajo y sutura','Protocolo postoperatorio','Seguimiento radiológico inmediato'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:var(--sky500);flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -123,7 +123,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Competencia evaluada</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Ejecución autónoma de cirugía guiada','Lectura e interpretación de CBCT','Manejo del kit de cirugía guiada','Criterios de selección de casos','Resolución de incidencias intraop.'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:var(--sky500);flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -150,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Contenido teórico</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Concepto OneDay OnePiece','Criterios de estabilidad primaria','Planificación protésica previa','Selección de implante monobloque','Protocolo de carga el mismo día'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:var(--sky400);flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -160,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Práctica clínica</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Cirugía guiada con carga inmediata','Colocación de corona provisional','Ajuste oclusal inmediato','Verificación de torque mínimo','Instrucciones al paciente'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:var(--sky400);flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -170,7 +170,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Competencia evaluada</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Protocolo completo OneDay','Criterios de selección del caso','Gestión del provisionalizado','Toma de decisiones intraop.','Documentación del caso'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:var(--sky400);flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -197,7 +197,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Contenido teórico</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Concepto All-on-Four y variantes','Angulación distal: biomecánica','Planificación 3D arco completo','Selección y diseño de provisional','Protocolo de carga inmediata total'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:#7c3aed;flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -207,7 +207,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Práctica clínica</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Extracción y colocación All-on-Four','Implantes rectos y angulados 30°–45°','Impresión y carga del provisional','Ajuste oclusal arco completo','Cierre y protocolo postoperatorio'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:#7c3aed;flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
@@ -217,7 +217,7 @@ import Layout from '../layouts/Layout.astro';
                 <div style="font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--sky600);margin-bottom:8px;">Competencia evaluada</div>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
                   {['Protocolo All-on-Four completo','Ejecución de implante angulado','Gestión de la fase protésica','Planificación preoperatoria 3D','Criterios de éxito y seguimiento'].map(t=>(
-                    <li style="font-size:.76rem;color:var(--sl600);display:flex;gap:6px;line-height:1.5;">
+                    <li style="font-size:.76rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
                       <span style="color:#7c3aed;flex-shrink:0;">·</span>{t}
                     </li>
                   ))}
