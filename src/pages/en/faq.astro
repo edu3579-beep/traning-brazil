@@ -1,91 +1,91 @@
-﻿---
-import Layout from '../../layouts/Layout.astro';
-
-const faqs = [
-  {
-    q: 'Who is this programme designed for?',
-    a: 'The programme is aimed at dentists, oral and maxillofacial surgeons, and implantology specialists who wish to update their skills in digital guided surgery and immediate loading protocols.',
-  },
-  {
-    q: 'What prior knowledge is required?',
-    a: 'Basic clinical experience in implantology is recommended. The programme covers concepts from fundamentals to advanced techniques, with a strong hands-on focus.',
-  },
-  {
-    q: 'How many participants are there per edition?',
-    a: 'The programme is designed for small groups of up to 12 participants, ensuring personalised attention and direct access to the directors throughout all sessions.',
-  },
-  {
-    q: 'Are the practical sessions performed on real patients?',
-    a: 'Yes. A key part of the programme includes supervised surgeries on real patients at CliniCare Training, under the direct supervision of Dr. Juan MÃ©ndez, Dr. Manuel Gonzales and Prof. Assis Filipe.',
-  },
-  {
-    q: 'Which 3D planning software is used?',
-    a: 'The programme works with the leading software on the market: EXocad, Exoplan and other digital guided planning systems, with both theoretical and practical sessions on each platform.',
-  },
-  {
-    q: 'Does the programme include accommodation and transfers?',
-    a: 'The programme includes accommodation. The organisation provides hotel recommendations near CliniCare Training and coordinates shared transfers from the airport.',
-  },
-  {
-    q: 'Is a certificate issued upon completion?',
-    a: 'Yes. Participants who complete the programme will receive a certificate of attendance and achievement, jointly issued by DGIS Fortaleza, CliniCare Training and NACAR ClÃ­nicas Dentales.',
-  },
-  {
-    q: 'What language is the programme delivered in?',
-    a: 'The programme is delivered in Spanish, with materials also available in Portuguese to support Brazilian participants.',
-  },
-  {
-    q: 'How can I reserve my place?',
-    a: 'You can reserve your place via the registration form on this website, or by contacting Eduardo Burger directly on WhatsApp at +34 678 871 916. Places are limited and allocated on a first-come, first-served basis.',
-  },
-  {
-    q: 'What is the cancellation policy?',
-    a: 'Cancellations made more than 60 days in advance receive an 80% refund. Within 60 days, we offer the option to transfer your place to a future edition of the programme.',
-  },
-];
----
-<Layout title="Q&A â€“ DGIS Fortaleza 2026" lang="en">
-
-<div class="sec-dark" style="padding:40px 24px 36px;">
-  <div class="container" style="padding:0;">
-    <span class="eyebrow-white">Information</span>
-    <h1 class="page-h1-white" style="margin-top:8px;">Frequently asked questions</h1>
-    <div class="gold-bar"></div>
-    <p class="lead-white" style="max-width:580px;">Everything you need to know before applying to the programme.</p>
-  </div>
-</div>
-
-<div class="sec-white">
-  <div class="section">
-
-    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
-      {faqs.map((item, i) => (
-        <details style="border:1.5px solid var(--sky100);border-radius:10px;overflow:hidden;background:#fff;">
-          <summary style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:.88rem;font-weight:700;color:var(--sky900);cursor:pointer;list-style:none;gap:16px;">
-            <span>{item.q}</span>
-            <svg style="flex-shrink:0;transition:transform .2s;" width="16" height="16" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div style="padding:0 20px 18px;font-size:.84rem;color:var(--sl500);line-height:1.75;border-top:1px solid var(--sky100);margin-top:0;padding-top:14px;">
-            {item.a}
-          </div>
-        </details>
-      ))}
-    </div>
-
-    <div class="cta-banner" style="margin-top:40px;max-width:780px;margin-left:auto;margin-right:auto;">
-      <div>
-        <p style="font-size:.92rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Still have a question?</p>
-        <p style="font-size:.82rem;color:var(--sl500);">Get in touch with us directly on WhatsApp.</p>
-      </div>
-      <a href="https://wa.me/34678871916" class="btn btn-sky btn-lg">ðŸ’¬ WhatsApp</a>
-    </div>
-
-  </div>
-</div>
-
-<style>
-  details[open] summary svg { transform: rotate(180deg); }
-  details[open] { background: var(--sky50); }
-  summary::-webkit-details-marker { display: none; }
-</style>
-</Layout>
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  {
+    q: 'Who is this programme designed for?',
+    a: 'The programme is aimed at dentists, oral and maxillofacial surgeons, and implantology specialists who wish to update their skills in digital guided surgery and immediate loading protocols.',
+  },
+  {
+    q: 'What prior knowledge is required?',
+    a: 'Basic clinical experience in implantology is recommended. The programme covers concepts from fundamentals to advanced techniques, with a strong hands-on focus.',
+  },
+  {
+    q: 'How many participants are there per edition?',
+    a: 'The programme is designed for small groups of up to 12 participants, ensuring personalised attention and direct access to the directors throughout all sessions.',
+  },
+  {
+    q: 'Are the practical sessions performed on real patients?',
+    a: 'Yes. A key part of the programme includes supervised surgeries on real patients at CliniCare Training, under the direct supervision of Dr. Juan Méndez, Dr. Manuel Gonzales and Prof. Assis Filipe.',
+  },
+  {
+    q: 'Which 3D planning software is used?',
+    a: 'The programme works with the leading software on the market: EXocad, Exoplan and other digital guided planning systems, with both theoretical and practical sessions on each platform.',
+  },
+  {
+    q: 'Does the programme include accommodation and transfers?',
+    a: 'The programme includes accommodation. The organisation provides hotel recommendations near CliniCare Training and coordinates shared transfers from the airport.',
+  },
+  {
+    q: 'Is a certificate issued upon completion?',
+    a: 'Yes. Participants who complete the programme will receive a certificate of attendance and achievement, jointly issued by DGIS Fortaleza, CliniCare Training and NACAR Clínicas Dentales.',
+  },
+  {
+    q: 'What language is the programme delivered in?',
+    a: 'The programme is delivered in Spanish, with materials also available in Portuguese to support Brazilian participants.',
+  },
+  {
+    q: 'How can I reserve my place?',
+    a: 'You can reserve your place via the registration form on this website, or by contacting Eduardo Burger directly on WhatsApp at +34 678 871 916. Places are limited and allocated on a first-come, first-served basis.',
+  },
+  {
+    q: 'What is the cancellation policy?',
+    a: 'Cancellations made more than 60 days in advance receive an 80% refund. Within 60 days, we offer the option to transfer your place to a future edition of the programme.',
+  },
+];
+---
+<Layout title="Q&A – DGIS Fortaleza 2026" lang="en">
+
+<div class="sec-dark" style="padding:40px 24px 36px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Information</span>
+    <h1 class="page-h1-white" style="margin-top:8px;">Frequently asked questions</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:580px;">Everything you need to know before applying to the programme.</p>
+  </div>
+</div>
+
+<div class="sec-white">
+  <div class="section">
+
+    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+      {faqs.map((item, i) => (
+        <details style="border:1.5px solid var(--sky100);border-radius:10px;overflow:hidden;background:#fff;">
+          <summary style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-size:.88rem;font-weight:700;color:var(--sky900);cursor:pointer;list-style:none;gap:16px;">
+            <span>{item.q}</span>
+            <svg style="flex-shrink:0;transition:transform .2s;" width="16" height="16" fill="none" stroke="var(--sky500)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div style="padding:0 20px 18px;font-size:.84rem;color:var(--sl500);line-height:1.75;border-top:1px solid var(--sky100);margin-top:0;padding-top:14px;">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="cta-banner" style="margin-top:40px;max-width:780px;margin-left:auto;margin-right:auto;">
+      <div>
+        <p style="font-size:.92rem;font-weight:700;color:var(--sky900);margin-bottom:4px;">Still have a question?</p>
+        <p style="font-size:.82rem;color:var(--sl500);">Get in touch with us directly on WhatsApp.</p>
+      </div>
+      <a href="https://wa.me/34678871916" class="btn btn-sky btn-lg">💬 WhatsApp</a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  details[open] summary svg { transform: rotate(180deg); }
+  details[open] { background: var(--sky50); }
+  summary::-webkit-details-marker { display: none; }
+</style>
+</Layout>
