@@ -244,7 +244,12 @@ import Layout from '../layouts/Layout.astro';
     }
     .director-photo {
       width: 100% !important;
-      height: 240px !important;
+      height: auto !important;
+    }
+    .director-photo img {
+      object-fit: contain !important;
+      height: auto !important;
+      max-height: none !important;
     }
   }
 </style>
