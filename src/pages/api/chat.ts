@@ -7,11 +7,11 @@ export const prerender = false;
 // process.env.ANTHROPIC_API_KEY is used on Vercel (set in dashboard)
 declare const __ANTHROPIC_KEY__: string;
 
-const SYSTEM_PROMPT = `You are a helpful assistant for the DDX Fortaleza 2026 programme - a Digital Guided Implant Surgery Immersion Program.
+const SYSTEM_PROMPT = `You are a helpful assistant for the DDX Fortaleza 2027 programme - a Digital Guided Implant Surgery Immersion Program.
 
 KEY PROGRAMME INFORMATION:
-- Full name: Digital Guided Implant Surgery (DDX) Immersion Program - Fortaleza 2026
-- Dates: 21-27 February 2027 (8 days)
+- Full name: Digital Guided Implant Surgery (DDX) Immersion Program - Fortaleza 2027
+- Dates: 20-27 February 2027 (8 days)
 - Location: CliniCare Training, Fortaleza, Ceara, Brazil
 - Maximum participants: 12 (small groups, personalised attention)
 - Language: Programme delivered in Spanish; materials also available in Portuguese
