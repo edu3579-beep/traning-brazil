@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Full Arch Digital Experience BCN – Cursos Barcelona" lang="es">
+
+<!-- ══ Header: flujo digital completo ═══════════════════════════════ -->
+<div class="sec-white" style="padding:24px 24px 0;">
+  <div class="container" style="padding:0;">
+    <div style="border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;background:#fff;padding:20px 20px 0;">
+      <img src="/pptx_images/fullarch-workflow-banner.png" alt="Flujo digital: Captura, diseño, producción, ejecución y restauración" style="width:100%;height:auto;display:block;" />
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;text-align:center;padding:16px 8px 24px;">
+        {[
+          { t:'CAPTURE', d:'Straumann SIRIOS™X3' },
+          { t:'DESIGN', d:'CoDiagnostix' },
+          { t:'PRODUCE', d:'Chairside Milling' },
+          { t:'EXECUTE', d:'Neodent EasyGuide' },
+          { t:'RESTORE', d:'Permanent Restoration' },
+        ].map(w => (
+          <div style="min-width:110px;">
+            <div style="font-weight:900;font-size:.78rem;letter-spacing:.5px;color:var(--sky900);">{w.t}</div>
+            <div style="font-size:.72rem;color:var(--sl500);">{w.d}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-dark" style="padding:52px 24px 48px;">
+  <div class="container" style="padding:0;">
+    <span class="eyebrow-white">Curso clínico · Barcelona</span>
+    <h1 class="page-h1-white" style="margin-top:10px;">Full Arch Digital Experience</h1>
+    <div class="gold-bar"></div>
+    <p class="lead-white" style="max-width:680px;">Programa clínico intensivo diseñado para que el odontólogo adquiera una visión práctica de protocolos digitales en tratamientos de arcada completa: desde la toma de registros hasta la rehabilitación final, pasando por la planificación implantológica prostéticamente guiada, el diseño de férulas quirúrgicas, la cirugía guiada y la carga inmediata.</p>
+
+    <div class="grid-4" style="gap:16px;margin-top:32px;">
+      {[
+        { icon:'📅', label:'Fechas', val:'8–10 Octubre 2026' },
+        { icon:'📍', label:'Sede', val:'Clínica Nacar · Hospitalet de Llobregat, Barcelona' },
+        { icon:'👥', label:'Plazas', val:'12 plazas' },
+        { icon:'💶', label:'Inversión', val:'1.650 €' },
+      ].map(s => (
+        <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:16px 18px;">
+          <div style="font-size:1.3rem;margin-bottom:6px;">{s.icon}</div>
+          <div style="font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);margin-bottom:2px;">{s.label}</div>
+          <div style="font-size:.82rem;font-weight:700;color:#fff;">{s.val}</div>
+        </div>
+      ))}
+    </div>
+
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="mailto:barbara.olmedo@straumann.com" class="btn btn-white">✉ Información y registro</a>
+      <a href="tel:+34620900718" class="btn" style="border:1.5px solid rgba(255,255,255,.4);color:#fff;">📞 620 900 718</a>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="mailto:edu@digitaldentalxperts.com" class="btn" style="border:1.5px solid rgba(255,255,255,.4);color:#fff;">✉ edu@digitaldentalxperts.com</a>
+      <a href="tel:+34678871916" class="btn" style="border:1.5px solid rgba(255,255,255,.4);color:#fff;">📞 678 871 916</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Objetivos + flujo digital ═══════════════════════════════════════ -->
+<div class="sec-light">
+  <div class="section" style="padding-top:52px;padding-bottom:52px;">
+    <span class="eyebrow">Objetivos del curso</span>
+    <h2 class="sec-h2" style="margin-top:10px;margin-bottom:14px;">Dotar al clínico de un flujo de trabajo 100% digital</h2>
+    <div class="sky-bar"></div>
+    <p style="font-size:.85rem;color:var(--sl500);max-width:680px;margin-top:14px;margin-bottom:24px;">Conocimientos necesarios para planificar y ejecutar tratamientos implantológicos complejos:</p>
+
+    <ol class="grid-2" style="list-style:none;gap:10px 20px;counter-reset:obj;max-width:900px;margin-bottom:52px;">
+      {[
+        'Diagnóstico estratégico en casos de Full Arch',
+        'Planificación implantológica prostéticamente guiada con coDiagnostix',
+        'Ejecución clínica de cirugía guiada con Neodent EasyGuide',
+        'Carga inmediata con impresión de provisionales en clínica con Pro 2 3D Printer',
+        'Escaneo post-cirugía con protocolo para edéntulos para prótesis definitiva',
+        'Reducción de complicaciones quirúrgicas y protésicas',
+      ].map((o, i) => (
+        <li style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid var(--sky100);border-radius:10px;padding:14px 18px;">
+          <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--sky800);color:#fff;font-size:.75rem;font-weight:900;display:flex;align-items:center;justify-content:center;">{i + 1}</span>
+          <span style="font-size:.85rem;color:var(--sl700);line-height:1.6;padding-top:2px;">{o}</span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</div>
+
+<!-- ══ Programa día a día ═══════════════════════════════════════════════ -->
+<div class="sec-white">
+  <div class="section" style="padding-top:52px;padding-bottom:52px;">
+    <span class="eyebrow">Programa</span>
+    <h2 class="sec-h2" style="margin-top:10px;margin-bottom:28px;">Tres días de inmersión clínica</h2>
+
+    <div class="grid-3" style="gap:20px;">
+      {[
+        {
+          day: 'DÍA 1', title: 'Diagnóstico y planificación digital', color: 'var(--sky500)', badgeBg: 'var(--sky800)',
+          items: [
+            'Introducción al protocolo Full Arch digital',
+            'Toma de registros: escaneo intraoral y CBCT',
+            'Planificación prostéticamente guiada con Codiagnostix',
+            'Integración de archivos STL + DICOM',
+            'Segmentación ósea asistida por IA',
+            'Planificación digital y toma de decisiones',
+            'Diseño de férulas quirúrgicas (dentosoportadas, mucosoportadas y apilables)',
+          ],
+        },
+        {
+          day: 'DÍA 2', title: 'Cirugía guiada y carga inmediata', color: 'var(--sky400)', badgeBg: 'var(--sky700)',
+          items: [
+            'Cirugía Full Arch en vivo con paciente real',
+            'Toma de impresión digital intraoperatoria',
+            'Protocolo de provisionalización inmediata',
+            'Impresión 3D de prótesis provisional en clínica con Pro 2 3D Printer',
+            'Mesa redonda: discusión clínica y análisis del caso',
+          ],
+        },
+        {
+          day: 'DÍA 3', title: 'Formación práctica · Hands on', color: '#7c3aed', badgeBg: '#5b21b6',
+          items: [
+            'Planificación completa paso a paso de un caso por parte de los participantes con Codiagnostix',
+            'Diseño e impresión de férulas quirúrgicas',
+            'Mesa redonda: discusión clínica y resolución de dudas',
+          ],
+        },
+      ].map(d => (
+        <div style="background:#fff;border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style={`background:${d.color};height:6px;`}></div>
+          <div style="padding:24px 24px 26px;flex:1;">
+            <div style={`display:inline-block;background:${d.badgeBg};color:#fff;font-size:.65rem;font-weight:900;padding:4px 10px;border-radius:6px;margin-bottom:12px;`}>{d.day}</div>
+            <h3 style="font-weight:900;font-size:1rem;color:var(--sky900);margin-bottom:14px;">{d.title}</h3>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              {d.items.map(it => (
+                <li style="font-size:.78rem;color:var(--sl600);display:flex;align-items:flex-start;gap:6px;line-height:1.5;">
+                  <span style={`color:${d.color};flex-shrink:0;`}>·</span>{it}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- ══ Ponentes ══════════════════════════════════════════════════════ -->
+<div class="sec-light">
+  <div class="section" style="padding-top:52px;padding-bottom:52px;">
+    <span class="eyebrow">Dirección del curso</span>
+    <h2 class="sec-h2" style="margin-top:10px;margin-bottom:28px;">Ponentes</h2>
+
+    <div class="grid-3" style="gap:24px;">
+      {[
+        { img:'/dr-manuel-gonzalez.jpg', name:'Dr. Manuel González Poyato', role:'Director de Programa' },
+        { img:'/dr-mario-benitez.jpg', name:'Dr. Mario Benítez Martínez', role:'Ponente' },
+        { img:'/jose-pablo-guerrero.jpg', name:'TD. José Pablo Guerrero', role:'Técnico Dental' },
+      ].map(p => (
+        <div style="background:#fff;border:1px solid var(--sky100);border-radius:14px;padding:28px 20px;text-align:center;">
+          <img src={p.img} alt={p.name} width="96" height="96" loading="lazy" style="width:96px;height:96px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:3px solid var(--sky100);" />
+          <div style="font-weight:800;font-size:.9rem;color:var(--sky900);margin-bottom:2px;">{p.name}</div>
+          <div style="font-size:.76rem;color:var(--sl500);">{p.role}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- ══ Colaboración + registro ═══════════════════════════════════════ -->
+<div class="sec-white">
+  <div class="section" style="padding-top:44px;padding-bottom:52px;">
+    <div style="background:linear-gradient(135deg,#0c4a6e 0%,#075985 60%,#0369a1 100%);border-radius:16px;padding:40px 36px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;margin-bottom:36px;">
+      <div style="max-width:520px;">
+        <div style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#7dd3fc;margin-bottom:8px;">Descuento para asistentes</div>
+        <p style="color:#fff;font-size:.95rem;font-weight:600;line-height:1.6;">Descuento especial para asistentes al programa clínico de cirugía guiada en Fortaleza (Brasil).</p>
+      </div>
+      <a href="/programa" class="btn btn-white" style="flex-shrink:0;">Ver curso Fortaleza →</a>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;padding:24px;margin-bottom:40px;">
+      <img src="/ddx-logo.png" alt="DDX Digital Dental Xperts" width="107" height="64" loading="lazy" style="height:56px;width:auto;object-fit:contain;" />
+      <span style="font-size:.78rem;color:var(--sl400);font-weight:700;">Colaboración con</span>
+      <img src="/pptx_images/neodent-straumann-logo.png" alt="Neodent · A Straumann Group Brand" width="200" height="58" loading="lazy" style="height:46px;width:auto;object-fit:contain;" />
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3 style="font-weight:800;font-size:1.05rem;color:var(--sky900);margin-bottom:6px;">¿Quieres reservar tu plaza?</h3>
+        <p style="font-size:.84rem;color:var(--sl500);margin-bottom:4px;">12 plazas disponibles · 1.650 €</p>
+        <p style="font-size:.84rem;color:var(--sl500);margin-bottom:4px;">Bárbara Olmedo (Straumann): barbara.olmedo@straumann.com · 620 900 718</p>
+        <p style="font-size:.84rem;color:var(--sl500);margin-bottom:18px;">Eduardo Burger (DDX): edu@digitaldentalxperts.com · 678 871 916</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="mailto:barbara.olmedo@straumann.com" class="btn btn-sky">✉ Escribir a Bárbara</a>
+          <a href="mailto:edu@digitaldentalxperts.com" class="btn btn-sky">✉ Escribir a Eduardo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</Layout>
