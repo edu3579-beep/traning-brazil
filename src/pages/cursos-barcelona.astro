@@ -15,18 +15,18 @@ import Layout from '../layouts/Layout.astro';
 <!-- ══ Header: flujo digital completo ═══════════════════════════════ -->
 <div class="sec-white" style="padding:16px 24px 0;">
   <div class="container" style="padding:0;">
-    <div style="border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;background:#fff;padding:20px 20px 0;">
-      <img src="/pptx_images/fullarch-workflow-banner.png" alt="Flujo digital: Captura, diseño, producción, ejecución y restauración" style="width:100%;height:auto;display:block;" />
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;text-align:center;padding:16px 8px 24px;">
+    <div style="border:1.5px solid var(--sky100);border-radius:14px;overflow:hidden;background:#fff;padding:20px 20px 24px;">
+      <div class="workflow-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;">
         {[
-          { t:'CAPTURE', d:'Straumann SIRIOS™X3' },
-          { t:'DESIGN', d:'CoDiagnostix' },
-          { t:'PRODUCE', d:'Chairside Milling' },
-          { t:'EXECUTE', d:'Neodent EasyGuide' },
-          { t:'RESTORE', d:'Permanent Restoration' },
+          { img:'capture', t:'CAPTURE', d:'Straumann SIRIOS™X3' },
+          { img:'design', t:'DESIGN', d:'CoDiagnostix' },
+          { img:'produce', t:'PRODUCE', d:'Chairside Milling' },
+          { img:'execute', t:'EXECUTE', d:'Neodent EasyGuide' },
+          { img:'restore', t:'RESTORE', d:'Permanent Restoration' },
         ].map(w => (
-          <div style="min-width:110px;">
-            <div style="font-weight:900;font-size:.78rem;letter-spacing:.5px;color:var(--sky900);">{w.t}</div>
+          <div style="text-align:center;">
+            <img src={`/pptx_images/workflow-${w.img}.png`} alt={w.t} style="width:100%;height:auto;display:block;" />
+            <div style="font-weight:900;font-size:.78rem;letter-spacing:.5px;color:var(--sky900);margin-top:14px;">{w.t}</div>
             <div style="font-size:.72rem;color:var(--sl500);">{w.d}</div>
           </div>
         ))}
@@ -205,5 +205,14 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </div>
 </div>
+
+<style>
+  @media (max-width: 760px) {
+    .workflow-grid { grid-template-columns: repeat(2,1fr) !important; }
+  }
+  @media (max-width: 420px) {
+    .workflow-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
 
 </Layout>
